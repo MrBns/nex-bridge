@@ -6,3 +6,49 @@
   width: 100%;
   max-width: 1635px;
 }
+
+.logo-gradient {
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(146, 222, 237, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-1 {
+  font-size: 200px;
+}
+
+.heading-2 {
+  font-size: 190px;
+}
+
+.heading-3 {
+  font-size: 100px;
+  line-height: 110px;
+}
+
+.heading-4 {
+  font-size: 100px;
+}
+
+.heading-5 {
+  font-size: 56px;
+}
+
+.heading-6 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.heading-7 {
+  font-size: 16px;
+  list-style: 26px;
+}
+
+.heading-8 {
+  font-size: 16px;
+  line-height: 26px;
+}

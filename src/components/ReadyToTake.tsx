@@ -27,17 +27,17 @@ function ReadyToTake({}: Props) {
       </div>
       <div className="flex flex-col justify-between">
         <div className="flex flex-col justify-start gap-1">
-          <p className="text-[100px] leading-[110px] font-medium">500+</p>
+          <p className="heading-3 font-medium">500+</p>
           <span className="text-[32px] leading-[40px]">
             Successful Projects
           </span>
         </div>
         <div className="flex flex-col justify-start gap-1">
-          <p className="text-[100px] leading-[110px] font-medium">98%</p>
+          <p className="heading-3 font-medium">98%</p>
           <span className="text-[32px] leading-[40px]">Satisfied Clients</span>
         </div>
         <div className="flex flex-col justify-start gap-1">
-          <p className="text-[100px] leading-[110px] font-medium">500+</p>
+          <p className="heading-3 font-medium">500+</p>
           <span className="text-[32px] leading-[40px]">Handled Countries</span>
         </div>
       </div>
