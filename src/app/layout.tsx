@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "../styles/app.css";
 import "../styles/app.scss";
+import Navbar from "@/components/layout-comp/Navbar";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,7 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <head></head>
-      <body className="bg-black" >{children}</body>
+      <body className="bg-black">
+        <Navbar />
+        {children}
+      </body>
+      <Script id="root-layout">
+        <script defer src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+      </Script>
     </html>
   );
 }
