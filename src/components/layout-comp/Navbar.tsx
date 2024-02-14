@@ -3,6 +3,12 @@ type TProps = {}
 
 export default function Navbar(props:TProps) {
   return (
-    <>Navbar</>
+    <>
+      <nav className="">
+      <div className="my-container">
+        
+      </div>
+      </nav>
+    </>
   )
 }
