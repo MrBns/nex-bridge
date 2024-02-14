@@ -7,6 +7,22 @@ height: 914px;
 background: linear-gradient(212.76deg, rgba(28, 117, 188, 0.3) 5.52%, rgba(0, 0, 0, 0) 80.42%);
 
 
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 306.58px;
+height: 80px;
+left: 843px;
+top: 746px;
+
+background: rgba(0, 16, 28, 0.1);
+backdrop-filter: blur(4.85px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 15px;
+
+
 /* 01_Homepage v1 */
 
 
