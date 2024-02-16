@@ -23,6 +23,12 @@
       rgba(28, 117, 188, 0.4) 0%,
       rgba(28, 117, 188, 0) 100%
     );
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #main-navbar.navbar-scrolled {
+    @apply bg-darkBlue;
   }
 }
 
