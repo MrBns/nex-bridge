@@ -4,6 +4,7 @@ import SectionWeBelieve from "@/views/homepage/SectionWeBelieve";
 import Image from "next/image";
 import ReadyToTake from "@/components/ReadyToTake";
 import Footer from "@/components/Footer";
+import Blogs from "@/components/Blogs";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Header />
       <SectionWeBelieve />
       <ReadyToTake />
-      <div className="mt-80"></div>
+      <Blogs />
       <Footer />
     </main>
   );

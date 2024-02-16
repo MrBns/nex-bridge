@@ -20,7 +20,7 @@ function Footer({}: Props) {
             </p>
           </span>
           <button className="w-max flex items-center gap-3 mt-10 py-5 px-10 rounded-[15px] border border-white">
-            <p>Contact us</p>
+            <p className="font-semibold">Contact us</p>
             <svg
               width="101"
               height="16"
