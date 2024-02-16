@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gen::img": "./src/assets/assetLoader --dir=\"src/assets/img/\" --output=\"index.ts\" --prefix=\"IMG\"",
-    "gen::icon": "./src/assets/assetLoader --dir=\"src/assets/icon/\" --output=\"index.ts\" --prefix=\"ICON\""
+    "gen::img": "./src/assets/assetLoader.exe --dir=\"src/assets/img/\" --output=\"index.ts\" --prefix=\"IMG\"",
+    "gen::icon": "./src/assets/assetLoader.exe --dir=\"src/assets/icon/\" --output=\"index.ts\" --prefix=\"ICON\""
   },
   "dependencies": {
     "next": "14.1.0",

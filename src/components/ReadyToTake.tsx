@@ -1,5 +1,5 @@
-import React from 'react';
-import ArrowIcon from '../assets/ArrowIcon';
+import React from "react";
+import ArrowIcon from "../assets/ArrowIcon";
 
 type Props = {};
 
