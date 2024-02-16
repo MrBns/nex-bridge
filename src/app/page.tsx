@@ -5,6 +5,7 @@ import Image from "next/image";
 import ReadyToTake from "@/components/ReadyToTake";
 import Footer from "@/components/Footer";
 import Blogs from "@/components/Blogs";
+import BrandSlider from "@/components/BrandSlider";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <SectionWeBelieve />
       <ReadyToTake />
+      <BrandSlider />
       <Blogs />
       <Footer />
     </main>

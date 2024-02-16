@@ -104,3 +104,25 @@
     line-height: 26px;
   }
 }
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.swiper::before,
+.swiper::after {
+  content: "";
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-image: linear-gradient(90deg, #000, transparent);
+}
+
+.swiper::after {
+  left: auto;
+  right: 0;
+  background-image: linear-gradient(270deg, #000, transparent);
+}
