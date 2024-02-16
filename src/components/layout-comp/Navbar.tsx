@@ -1,5 +1,7 @@
 import { IMG_NEXT_BRIDGE_LOGO } from "@/assets/img";
 import Image from "next/image";
+import Script from "next/script";
+import "./navbar.effect"
 
 type TProps = {};
 
@@ -34,7 +36,8 @@ const NAVBAR_MENU_DATA = [
 export default function Navbar(props: TProps) {
   return (
     <>
-      <nav className="text-white py-5 fixed bg-transparent w-full">
+      {/* <Script src={new URL("./navbar.effect.ts").pathname} strategy="afterInteractive" /> */}
+      <nav id="main-navbar" className="text-white  fixed  w-full z-[100]">
         <div className="my-container">
           <div className="flex items-center">
             <div className="">

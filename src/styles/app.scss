@@ -1,10 +1,32 @@
 @font-face {
-    font-family: "Monument Extended";
-    src: url("../assets/fonts/monument-extended.ttf");
-    font-weight: 400
+  font-family: "Monument Extended";
+  src: url("../assets/fonts/monument-extended.ttf");
+  font-weight: 400;
 }
 @font-face {
-    font-family: "Monument Extended";
-    src: url("../assets/fonts/Monument-Ultrabold.OTF");
-    font-weight: 700
+  font-family: "Monument Extended";
+  src: url("../assets/fonts/Monument-Ultrabold.OTF");
+  font-weight: 700;
+}
+
+#main-navbar {
+  transition: 0.3s;
+
+  &:not(.navbar-scrolled) {
+    padding: 2rem 0px;
+  }
+  .navbar-scrolled {
+    padding: 10px 0px;
+  }
+}
+
+.we-believe-change-text {
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(28, 117, 188, 0.5) 0%, rgba(28, 117, 188, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+
 }
