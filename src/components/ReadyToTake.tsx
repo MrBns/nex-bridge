@@ -5,7 +5,7 @@ type Props = {};
 
 function ReadyToTake({}: Props) {
   return (
-    <div className="my-container mx-auto flex justify-between gap-10 mt-10">
+    <div className="my-container mx-auto flex justify-between gap-10 mt-10 text-white">
       <div className="w-[75%] rounded-[50px] flex items-end justify-between pt-20 pb-10 pl-16 pr-28 bg-[url('/ready-to-take-bg.svg')] bg-cover bg-no-repeat bg-bottom">
         <p className="text-[70.37px] leading-[75.7px] font-medium">
           We envision a future

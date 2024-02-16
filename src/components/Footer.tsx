@@ -1,5 +1,6 @@
-import React from 'react';
-import ArrowIcon from '../assets/ArrowIcon';
+import React from "react";
+import ArrowIcon from "../assets/ArrowIcon";
+import Img from "./helper/Img";
 
 type Props = {};
 
@@ -14,8 +15,7 @@ function Footer({}: Props) {
           <span className="text-center heading-3 font-medium">
             <p>Need IT Solutions?</p>
             <p>
-              Let's{' '}
-              <span className="heading-4 font-light italic">start now.</span>
+              let&apos;s <span className="heading-4 font-light italic">start now.</span>
             </p>
           </span>
           <button className="flex items-center gap-3 uppercase mt-10 bg-darkBlue py-5 px-10 rounded-[15px] border border-white">
@@ -27,21 +27,17 @@ function Footer({}: Props) {
       <div className="my-container mx-auto">
         <div className="flex gap-20">
           <div className="w-full flex flex-col justify-between">
-            <img
-              src="/logo.svg"
-              alt="logo"
-              className="-ml-[30px] max-w-[491px]"
-            />
+            <Img src="/logo.svg" alt="logo" className="-ml-[30px] max-w-[491px]" />
 
             <div className="flex items-center gap-5">
               <a href="#">
-                <img src="/insta.svg" alt="instagram" />
+                <Img src="/insta.svg" alt="instagram" />
               </a>
               <a href="#">
-                <img src="/fb.svg" alt="facebook" />
+                <Img src="/fb.svg" alt="facebook" />
               </a>
               <a href="#">
-                <img src="/twitter.svg" alt="twitter" />
+                <Img src="/twitter.svg" alt="twitter" />
               </a>
             </div>
           </div>
@@ -85,27 +81,19 @@ function Footer({}: Props) {
           <div className="space-y-5">
             <p className="heading-6">Newsletter</p>
             <p className="text-[20px] leading-[30px] opacity-75 font-light">
-              Subscribe to our newsletter to stay informed about our latest
-              products, services, and promotions. Feel free to unsubscribe
-              anytime!
+              Subscribe to our newsletter to stay informed about our latest products, services, and promotions. Feel free to unsubscribe anytime!
             </p>
 
             <div className="w-full flex items-center gap-2 bg-darkBlue rounded-[5px] border border-white px-6 py-4">
-              <input
-                placeholder="Enter Your Email Address ..."
-                type="email"
-                className="w-full bg-transparent placeholder:text-white placeholder:opacity-75 font-light focus:outline-none"
-              />
+              <input placeholder="Enter Your Email Address ..." type="email" className="w-full bg-transparent placeholder:text-white placeholder:opacity-75 font-light focus:outline-none" />
               <button className="">
-                <img src="/arrow-right-bold.svg" alt="arrow" />
+                <Img src="/arrow-right-bold.svg" alt="arrow" />
               </button>
             </div>
           </div>
         </div>
         <div className="mt-5 border-t border-white border-opacity-50 flex items-center justify-between">
-          <p className="heading-8 opacity-50 mt-3 font-light">
-            Copyright © 2023 for WaveNet. All rights reserved.
-          </p>
+          <p className="heading-8 opacity-50 mt-3 font-light">Copyright © 2023 for WaveNet. All rights reserved.</p>
           <ul className="heading-8 opacity-50 mt-3 font-light flex items-center gap-3">
             <li>
               <a href="#">Terms & Condition</a>
