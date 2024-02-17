@@ -36,7 +36,7 @@ function Blogs({}: Props) {
         <h1 className="text-center heading-3 font-bold">Blogs</h1>
         <p className="text-center mt-16 max-w-[896px] mx-auto text-[20px] leading-[30px]">
           Stay up to date with the latest trends and insights in technology with
-          our informative blog. From industry news to expert tips, we've got you
+          our informative blog. From industry news to expert tips, we&apos;ve got you
           covered.
         </p>
       </div>
