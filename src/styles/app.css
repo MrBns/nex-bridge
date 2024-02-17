@@ -74,6 +74,43 @@
       linear-gradient(126deg, #1c75bc 0%, transparent 64%, #1c75bc 100%);
   }
 
+  .blue-partial-border {
+    position: relative;
+    background: radial-gradient(
+          circle at 100% 100%,
+          #000000 0,
+          #000000 14px,
+          transparent 14px
+        )
+        0% 0%/15px 15px no-repeat,
+      radial-gradient(
+          circle at 0 100%,
+          #000000 0,
+          #000000 14px,
+          transparent 14px
+        )
+        100% 0%/15px 15px no-repeat,
+      radial-gradient(
+          circle at 100% 0,
+          #000000 0,
+          #000000 14px,
+          transparent 14px
+        )
+        0% 100%/15px 15px no-repeat,
+      radial-gradient(circle at 0 0, #000000 0, #000000 14px, transparent 14px)
+        100% 100%/15px 15px no-repeat,
+      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 2px)
+        calc(100% - 30px) no-repeat,
+      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 30px)
+        calc(100% - 2px) no-repeat,
+      linear-gradient(
+        118deg,
+        #1c75bc 0%,
+        rgba(72, 171, 224, 0) 50%,
+        #1c75bc 100%
+      );
+  }
+
   .heading-1 {
     font-size: 200px;
   }

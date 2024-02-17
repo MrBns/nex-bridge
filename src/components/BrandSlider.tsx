@@ -14,7 +14,7 @@ type Props = {};
 
 function BrandSlider({}: Props) {
   return (
-    <div className="my-container mx-auto pt-60">
+    <div className="my-container mx-auto pt-40">
       <div className="relative slider-shadow overflow-hidden flex flex-nowrap gap-20">
         <div className="slider-anim flex items-center justify-between w-full shrink-0">
           <Img className="h-[42px]" src={BrandLogo1.src} alt="" />

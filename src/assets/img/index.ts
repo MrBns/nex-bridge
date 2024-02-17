@@ -9,3 +9,4 @@ export { default as BrandLogo2 } from "./Logo_2.png";
 export { default as BrandLogo3 } from "./Logo_3.png";
 export { default as BrandLogo4 } from "./Logo_4.png";
 export { default as BrandLogo5 } from "./Logo_5.png";
+export { default as MOBILE_TRADITIONAL_FINANCE } from "./mobile-traditional-finance.png";
