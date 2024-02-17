@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Blogs from "@/components/Blogs";
 import BrandSlider from "@/components/BrandSlider";
 import SectionWhyChooseUs from "@/views/homepage/SectionWhyChooseUs";
+import TraditionalFinance from "@/components/TraditionalFinance";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <SectionWeBelieve />
       <SectionWhyChooseUs />
+      <TraditionalFinance />
       <BrandSlider />
       <Blogs />
       <Footer />
