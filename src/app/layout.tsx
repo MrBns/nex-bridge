@@ -29,14 +29,48 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${montserrat.variable}`}>
-      <head></head>
+      <head>
+        <script
+          defer
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+        ></script>
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"
+        ></script>
+      </head>
       <body className="bg-black">
         <Navbar />
         {children}
       </body>
       <Script id="root-layout">
-        <script defer src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+        <script
+          defer
+          src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"
+        ></script>
       </Script>
+
+      <Script
+        defer
+        id="animation-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          VANTA.NET({
+            el: "#want-to-connect",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x404040,
+            backgroundColor: 0x0
+          })
+        `,
+        }}
+      ></Script>
     </html>
   );
 }

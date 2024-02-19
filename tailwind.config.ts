@@ -39,6 +39,10 @@ const config: Config = {
         lightBlue: "#92DEED",
         lightGray: "#D5D9E5",
       },
+
+      screens: {
+        // lg: "1428px",
+      },
     },
   },
   plugins: [],
