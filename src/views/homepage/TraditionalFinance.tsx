@@ -1,6 +1,7 @@
 import React from "react";
-import { MOBILE_TRADITIONAL_FINANCE } from "../../assets/img";
 import Img from "../../components/helper/Img";
+import { IMG_MOBILE_TRADITIONAL_FINANCE } from "@/assets/img";
+import GradientBorderButton from "@/components/shared/buttons/GradientBorderButton";
 
 type Props = {};
 
@@ -15,7 +16,7 @@ function TraditionalFinance({}: Props) {
           <br />
           traditional finance integrates seamlessly with blockchain
         </p>
-        <button className="mt-20 blue-partial-border w-max bg-black text-white font-medium px-8 py-6 rounded-[15px] flex items-center gap-3">
+        <GradientBorderButton variant="minimal"  className="mt-20 [--border-width:2px] w-max bg-black text-white font-medium px-8 py-6 rounded-[15px] flex items-center gap-3">
           Contact us
           <svg
             width="58"
@@ -29,11 +30,11 @@ function TraditionalFinance({}: Props) {
               fill="white"
             />
           </svg>
-        </button>
+        </GradientBorderButton>
       </div>
       <Img
         className="absolute right-0"
-        src={MOBILE_TRADITIONAL_FINANCE.src}
+        src={IMG_MOBILE_TRADITIONAL_FINANCE.src}
         alt=""
       />
     </div>

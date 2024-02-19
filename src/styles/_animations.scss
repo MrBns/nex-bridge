@@ -1,0 +1,54 @@
+//Map Section SVG Animations;
+#map-svg-highlight-circle {
+  .scale-animate {
+    animation: scale-in-out 1.5s ease-in-out infinite alternate;
+  }
+  .flag-below-arrow-sign {
+    animation: _arrow-up-down 1.5s ease-in-out infinite alternate;
+  }
+  .flag {
+    animation: _flag-up-down 1.5s 0.75s ease-in-out infinite alternate;
+  }
+
+  @keyframes _flag-up-down {
+    from {
+      transform-origin: center center;
+      transform: translateY(-16px);
+      opacity: 0.8;
+    }
+    to {
+      transform-origin: center center;
+      transform: translateY(1px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes _arrow-up-down {
+    from {
+      transform-origin: center center;
+      transform: translateY(-16px) scale(0.9);
+      opacity: 0.8;
+    }
+    to {
+      transform-origin: center center;
+      transform: translateY(-1px) scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in-out {
+    from {
+      transform-origin: center center;
+      transform: scale(0.85);
+      opacity: 0.8;
+    }
+    to {
+      transform-origin: center center;
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+
+

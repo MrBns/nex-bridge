@@ -1,7 +1,8 @@
 import { IMG_NEXT_BRIDGE_LOGO } from "@/assets/img";
 import Image from "next/image";
 import Script from "next/script";
-import "./navbar.effect"
+import "./navbar.effect";
+import GradientBorderButton from "../shared/buttons/GradientBorderButton";
 
 type TProps = {};
 
@@ -41,7 +42,13 @@ export default function Navbar(props: TProps) {
         <div className="my-container">
           <div className="flex items-center">
             <div className="">
-              <Image src={IMG_NEXT_BRIDGE_LOGO} className="mb-5" alt="nex-bridge-logo" />
+              <a href="/#" className="block">
+                <Image
+                  src={IMG_NEXT_BRIDGE_LOGO}
+                  className="mb-5"
+                  alt="nex-bridge-logo"
+                />
+              </a>
             </div>
             <div className="flex-1 ">
               <ul className="flex justify-center">
@@ -55,7 +62,12 @@ export default function Navbar(props: TProps) {
               </ul>
             </div>
             <div className="">
-              <button className="p-2 px-4 border rounded-md">Sign in</button>
+              <GradientBorderButton
+                className="px-4 py-2 [--border-width:2px] rounded-md uppercase"
+                variant="minimal"
+              >
+                Sign In
+              </GradientBorderButton>
             </div>
           </div>
         </div>

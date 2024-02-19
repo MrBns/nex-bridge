@@ -1,0 +1,91 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 95deg;
+  inherits: false;
+}
+
+.gradient-button {
+  --_rounded: 2px;
+  position: relative;
+  background-image: linear-gradient(
+    var(--rotate),
+    #1c75bc -22.22%,
+    rgba(28, 117, 188, 0) 54.4%,
+    #1c75bc 125.13%
+  );
+  background-size: cover;
+  animation: _button-animation 2s linear infinite;
+  isolation: isolate;
+  transition: 0.2s;
+
+  &.glow {
+    filter: drop-shadow(0px 0px 20px #033054);
+  }
+
+  &:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+  }
+  &:active {
+    color: white;
+    transform: scale(1.05);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+    width: calc(100% - calc(var(--border-width) * 2));
+    height: calc(100% - calc(var(--border-width) * 2));
+    background: #000;
+    z-index: -1;
+    border-radius: inherit;
+  }
+
+  @keyframes _button-animation {
+    0% {
+      --rotate: 265deg;
+    }
+    100% {
+      --rotate: 95deg;
+    }
+  }
+}
+
+.blog-read-more-btn.minimal {
+  position: relative;
+  width: 224.56px;
+  height: 80px;
+
+  background: linear-gradient(
+    95.83deg,
+    #1c75bc -22.22%,
+    rgba(28, 117, 188, 0) 54.4%,
+    #1c75bc 125.13%
+  );
+  backdrop-filter: blur(4.85px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+
+.blog-read-more-btn {
+  position: relative;
+  filter: drop-shadow(0px 0px 20px #1c75bc4d);
+  background: radial-gradient(
+        circle at 100% 100%,
+        #000000 0,
+        #000000 9px,
+        transparent 9px
+      )
+      0% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 0 100%, #000000 0, #000000 9px, transparent 9px)
+      100% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 100% 0, #000000 0, #000000 9px, transparent 9px)
+      0% 100%/10px 10px no-repeat,
+    radial-gradient(circle at 0 0, #000000 0, #000000 9px, transparent 9px) 100%
+      100%/10px 10px no-repeat,
+    linear-gradient(#000000, #000000) 50% 50% / calc(100% - 2px)
+      calc(100% - 20px) no-repeat,
+    linear-gradient(#000000, #000000) 50% 50% / calc(100% - 20px)
+      calc(100% - 2px) no-repeat,
+    linear-gradient(126deg, #1c75bc 0%, transparent 64%, #1c75bc 100%);
+}
