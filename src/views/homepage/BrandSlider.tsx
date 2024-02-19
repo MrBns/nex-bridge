@@ -1,14 +1,13 @@
-"use client";
-
 import React from "react";
-import Img from "./helper/Img";
+
 import {
   BrandLogo1,
   BrandLogo2,
   BrandLogo3,
   BrandLogo4,
   BrandLogo5,
-} from "../assets/img";
+} from "../../assets/img";
+import Img from "@/components/helper/Img";
 
 type Props = {};
 

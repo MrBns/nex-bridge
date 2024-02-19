@@ -1,6 +1,6 @@
 import React from "react";
-import { MOBILE_TRADITIONAL_FINANCE } from "../assets/img";
-import Img from "./helper/Img";
+import { MOBILE_TRADITIONAL_FINANCE } from "../../assets/img";
+import Img from "../../components/helper/Img";
 
 type Props = {};
 

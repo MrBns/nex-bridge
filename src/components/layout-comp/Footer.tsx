@@ -1,6 +1,5 @@
 import React from "react";
-import ArrowIcon from "../assets/ArrowIcon";
-import Img from "./helper/Img";
+import Img from "../helper/Img";
 
 type Props = {};
 
