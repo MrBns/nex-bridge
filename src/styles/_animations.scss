@@ -50,5 +50,14 @@
   }
 }
 
-
-
+//Word Typing animation;
+#word-change-and-typing-animation-span {
+  .cursor {
+    animation: blinking 1.5s infinite ease-in alternate;
+  }
+  @keyframes blinking {
+    50% {
+      color: transparent;
+    }
+  }
+}

@@ -12,7 +12,7 @@ export default function GradientBorderButton(props: TProps) {
     <button
       onClick={props.onClick}
       className={
-        `gradient-button ${props.variant} text-[#1C75BC] font-medium  rounded-[10px] ` +
+        `gradient-button ${props.variant} text-[#1C75BC]  rounded-[10px] ` +
         props.className
       }
     >

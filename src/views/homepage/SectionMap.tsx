@@ -7,7 +7,7 @@ export default function SectionMap() {
     <section id="" className="py-24 pb-40">
       <div className="my-container">
         <div className="my-16">
-          <h1 className="text-5xl leading-snug text-center">
+          <h1 className="text-2xl lg:text-5xl leading-snug text-center">
             NexBridge is registered as a digital asset issuer in the <br />
             <span className="font-monument blue-gradient-text">El Salvador</span> National Commission of Digital Assets registry.
           </h1>
@@ -17,7 +17,7 @@ export default function SectionMap() {
         <div className="map-img">
           <Img src={IMG_POLYGON_WORLD_MAP.src} className=" ms-auto" alt="" />
         </div>
-        <div className="highlights absolute top-[100px] left-[100px] w-[1341px]">
+        <div className="highlights absolute top-[15%] left-[-20%] lg:top-[100px] lg:left-[100px] w-[300px] lg:w-[1341px]">
           <SvgMapHighlight />
         </div>
       </div>

@@ -14,9 +14,11 @@
     #1c75bc 125.13%
   );
   background-size: cover;
-  animation: _button-animation 2s linear infinite;
   isolation: isolate;
   transition: 0.2s;
+  &:not(.no-animation) {
+    animation: _button-animation 2s linear infinite;
+  }
 
   &.glow {
     filter: drop-shadow(0px 0px 20px #033054);

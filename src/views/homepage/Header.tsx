@@ -1,42 +1,50 @@
 import { ICON_RIGHT_ARROW } from "@/assets/icon";
 import Img from "@/components/helper/Img";
 import GradientBorderButton from "@/components/shared/buttons/GradientBorderButton";
+import "./header.effect";
 
 export default function Header() {
   return (
     <header
-      className="header p-2 min-h-screen relative isolate"
+      className="header p-2 min-h-[700px]  lg:min-h-screen relative isolate grid place-items-center"
       id="homepage-header"
     >
-      <div className="absolute object-cover h-full -z-[1]">
-        <video autoPlay controls={false} playsInline muted>
+      <div className="absolute h-full w-full -z-[1]  left-0 top-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          controls={false}
+          playsInline
+          muted
+        >
           <source src={"/vid/header_animation.mp4"} />
         </video>
       </div>
       <div className="my-container text-white">
-        <div className="mt-[300px]">
-          <h1 className="leading-tight text-center font-montserrat uppercase">
-            <span className="text-[102px] font-thin">Gateway to a &nbsp;</span>
-            <span className="text-[102px] blue-gradient-text">New</span>
-            <span className="text-[102px] block blue-gradient-text ">
-              Financial Era
-            </span>
+        <div className="">
+          <h1 className="leading-none text-4xl md:text-[100px] text-center  font-montserrat uppercase">
+            <span className=" font-thin">Gateway to a </span>
+            <span className=" blue-gradient-text">New</span>
+            <span className=" block blue-gradient-text ">Financial Era</span>
           </h1>
-          <h5 className="text-[33px] uppercase text-center">
-            <span className="">For</span>{" "}
-            <span className="italic blue-gradient-text"></span>{" "}
-          </h5>
+          <div className="text-xl lg:text-[33px] uppercase text-center my-8 flex justify-center ">
+            <h5 className="">For &nbsp;</h5>
+            <h5 className="italic" id="word-change-and-typing-animation-span">
+              <span className="animation-word  blue-gradient-text lg:px-1"></span>
+              <span className="cursor">|&nbsp;</span>
+            </h5>
+          </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center my-16">
             <GradientBorderButton
               variant="glow"
-              className="[--border-width:3px] text-white active:!text-blue-400 px-10 py-5 uppercase"
+              className="[--border-width:3px] text-white active:!text-blue-400 font-bold px-10 py-5"
             >
-              Explore Now{" "}
+              Contact Us
               <Img
                 src={ICON_RIGHT_ARROW.src}
                 alt=""
-                className="inline-block ms-2 "
+                className="inline-block ms-6 "
               />
             </GradientBorderButton>
           </div>

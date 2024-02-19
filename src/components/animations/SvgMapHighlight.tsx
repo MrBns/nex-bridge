@@ -8,7 +8,7 @@ export default function SvgMapHighlight(props: TProps) {
   return (
     <svg
       width="100%"
-      height="670"
+      // height=""
       viewBox="0 0 1341 670"
       fill="none"
       // eslint-disable-next-line react-svg/no-unused-ids-in-svg
