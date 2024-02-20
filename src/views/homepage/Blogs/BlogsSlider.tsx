@@ -35,10 +35,10 @@ function BlogItem({
       <p className="tracking-wide uppercase text-[15px] leading-[18px] lg:text-[20px] lg:leading-[30px] text-[#C4C4C4]">
         {category}
       </p>
-      <p className="text-[22px] lg:heading-6 font-semibold text-center mt-5">
+      <p className="text-[22px] lg:text-[32px] lg:leading-[40px] font-semibold text-center mt-5">
         {title}
       </p>
-      <p className="mt-5 text-[12px] lg:heading-8 text-center text-[#C4C4C4]">
+      <p className="mt-5 text-[12px] lg:text-[16px] lg:leading-[26px] text-center text-[#C4C4C4]">
         {time}
       </p>
       <button className="blog-read-more-btn text-[#1C75BC] font-medium bg-black rounded-[10px] px-8 lg:px-14 py-3 mt-8">
@@ -46,11 +46,13 @@ function BlogItem({
       </button>
     </div>
   ) : (
-    <div className="h-[300px] lg:h-[439px] border-y border-[#C4C4C4] pt-10 pb-10 lg:pb-20">
+    <div className="h-[300px] lg:h-[439px] border-y border-[#C4C4C4] pt-10 pb-10 lg:pb-20 flex flex-col">
       <p className="uppercase tracking-[5px] text-[20px]">{category}</p>
-      <p className="font-semibold heading-7 lg:heading-6 mt-10">{title}</p>
+      <p className="font-semibold text-[16px] leading-[26px] lg:text-[32px] lg:leading-[40px] mt-10">
+        {title}
+      </p>
       <p
-        className={`${font.className} mt-16 text-end heading-6 heading-5 font-bold`}
+        className={`${font.className} mt-auto text-end text-[32px] leading-[40px] font-bold`}
       >
         {time}
       </p>
