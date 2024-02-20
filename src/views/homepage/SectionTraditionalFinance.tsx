@@ -7,12 +7,12 @@ type Props = {};
 
 function SectionTraditionalFinance({}: Props) {
   return (
-    <div className="my-container mx-5 lg:mx-auto flex flex-col lg:flex-row justify-between gap-10 mt-20 text-white relative">
-      <div className="w-full xl:w-[75%] p-10 rounded-[25px] lg:rounded-[50px] flex flex-col lg:pt-10 lg:pb-16 lg:pl-24 lg:pr-28 bg-[url('/ready-to-take-bg.svg')] bg-cover bg-no-repeat bg-bottom">
-        <p
-          data-aos
-          className="lg:text-[54px] lg:leading-[58px] xl:text-[83.63px] xl:leading-[86px] font-medium"
-        >
+    <div className="my-container mx-5 lg:mx-auto flex flex-col lg:flex-row justify-between gap-10 mt-10 lg:mt-20 text-white relative">
+      <div
+        data-aos
+        className="w-full pt-36 sm:pt-40 xl:w-[75%] p-10 rounded-[25px] lg:rounded-[50px] flex flex-col lg:pt-10 lg:pb-16 lg:pl-24 lg:pr-28 bg-[url('/ready-to-take-bg.svg')] bg-cover bg-no-repeat bg-bottom"
+      >
+        <p className="lg:text-[54px] lg:leading-[58px] xl:text-[83.63px] xl:leading-[86px] font-medium">
           <span className="lg:text-[32px] lg:leading-[36px] xl:text-[48px] font-extralight">
             We envision a future where
           </span>
@@ -21,7 +21,7 @@ function SectionTraditionalFinance({}: Props) {
         </p>
         <GradientBorderButton
           variant="minimal"
-          className="mt-20 [--border-width:2px] w-max bg-black text-white font-medium px-8 py-6 rounded-[15px] flex items-center gap-3"
+          className="mt-5 lg:mt-20 [--border-width:2px] w-max bg-black text-white font-medium px-5 py-4 lg:px-8 lg:py-6 rounded-[15px] flex items-center gap-3"
         >
           Contact us
           <svg
@@ -41,7 +41,7 @@ function SectionTraditionalFinance({}: Props) {
       </div>
       <Img
         aos
-        className="absolute right-5 bottom-5 lg:right-0 lg:bottom-0 xl:bottom-auto w-1/5 lg:w-1/3 xl:w-auto"
+        className="absolute w-1/2 md:w-1/6 -top-20 left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-auto lg:-top-0 lg:right-0 lg:bottom-0 xl:bottom-auto lg:w-1/3 xl:w-auto"
         src={IMG_MOBILE_TRADITIONAL_FINANCE.src}
         alt=""
       />

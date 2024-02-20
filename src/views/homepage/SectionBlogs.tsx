@@ -57,7 +57,7 @@ function SectionBlogs({}: Props) {
         <SectionBlogsSlider data={BLOGS_DATA} />
       </div>
 
-      <button className="mt-20 mx-auto w-max flex items-center gap-3 py-3 px-3 lg:py-5 lg:px-10 rounded-[15px] border border-white">
+      <button className="mt-20 mx-auto w-max flex items-center gap-3 py-3 px-3 lg:py-5 lg:px-10 rounded-[15px] border border-white hover:scale-105 active:scale-100 transition-transform">
         <p className="uppercase font-semibold">Read more articles</p>
         <svg
           width="101"
