@@ -1,4 +1,10 @@
-import { IMG_ILLST_INDUSTRY_LEADER, IMG_ILLST_REGISTER_ISSUER, IMG_ILLUST_GLOBAL_PRESENCE, IMG_LILLST_FINANCIAL_KNOW_HOW } from "@/assets/img";
+import {
+  IMG_ILLST_INDUSTRY_LEADER,
+  IMG_ILLST_REGISTER_ISSUER,
+  IMG_ILLUST_GLOBAL_PRESENCE,
+  IMG_LILLST_FINANCIAL_KNOW_HOW,
+  IMG_WHY_CHOOSE_US_WAVE,
+} from "@/assets/img";
 import Img from "@/components/helper/Img";
 
 const WHY_CHOOSE_US_CARD_DATA = [
@@ -30,23 +36,37 @@ const WHY_CHOOSE_US_CARD_DATA = [
 
 export default function SectionWhyChooseUs() {
   return (
-    <section id="section-why-choose-us">
-      <div className="my-container px-10">
+    <section id="section-why-choose-us" className="relative">
+      <div className="h-[100px] lg:h-[250px] relative max-w-[1920px] mx-auto z-10">
+        <Img
+          src={IMG_WHY_CHOOSE_US_WAVE.src}
+          alt="nex-bridge-wave"
+          className="absolute top-[0%] lg:-top-[50%] left-0 lg:opacity-30"
+        />
+      </div>
+      <div className="my-container lg:px-10">
         <div className="mb-20">
-          <h1 className="text-[100px] leading-tight font-bold">
+          <h1 className="text-5xl lg:text-[100px] leading-tight font-bold">
             Why <br />
             Choose Us ?
           </h1>
         </div>
 
         <div className="">
-          <div className="flex gap-5">
+          <div className="flex flex-wrap">
             {WHY_CHOOSE_US_CARD_DATA.map((d, idx) => (
-              <div key={idx + d.id} className="w-3/12 group rounded-3xl p-7 hover:scale-105 transition-all duration-500">
-                <Img src={d.img} alt={d.title} className="mb-8 opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[20deg]" />
+              <div
+                key={idx + d.id}
+                className="w-1/2 lg:w-3/12 group rounded-3xl p-2 lg:p-7 hover:scale-105 transition-all duration-500"
+              >
+                <Img
+                  src={d.img}
+                  alt={d.title}
+                  className="mb-8 h-[100px] opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[20deg]"
+                />
                 <div className="">
-                  <h1 className="text-3xl mb-4 font-semibold">{d.title}</h1>
-                  <p>{d.desc}</p>
+                  <h1 className="lg:text-3xl mb-4 font-semibold">{d.title}</h1>
+                  <p className="text-xs">{d.desc}</p>
                 </div>
               </div>
             ))}

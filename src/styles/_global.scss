@@ -1,0 +1,44 @@
+.slider-shadow::before,
+.slider-shadow::after {
+  content: "";
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-image: linear-gradient(90deg, #000, transparent);
+}
+
+.slider-shadow::after {
+  left: auto;
+  right: 0;
+  background-image: linear-gradient(270deg, #000, transparent);
+}
+
+.slider-anim {
+  animation: toRight 40s linear infinite;
+}
+
+@keyframes toRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-shadow::before,
+  .slider-shadow::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-image: linear-gradient(90deg, #000, transparent);
+  }
+}

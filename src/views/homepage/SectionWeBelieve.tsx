@@ -3,9 +3,9 @@ import Img from "@/components/helper/Img";
 
 function CountCard({ amount = "", label = "" }) {
   return (
-    <div className="p-5 text-center flex-shrink-0 ">
-      <h1 className="text-[56px] font-bold">{amount}</h1>
-      <p className="text-lg">{label}</p>
+    <div className="p-5 text-center flex-shrink-0 w-1/3 ">
+      <h1 className="text-2xl md:text-[56px] font-bold">{amount}</h1>
+      <p className="text-sm md:text-lg">{label}</p>
     </div>
   );
 }
@@ -14,12 +14,15 @@ export default function SectionWeBelieve() {
   return (
     <section id="we-believe">
       <div className="my-container text-white">
-        <div className="max-w-[1316px] py-40 mx-auto">
-          <div className="text-center mt-52">
-            <hgroup className="titles text-[96px]">
-              <h1 className="flex justify-center gap-5 items-center ">
-                <span className="leading-[0.8] mt-8">We believe that </span> <Img src={IMG_NEX_BRIDGE_WHITE_LOGO.src} className="inline-block h-[115px]" alt="" />
+        <div className="max-w-[1316px] py-10 lg:py-40 mx-auto">
+          <div className="text-center lg:mt-26">
+            <hgroup className="titles text-4xl lg:text-[96px]">
+              <h1 className="flex justify-center flex-col md:flex-row  mb-4 lg:mb-0 gap-2 items-center ">
+                <span className="leading-[0.8] lg:leading-snug  mt-8">We believe that </span> <Img src={IMG_NEX_BRIDGE_WHITE_LOGO.src} className="inline-block h-[50px] lg:h-[115px]" alt="" />
               </h1>
+              {/* <h1 className="flex justify-center gap-5 items-center ">
+                <span className="leading-[0.8] mt-8 flex-shrink-0">We believe that </span> <Img src={IMG_NEX_BRIDGE_WHITE_LOGO.src} className="inline-block h-[30px] lg:h-[115px]" alt="" />
+              </h1> */}
               <h1 className="">
                 can <span className="we-believe-change-text font-bold"> Change </span>the world.
               </h1>
@@ -35,9 +38,9 @@ export default function SectionWeBelieve() {
           <div className="mt-20">
             <div className="flex items-center">
               <CountCard amount={"500+"} label="successful Project" />
-              <hr className="line flex-1"></hr>
+              <hr className="line flex-1 hidden md:block"></hr>
               <CountCard amount={"98%"} label="Satisfied Client" />
-              <hr className="line flex-1"></hr>
+              <hr className="line flex-1 hidden md:block"></hr>
               <CountCard amount={"35+"} label="Handled Countries" />
             </div>
           </div>

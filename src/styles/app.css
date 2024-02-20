@@ -7,7 +7,7 @@
     @apply text-white;
   }
   .my-container {
-    @apply max-w-[1635px] mx-auto;
+    @apply max-w-[1635px] mx-auto px-5 md:px-3;
   }
 
   #homepage-header {
@@ -30,6 +30,9 @@
   #main-navbar.navbar-scrolled {
     @apply bg-darkBlue;
   }
+  #main-navbar .navbar-content-show{
+    @apply !block;
+  }
 }
 
 @layer utilities {
@@ -49,29 +52,6 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  .blog-read-more-btn {
-    position: relative;
-    filter: drop-shadow(0px 0px 20px #1c75bc4d);
-    background: radial-gradient(
-          circle at 100% 100%,
-          #000000 0,
-          #000000 9px,
-          transparent 9px
-        )
-        0% 0%/10px 10px no-repeat,
-      radial-gradient(circle at 0 100%, #000000 0, #000000 9px, transparent 9px)
-        100% 0%/10px 10px no-repeat,
-      radial-gradient(circle at 100% 0, #000000 0, #000000 9px, transparent 9px)
-        0% 100%/10px 10px no-repeat,
-      radial-gradient(circle at 0 0, #000000 0, #000000 9px, transparent 9px)
-        100% 100%/10px 10px no-repeat,
-      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 2px)
-        calc(100% - 20px) no-repeat,
-      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 20px)
-        calc(100% - 2px) no-repeat,
-      linear-gradient(126deg, #1c75bc 0%, transparent 64%, #1c75bc 100%);
   }
 
   .blue-partial-border {
@@ -110,86 +90,6 @@
         #1c75bc 100%
       );
   }
-
-  .heading-1 {
-    font-size: 200px;
-  }
-
-  .heading-2 {
-    font-size: 190px;
-  }
-
-  .heading-3 {
-    font-size: 100px;
-    line-height: 110px;
-  }
-
-  .heading-4 {
-    font-size: 100px;
-  }
-
-  .heading-5 {
-    font-size: 56px;
-  }
-
-  .heading-6 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .heading-7 {
-    font-size: 16px;
-    list-style: 26px;
-  }
-
-  .heading-8 {
-    font-size: 16px;
-    line-height: 26px;
-  }
 }
 
-.slider-shadow::before,
-.slider-shadow::after {
-  content: "";
-  width: 500px;
-  height: 50px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  background-image: linear-gradient(90deg, #000, transparent);
-}
 
-.slider-shadow::after {
-  left: auto;
-  right: 0;
-  background-image: linear-gradient(270deg, #000, transparent);
-}
-
-.slider-anim {
-  --ms: 40s;
-  animation: toRight var(--ms) linear infinite;
-}
-
-@keyframes toRight {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .slider-shadow::before,
-  .slider-shadow::after {
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    background-image: linear-gradient(90deg, #000, transparent);
-  }
-}

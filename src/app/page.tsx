@@ -6,6 +6,7 @@ import Blogs from "@/views/homepage/Blogs/Blogs";
 import BrandSlider from "@/views/homepage/BrandSlider";
 import SectionWhyChooseUs from "@/views/homepage/SectionWhyChooseUs";
 import TraditionalFinance from "@/views/homepage/TraditionalFinance";
+import SectionMap from "@/views/homepage/SectionMap";
 import WantToConnect from "@/views/homepage/WantToConnect";
 
 export default function Home() {
@@ -14,7 +15,9 @@ export default function Home() {
       <Header />
       <SectionWeBelieve />
       <SectionWhyChooseUs />
+      <SectionMap />
       <TraditionalFinance />
+
       <BrandSlider />
       <Blogs />
       <WantToConnect />
