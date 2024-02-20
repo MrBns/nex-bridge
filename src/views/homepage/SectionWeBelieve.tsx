@@ -52,12 +52,12 @@ export default function SectionWeBelieve() {
                 </h1>
               </hgroup>
               <div className="max-w-[883px] mx-auto my-12">
-                <p className="">
-                  NexBridge is a digital asset issuer, forging a link between
+                <p id="typedtext">
+                  {/* NexBridge is a digital asset issuer, forging a link between
                   traditional finance and digital assets. We empower investors
                   with access to a new spectrum of tokenized investment
                   opportunities, while enabling asset owners to penetrate global
-                  liquid capital markets.
+                  liquid capital markets. */}
                 </p>
               </div>
 
@@ -88,6 +88,7 @@ export default function SectionWeBelieve() {
       </section>
 
       <Script src="/js/statanimate.js" defer strategy="lazyOnload"></Script>
+      <Script src="/js/typedtext.js" defer strategy="lazyOnload"></Script>
     </>
   );
 }
