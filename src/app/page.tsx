@@ -10,6 +10,7 @@ import SectionBlogs from "@/views/homepage/SectionBlogs";
 import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
 import "@/lib/client/scroll-animation.effect";
 
+
 export default function Home() {
   return (
     <main className="bg-black">
@@ -18,7 +19,6 @@ export default function Home() {
       <SectionWhyChooseUs />
       <SectionMap />
       <SectionTraditionalFinance />
-
       <BrandSlider />
       <SectionBlogs />
       <SectionWantToConnect />
