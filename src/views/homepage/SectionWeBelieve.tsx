@@ -8,14 +8,11 @@ import Script from "next/script";
 function CountCard({ amount = "", label = "", amountSuffix = "" }) {
   return (
     <div className="p-5 text-center flex-shrink-0 w-1/3 ">
-      <h1
-        data-count={amount}
-        data-count-suffix={amountSuffix}
-        className="text-2xl md:text-[56px] font-bold"
-      >
-        0{amountSuffix}
+      <h1 className="text-2xl md:text-[56px] font-bold">
+        <span className="" data-count={amount} data-count-ms="100"></span>
+        <span>{amountSuffix}</span>
       </h1>
-      <p className="text-sm md:text-lg">{label}</p>
+      <p className="text-sm lg:mt-3 md:text-lg">{label}</p>
     </div>
   );
 }
@@ -76,7 +73,7 @@ export default function SectionWeBelieve() {
                   />
                   <hr className="line flex-1 hidden md:block"></hr>
                   <CountCard
-                    amount="35"
+                    amount="5"
                     amountSuffix="+"
                     label="Handled Countries"
                   />
