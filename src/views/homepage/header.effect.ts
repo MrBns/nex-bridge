@@ -1,11 +1,16 @@
 "use client";
 import isDomReady from "@/lib/client/isDomReady";
-
+import wait from "@/lib/client/wait";
 
 isDomReady()
   .completed()
   .then(() => {
-    const words = ["BITCOIN MAXIMALISTS ", "VISIONARIES ", "WEALTH ", "ENTERPRUNER "],
+    const words = [
+        "BITCOIN MAXIMALISTS ",
+        "VISIONARIES ",
+        "WEALTH ",
+        "ENTERPRUNER ",
+      ],
       colors = ["blue", "green", "yellow", "red"],
       text = document.querySelector(
         "#word-change-and-typing-animation-span .animation-word"
@@ -63,5 +68,37 @@ isDomReady()
     let gen = generator();
 
     printChar(words[gen.next().value]);
-
   });
+
+//Header Text Animation;
+isDomReady()
+  .completed()
+  .then(async () => {
+    const background_animated_video = document.getElementById(
+      "header-animated-video"
+    ) as HTMLVideoElement;
+
+    const all_element_wrapper = document.querySelector(
+      ".header-all-element-wrapper"
+    )!;
+
+    const { top } = background_animated_video.getBoundingClientRect();
+
+    //checking video current time by Animation Frame loop;
+    async function checkingIfPlaying() {
+      await wait(100);
+
+      if (background_animated_video.currentTime > 0) {
+        //Taking element inside of view;
+        setTimeout(() => {
+          all_element_wrapper.classList.remove("out-of-side");
+        }, 500);
+
+        return;
+      } else {
+        checkingIfPlaying();
+      }
+    }
+    requestAnimationFrame(checkingIfPlaying);
+  })
+  .catch((e) => console.error(e));

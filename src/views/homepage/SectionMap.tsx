@@ -6,7 +6,7 @@ export default function SectionMap() {
   return (
     <section id="" className="py-24 pb-40">
       <div className="my-container">
-        <div className="my-16">
+        <div data-aos className="my-16">
           <h1 className="text-2xl lg:text-5xl leading-snug text-center">
             NexBridge is registered as a digital asset issuer in the <br />
             <span className="font-monument blue-gradient-text">El Salvador</span> National Commission of Digital Assets registry.

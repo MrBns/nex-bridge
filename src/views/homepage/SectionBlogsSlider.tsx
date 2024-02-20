@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import { Space_Grotesk } from "next/font/google";
-import { BlogType } from "./Blogs";
+import { BlogType } from "./SectionBlogs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useWindowWidth } from "../../../lib/hooks/useWindowWidth";
+import { useWindowWidth } from "../../lib/hooks/useWindowWidth";
 
 type Props = {
   data: BlogType[];
@@ -58,7 +58,7 @@ function BlogItem({
   );
 }
 
-function BlogsSlider({ data }: Props) {
+function SectionBlogsSlider({ data }: Props) {
   const [centerId, setCenterId] = useState(data.length >= 1 ? data[1].id : "");
   const { width } = useWindowWidth();
 
@@ -107,4 +107,4 @@ function BlogsSlider({ data }: Props) {
   );
 }
 
-export default BlogsSlider;
+export default SectionBlogsSlider;

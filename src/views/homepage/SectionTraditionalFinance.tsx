@@ -5,11 +5,14 @@ import GradientBorderButton from "@/components/shared/buttons/GradientBorderButt
 
 type Props = {};
 
-function TraditionalFinance({}: Props) {
+function SectionTraditionalFinance({}: Props) {
   return (
     <div className="my-container mx-5 lg:mx-auto flex flex-col lg:flex-row justify-between gap-10 mt-20 text-white relative">
       <div className="w-full xl:w-[75%] p-10 rounded-[25px] lg:rounded-[50px] flex flex-col lg:pt-10 lg:pb-16 lg:pl-24 lg:pr-28 bg-[url('/ready-to-take-bg.svg')] bg-cover bg-no-repeat bg-bottom">
-        <p className="lg:text-[54px] lg:leading-[58px] xl:text-[83.63px] xl:leading-[86px] font-medium">
+        <p
+          data-aos
+          className="lg:text-[54px] lg:leading-[58px] xl:text-[83.63px] xl:leading-[86px] font-medium"
+        >
           <span className="lg:text-[32px] lg:leading-[36px] xl:text-[48px] font-extralight">
             We envision a future where
           </span>
@@ -37,6 +40,7 @@ function TraditionalFinance({}: Props) {
         </GradientBorderButton>
       </div>
       <Img
+        aos
         className="absolute right-5 bottom-5 lg:right-0 lg:bottom-0 xl:bottom-auto w-1/5 lg:w-1/3 xl:w-auto"
         src={IMG_MOBILE_TRADITIONAL_FINANCE.src}
         alt=""
@@ -45,4 +49,4 @@ function TraditionalFinance({}: Props) {
   );
 }
 
-export default TraditionalFinance;
+export default SectionTraditionalFinance;

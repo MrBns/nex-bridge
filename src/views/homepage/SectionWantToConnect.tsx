@@ -2,9 +2,9 @@ import React from "react";
 
 type Props = {};
 
-function WantToConnect({}: Props) {
+function SectionWantToConnect({}: Props) {
   return (
-    <div className="flex flex-col w-full">
+    <section className="flex flex-col w-full overflow-x-hidden">
       <div
         id="want-to-connect"
         // bg-[url('/footer-wireframe.svg')]
@@ -42,8 +42,8 @@ function WantToConnect({}: Props) {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default WantToConnect;
+export default SectionWantToConnect;

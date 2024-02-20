@@ -61,3 +61,27 @@
     }
   }
 }
+
+.header-all-element-wrapper {
+  transition: 1s;
+  opacity: 1;
+  transform: scale(1);
+
+  &.out-of-side {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+//Global Aos Animations;
+[data-aos] {
+  transition: 0.8s;
+  &:not(.animate) {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  &.animate {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
