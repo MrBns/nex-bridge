@@ -28,10 +28,9 @@
     background-position: center center;
   }
   #main-navbar.navbar-scrolled {
-    /* @apply bg-darkBlue; */
-    @apply backdrop-blur-lg bg-black/15;
+    @apply backdrop-blur-lg bg-black/15 py-2;
   }
-  #main-navbar .navbar-content-show{
+  #main-navbar .navbar-content-show {
     @apply !block;
   }
 }
@@ -92,5 +91,3 @@
       );
   }
 }
-
-

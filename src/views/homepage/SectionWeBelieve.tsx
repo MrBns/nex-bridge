@@ -26,13 +26,13 @@ export default function SectionWeBelieve() {
             <div className="text-center lg:mt-26">
               <hgroup
                 data-aos
-                className="titles leading-[0.8] lg:leading-tight text-4xl lg:text-[96px]"
+                className="titles leading-[0.8] lg:leading-tight text-4xl lg:text-[70px] 2xl:text-[96px]"
               >
-                <h1 className="flex justify-center flex-col md:flex-row  mb-4 lg:mb-0 gap-2 items-center ">
+                <h1 className="flex justify-center flex-col lg:flex-row  mb-4 lg:mb-0 gap-2 items-center ">
                   <span className="  mt-8">We believe that </span>{" "}
                   <Img
                     src={IMG_NEX_BRIDGE_WHITE_LOGO.src}
-                    className="inline-block h-[50px] lg:h-[115px]"
+                    className="inline-block h-[50px] lg:h-[80px] 2xl:h-[115px]"
                     alt=""
                   />
                 </h1>

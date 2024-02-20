@@ -1,4 +1,4 @@
-import { IMG_NEXT_BRIDGE_LOGO } from "@/assets/img";
+import { IMG_NEXBRIDGE_WHITE_LOGO, IMG_NEXT_BRIDGE_LOGO } from "@/assets/img";
 import Image from "next/image";
 import Script from "next/script";
 import "./navbar.effect";
@@ -38,20 +38,20 @@ export default function Navbar(props: TProps) {
   return (
     <>
       {/* <Script src={new URL("./navbar.effect.ts").pathname} strategy="afterInteractive" /> */}
-      <nav id="main-navbar" className="text-white  fixed  w-screen z-[100]">
+      <nav id="main-navbar" className="text-white fixed  w-screen z-[100]">
         <div className="my-container">
           <div className="flex items-center">
             <div className="">
               <a href="/#" className="block">
                 <Image
-                  src={IMG_NEXT_BRIDGE_LOGO}
-                  className="mb-5"
+                  src={IMG_NEXBRIDGE_WHITE_LOGO}
+                  className="mb-5  w-[260px]"
                   alt="nex-bridge-logo"
                 />
               </a>
             </div>
 
-            <div className="ms-auto flex-shrink-0 me-2 md:hidden">
+            <div className="ms-auto flex-shrink-0 me-2 lg:hidden">
               <button id="navbar-toggle-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,21 +68,36 @@ export default function Navbar(props: TProps) {
 
             <div
               id="navbar-menu-el"
-              className="flex-1  hidden md:block fixed md:static w-full h-full left-0 lg:w-auto lg:h-auto top-0 bg-darkBlue md:bg-transparent z-50"
+              className="flex-1  hidden lg:block absolute lg:static w-full h-screen left-0 lg:w-auto lg:h-auto top-0 bg-black lg:bg-transparent z-50"
             >
-              <ul  className="flex flex-col md:flex-row p-10 md:p-0 justify-center">
+              <ul className="flex flex-col lg:flex-row p-10 lg:p-0 justify-center">
                 {NAVBAR_MENU_DATA.map((data, index) => (
                   <li key={`${index}-${data.slug}`} className="p-4">
-                    <a href="" className="text-4xl md:text-base text-center block md:inline-block">
+                    <a
+                      href=""
+                      className="text-4xl lg:text-base text-center block lg:inline-block"
+                    >
                       {data.name}
                     </a>
                   </li>
                 ))}
-                <li className="md:hidden mt-5">
+                <li className="lg:hidden mt-5">
                   <button
                     id="navbar-menu-close-button"
-                    className="text-4xl w-full bg-red-500/10 py-3 rounded-2xl lg:text-base text-red-100 text-center block "
+                    className="text-4xl w-full  py-3 rounded-2xl lg:text-base text-[#0F75BC] text-center flex items-center justify-center gap-5"
                   >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="3rem"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="m2.87 7.75l1.97 1.97a.75.75 0 1 1-1.06 1.06L.53 7.53L0 7l.53-.53l3.25-3.25a.75.75 0 0 1 1.06 1.06L2.87 6.25h9.88a3.25 3.25 0 0 1 0 6.5h-2a.75.75 0 0 1 0-1.5h2a1.75 1.75 0 1 0 0-3.5z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
                     Go Back
                   </button>
                 </li>
