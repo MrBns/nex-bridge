@@ -1,5 +1,5 @@
 import React from "react";
-import BlogsSlider from "./BlogsSlider";
+import SectionBlogsSlider from "./SectionBlogsSlider";
 
 type Props = {};
 
@@ -40,7 +40,7 @@ const BLOGS_DATA = [
 
 export type BlogType = (typeof BLOGS_DATA)[number];
 
-function Blogs({}: Props) {
+function SectionBlogs({}: Props) {
   return (
     <div className="w-full pt-20 pb-40">
       <div className="bg-blog-gradient bg-top h-[70px] md:h-[100px]"></div>
@@ -54,7 +54,7 @@ function Blogs({}: Props) {
       </div>
 
       <div className="my-container mx-5 lg:mx-auto mt-10 lg:mt-24">
-        <BlogsSlider data={BLOGS_DATA} />
+        <SectionBlogsSlider data={BLOGS_DATA} />
       </div>
 
       <button className="mt-20 mx-auto w-max flex items-center gap-3 py-3 px-3 lg:py-5 lg:px-10 rounded-[15px] border border-white">
@@ -77,4 +77,4 @@ function Blogs({}: Props) {
   );
 }
 
-export default Blogs;
+export default SectionBlogs;

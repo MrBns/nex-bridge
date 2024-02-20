@@ -20,6 +20,10 @@
   animation: toRight 40s linear infinite;
 }
 
+body.no-scroll{
+  overflow: hidden;
+}
+
 @keyframes toRight {
   0% {
     transform: translateX(-100%);

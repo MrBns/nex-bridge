@@ -2,12 +2,13 @@ import Header from "@/views/homepage/Header";
 import SectionWeBelieve from "@/views/homepage/SectionWeBelieve";
 
 import Footer from "@/components/layout-comp/Footer";
-import Blogs from "@/views/homepage/Blogs/Blogs";
 import BrandSlider from "@/views/homepage/BrandSlider";
 import SectionWhyChooseUs from "@/views/homepage/SectionWhyChooseUs";
-import TraditionalFinance from "@/views/homepage/TraditionalFinance";
 import SectionMap from "@/views/homepage/SectionMap";
-import WantToConnect from "@/views/homepage/WantToConnect";
+import SectionTraditionalFinance from "@/views/homepage/SectionTraditionalFinance";
+import SectionBlogs from "@/views/homepage/SectionBlogs";
+import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
+import "@/lib/client/scroll-animation.effect";
 
 export default function Home() {
   return (
@@ -16,11 +17,11 @@ export default function Home() {
       <SectionWeBelieve />
       <SectionWhyChooseUs />
       <SectionMap />
-      <TraditionalFinance />
+      <SectionTraditionalFinance />
 
       <BrandSlider />
-      <Blogs />
-      <WantToConnect />
+      <SectionBlogs />
+      <SectionWantToConnect />
       <Footer />
     </main>
   );

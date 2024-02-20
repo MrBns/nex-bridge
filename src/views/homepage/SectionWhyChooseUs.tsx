@@ -45,7 +45,7 @@ export default function SectionWhyChooseUs() {
         />
       </div>
       <div className="my-container lg:px-10">
-        <div className="mb-20">
+        <div data-aos className="mb-20">
           <h1 className="text-5xl lg:text-[100px] leading-tight font-bold">
             Why <br />
             Choose Us ?
@@ -57,6 +57,7 @@ export default function SectionWhyChooseUs() {
             {WHY_CHOOSE_US_CARD_DATA.map((d, idx) => (
               <div
                 key={idx + d.id}
+                data-aos
                 className="w-1/2 lg:w-3/12 group rounded-3xl p-2 lg:p-7 hover:scale-105 transition-all duration-500"
               >
                 <Img

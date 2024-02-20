@@ -28,7 +28,8 @@
     background-position: center center;
   }
   #main-navbar.navbar-scrolled {
-    @apply bg-darkBlue;
+    /* @apply bg-darkBlue; */
+    @apply backdrop-blur-lg bg-black/15;
   }
   #main-navbar .navbar-content-show{
     @apply !block;

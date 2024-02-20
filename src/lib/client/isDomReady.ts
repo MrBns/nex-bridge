@@ -7,27 +7,28 @@ export default function isDomReady() {
     loading() {
       return new Promise((resolve) => {
         if (isBrowser) {
-          let state: typeof document.readyState = "loading";
-
-          while (true) {
-            state = document.readyState;
-            if (state === "loading") {
-              return resolve(true);
-            }
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", () => {
+              resolve(true);
+            });
+          } else {
+            resolve(true);
           }
         }
       });
     },
     interactive() {
-      return new Promise((resolve) => {
+      return new Promise(async (resolve) => {
         if (isBrowser) {
-          let state: typeof document.readyState = "loading";
-
-          while (true) {
-            state = document.readyState;
-            if (state === "interactive") {
-              return resolve(true);
-            }
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", () => {
+              resolve(true);
+            });
+          } else if (document.readyState === "interactive") {
+            resolve(true);
+          } else {
+            await wait(10);
+            resolve(true);
           }
         }
       });
@@ -35,14 +36,11 @@ export default function isDomReady() {
     completed() {
       return new Promise(async (resolve) => {
         if (isBrowser) {
-          let state: typeof document.readyState = "loading";
-
-          while (true) {
+          if (document.readyState === "complete") {
+            resolve(true);
+          } else {
             await wait(100);
-            state = document.readyState;
-            if (state === "complete") {
-              return resolve(true);
-            }
+            resolve(true);
           }
         }
       });

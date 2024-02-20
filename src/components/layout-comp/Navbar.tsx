@@ -38,7 +38,7 @@ export default function Navbar(props: TProps) {
   return (
     <>
       {/* <Script src={new URL("./navbar.effect.ts").pathname} strategy="afterInteractive" /> */}
-      <nav id="main-navbar" className="text-white  fixed  w-full z-[100]">
+      <nav id="main-navbar" className="text-white  fixed  w-screen z-[100]">
         <div className="my-container">
           <div className="flex items-center">
             <div className="">
@@ -70,7 +70,7 @@ export default function Navbar(props: TProps) {
               id="navbar-menu-el"
               className="flex-1  hidden md:block fixed md:static w-full h-full left-0 lg:w-auto lg:h-auto top-0 bg-darkBlue md:bg-transparent z-50"
             >
-              <ul className="flex flex-col md:flex-row p-10 md:p-0 justify-center">
+              <ul  className="flex flex-col md:flex-row p-10 md:p-0 justify-center">
                 {NAVBAR_MENU_DATA.map((data, index) => (
                   <li key={`${index}-${data.slug}`} className="p-4">
                     <a href="" className="text-4xl md:text-base text-center block md:inline-block">
