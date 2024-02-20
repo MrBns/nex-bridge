@@ -27,6 +27,7 @@ isDomReady()
       "navbar-menu-close-button"
     );
     const navbar_menu_el = document.getElementById("navbar-menu-el");
+    console.log(navbar_menu_close_button, navbar_menu_el, navbar_toggle_button)
 
     navbar_toggle_button?.addEventListener("click", () => {
       navbar_menu_el?.classList.add("navbar-content-show");

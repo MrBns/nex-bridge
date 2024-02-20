@@ -8,14 +8,11 @@ import Script from "next/script";
 function CountCard({ amount = "", label = "", amountSuffix = "" }) {
   return (
     <div className="p-5 text-center flex-shrink-0 w-1/3 ">
-      <h1
-        data-count={amount}
-        data-count-suffix={amountSuffix}
-        className="text-2xl md:text-[56px] font-bold"
-      >
-        0{amountSuffix}
+      <h1 className="text-2xl md:text-[56px] font-bold">
+        <span className="" data-count={amount} data-count-ms="100"></span>
+        <span>{amountSuffix}</span>
       </h1>
-      <p className="text-sm md:text-lg">{label}</p>
+      <p className="text-sm lg:mt-3 md:text-lg">{label}</p>
     </div>
   );
 }
@@ -29,13 +26,13 @@ export default function SectionWeBelieve() {
             <div className="text-center lg:mt-26">
               <hgroup
                 data-aos
-                className="titles leading-[0.8] lg:leading-tight text-4xl lg:text-[96px]"
+                className="titles leading-[0.8] lg:leading-tight text-4xl lg:text-[70px] 2xl:text-[96px]"
               >
-                <h1 className="flex justify-center flex-col md:flex-row  mb-4 lg:mb-0 gap-2 items-center ">
+                <h1 className="flex justify-center flex-col lg:flex-row  mb-4 lg:mb-0 gap-2 items-center ">
                   <span className="  mt-8">We believe that </span>{" "}
                   <Img
                     src={IMG_NEX_BRIDGE_WHITE_LOGO.src}
-                    className="inline-block h-[50px] lg:h-[115px]"
+                    className="inline-block h-[50px] lg:h-[80px] 2xl:h-[115px]"
                     alt=""
                   />
                 </h1>
@@ -76,7 +73,7 @@ export default function SectionWeBelieve() {
                   />
                   <hr className="line flex-1 hidden md:block"></hr>
                   <CountCard
-                    amount="35"
+                    amount="5"
                     amountSuffix="+"
                     label="Handled Countries"
                   />

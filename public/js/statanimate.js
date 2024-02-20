@@ -4,6 +4,8 @@ const statRoot = document.querySelector(".stat-root");
 const countsEl = document.querySelectorAll("[data-count]");
 
 let isPlayedCountAnimation = false;
+let totalStepTime = 5000;
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -22,23 +24,22 @@ if (statRoot) {
 }
 function startCounting() {
   countsEl.forEach((el) => {
-    const numberToCount = el.getAttribute("data-count");
-    const suffix = el.getAttribute("data-count-suffix");
-    const ms = el.getAttribute("data-count-ms");
-    countToN(Number(numberToCount), el, suffix, ms);
+    const numberToCount = parseInt(el.getAttribute("data-count"));
+
+    let duration = Math.floor(totalStepTime / numberToCount);
+
+    countToN(numberToCount, el, duration);
   });
 }
-function countToN(n, el, suffix, ms) {
+
+function countToN(n, el, duration) {
   let clear;
   let i = 0;
-  clear = setInterval(
-    () => {
-      if (i > n) {
-        return clearInterval(clear);
-      }
-      el.textContent = i + suffix;
-      i += 1;
-    },
-    ms ? Number(ms) : 50
-  );
+  clear = setInterval(() => {
+    if (i > n) {
+      return clearInterval(clear);
+    }
+    el.textContent = i;
+    i++;
+  }, duration);
 }
