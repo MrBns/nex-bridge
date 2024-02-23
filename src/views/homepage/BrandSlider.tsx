@@ -22,11 +22,11 @@ const LOGO_LIST = [
 function BrandSlider({}: Props) {
   return (
     <div className="my-container mx-auto pt-20">
-      <div className="relative lg:slider-shadow overflow-hidden flex flex-nowrap">
+      <div className="relative slider-shadow overflow-hidden flex flex-nowrap">
         <div className="flex items-center justify-between shrink-0 px-0 lg:px-20 w-full  lg:gap-5">
           {LOGO_LIST.map((img, index) => (
             <Img
-              className="h-[30px] lg:h-[42px] w-1/6 md:w-full object-contain lg:shrink-0 "
+              className="h-[30px] lg:h-[42px] w-1/6 object-contain lg:shrink-0 "
               key={"index" + index}
               src={img.src}
               alt=""

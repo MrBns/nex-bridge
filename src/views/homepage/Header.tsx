@@ -27,7 +27,7 @@ export default function Header() {
           />
         </video>
       </div>
-      <div className="my-container text-white header-all-element-wrapper out-of-side">
+      <div className="my-container text-white header-all-element-wrapper">
         <div className="mt-20 lg:mt-0">
           <h1 className="text-center   uppercase">
             <span className=" leading-[1.2] text-4xl lg:text-[37px]">
