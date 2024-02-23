@@ -62,8 +62,11 @@ function SectionWantToConnect({}: Props) {
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x404040,
-            backgroundColor: 0x0
+            color: 0x1c75bc,
+            backgroundColor: 0x0,
+            points: 5.00,
+            spacing: 13.00,
+            showDots: false
           })
         `,
         }}
