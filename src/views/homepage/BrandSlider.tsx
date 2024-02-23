@@ -21,9 +21,19 @@ const LOGO_LIST = [
 
 function BrandSlider({}: Props) {
   return (
-    <div className="my-container mx-auto pt-40">
+    <div className="my-container mx-auto pt-20">
       <div className="relative slider-shadow overflow-hidden flex flex-nowrap">
-        <div className="slider-anim flex items-center justify-between shrink-0 px-10 lg:px-20 w-full min-w-[1100px]  gap-5">
+        <div className="flex items-center justify-between shrink-0 px-0 lg:px-20 w-full  lg:gap-5">
+          {LOGO_LIST.map((img, index) => (
+            <Img
+              className="h-[30px] lg:h-[42px] w-1/6 object-contain lg:shrink-0 "
+              key={"index" + index}
+              src={img.src}
+              alt=""
+            />
+          ))}
+        </div>
+        {/* <div className="slider-anim flex items-center justify-between shrink-0 px-10 lg:px-20 w-full min-w-[1100px]  gap-5">
           {LOGO_LIST.map((img, index) => (
             <Img
               className="h-[30px] lg:h-[42px] shrink-0 "
@@ -32,17 +42,7 @@ function BrandSlider({}: Props) {
               alt=""
             />
           ))}
-        </div>
-        <div className="slider-anim flex items-center justify-between shrink-0 px-10 lg:px-20 w-full min-w-[1100px]  gap-5">
-          {LOGO_LIST.map((img, index) => (
-            <Img
-              className="h-[30px] lg:h-[42px] shrink-0 "
-              key={"index" + index}
-              src={img.src}
-              alt=""
-            />
-          ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

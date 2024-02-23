@@ -8,6 +8,10 @@
   top: 0;
   z-index: 2;
   background-image: linear-gradient(90deg, #000, transparent);
+
+  @media screen and (max-width: 678px) {
+    visibility: hidden;
+  }
 }
 
 .slider-shadow::after {
@@ -20,7 +24,7 @@
   animation: toRight 40s linear infinite;
 }
 
-body.no-scroll{
+body.no-scroll {
   overflow: hidden;
 }
 

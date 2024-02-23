@@ -8,19 +8,19 @@ type TProps = {};
 
 const NAVBAR_MENU_DATA = [
   {
-    name: "About Us",
+    name: "Home",
     onClick: () => {},
-    slug: "about-us",
+    slug: "home",
   },
   {
-    name: "Services",
+    name: "About us",
     onClick: () => {},
-    slug: "services",
+    slug: "about us",
   },
   {
-    name: "Pricing",
+    name: "Vision",
     onClick: () => {},
-    slug: "pricing",
+    slug: "about us",
   },
   {
     name: "Blog",
@@ -29,6 +29,11 @@ const NAVBAR_MENU_DATA = [
   },
   {
     name: "Contact",
+    onClick: () => {},
+    slug: "contact",
+  },
+  {
+    name: "Private Access",
     onClick: () => {},
     slug: "contact",
   },

@@ -74,14 +74,14 @@
 }
 
 //Global Aos Animations;
-[data-aos] {
-  transition: 0.8s;
-  &:not(.animate) {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  &.animate {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
+// [data-aos] {
+//   transition: 0.8s;
+//   &:not(.animate) {
+//     opacity: 0;
+//     transform: translateY(70%);
+//   }
+//   &.animate {
+//     opacity: 1;
+//     transform: translateY(0%);
+//   }
+// }
