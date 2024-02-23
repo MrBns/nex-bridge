@@ -32,6 +32,7 @@ const config: Config = {
         sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
         montserrat: ["var(--font-montserrat)", ...defaultTheme.fontFamily.sans],
         monument: ["Monument Extended", ...defaultTheme.fontFamily.sans],
+        michroma: ["var(--font-michroma)"],
       },
 
       colors: {

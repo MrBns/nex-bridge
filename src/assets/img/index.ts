@@ -10,6 +10,6 @@ export { default as IMG_LOGO_WINDOWS } from "./logo-windows.png";
 export { default as IMG_MOBILE_TRADITIONAL_FINANCE } from "./mobile-traditional-finance.png";
 export { default as IMG_NEXBRIDGE_WHITE_LOGO } from "./nexbridge-white-logo.png";
 export { default as IMG_NEXT_BRIDGE_LOGO } from "./next-bridge-logo.png";
-export { default as IMG_POLYGON_WORLD_MAP } from "./polygon-world-map.png";
+export { default as IMG_PLAYGON_WORLD_MAP } from "./playgon-world-map.png";
 export { default as IMG_WHITE_BLUE_FLAG } from "./white-blue-flag.png";
 export { default as IMG_WHY_CHOOSE_US_WAVE } from "./why-choose-us-wave.png";

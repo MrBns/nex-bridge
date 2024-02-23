@@ -7,7 +7,7 @@ type Props = {};
 
 function SectionTraditionalFinance({}: Props) {
   return (
-    <div className="my-container mx-5 lg:mx-auto flex flex-col lg:flex-row justify-between gap-10 mt-10 lg:mt-20 text-white relative">
+ <div className="my-container mx-5 lg:mx-auto flex flex-col lg:flex-row justify-between gap-10 mt-10 lg:mt-20 text-white relative">
       <div
         data-aos
         className="w-full pt-36 sm:pt-40  p-10 rounded-[25px] lg:rounded-[50px] flex flex-col lg:pt-10 lg:pb-16 lg:pl-24 lg:pr-28 bg-[url('/ready-to-take-bg.svg')] bg-cover bg-no-repeat bg-bottom"
@@ -40,7 +40,6 @@ function SectionTraditionalFinance({}: Props) {
         </GradientBorderButton>
       </div>
       {/* <Img
-        aos
         className="absolute w-1/2 md:w-1/6 -top-20 left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-auto lg:-top-0 lg:right-0 lg:bottom-0 xl:bottom-auto lg:w-1/3 xl:w-auto"
         src={IMG_MOBILE_TRADITIONAL_FINANCE.src}
         alt=""

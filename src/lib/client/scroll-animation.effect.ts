@@ -24,9 +24,10 @@ globalScroll: {
   isDomReady()
     .completed()
     .then(() => {
-      const elements = document.querySelectorAll("[data-aos='true']");
-      elements.forEach((el) => {
-        watchElement(el);
-      });
+      // ! Header Animation;
+      // const elements = document.querySelectorAll("[data-aos='true']");
+      // elements.forEach((el) => {
+      //   watchElement(el);
+      // });
     });
 }

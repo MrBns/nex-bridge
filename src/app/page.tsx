@@ -15,11 +15,11 @@ export default function Home() {
   return (
     <main className="bg-black">
       <Header />
+      <BrandSlider />
       <SectionWeBelieve />
       <SectionWhyChooseUs />
       <SectionMap />
       <SectionTraditionalFinance />
-      <BrandSlider />
       <SectionBlogs />
       <SectionWantToConnect />
       <Footer />

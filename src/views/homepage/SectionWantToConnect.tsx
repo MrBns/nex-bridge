@@ -53,7 +53,7 @@ function SectionWantToConnect({}: Props) {
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
-          VANTA.NET({
+  VANTA.NET({
             el: "#want-to-connect",
             mouseControls: true,
             touchControls: true,

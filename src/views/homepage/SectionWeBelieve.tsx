@@ -8,14 +8,11 @@ import Script from "next/script";
 function CountCard({ amount = "", label = "", amountSuffix = "" }) {
   return (
     <div className="p-5 text-center flex-shrink-0 w-1/3 ">
-      <h1
-        data-count={amount}
-        data-count-suffix={amountSuffix}
-        className="text-2xl md:text-[56px] font-bold"
-      >
-        0{amountSuffix}
+      <h1 className="text-2xl md:text-[56px] font-bold">
+        <span className="" data-count={amount} data-count-ms="100"></span>
+        <span>{amountSuffix}</span>
       </h1>
-      <p className="text-sm md:text-lg">{label}</p>
+      <p className="text-sm lg:mt-3 md:text-lg">{label}</p>
     </div>
   );
 }
@@ -29,27 +26,33 @@ export default function SectionWeBelieve() {
             <div className="text-center lg:mt-26">
               <hgroup
                 data-aos
-                className="titles leading-[0.8] lg:leading-tight text-4xl lg:text-[96px]"
+                className="titles leading-[0.8] lg:leading-tight text-4xl 2xl:leading-[81px] lg:text-[44px] 2xl:text-[64px]"
               >
-                <h1 className="flex justify-center flex-col md:flex-row  mb-4 lg:mb-0 gap-2 items-center ">
-                  <span className="  mt-8">We believe that </span>{" "}
+                <h1 className="mt-8 flex justify-center flex-col lg:flex-row  mb-4 lg:mb-0 gap-2 items-center">
+                  {/* <span className="  mt-8">We believe that </span>{" "}
                   <Img
                     src={IMG_NEX_BRIDGE_WHITE_LOGO.src}
-                    className="inline-block h-[50px] lg:h-[115px]"
+                    className="inline-block h-[50px] lg:h-[80px] 2xl:h-[115px]"
                     alt=""
-                  />
+                  /> */}
+                  Reshaping the financial landscape
+                  <br />
+                  for a world, where finance is
+                </h1>
+                <h1 className="blue-gradient-text font-semibold">
+                  Accessible, Efficient and Universal
                 </h1>
                 {/* <h1 className="flex justify-center gap-5 items-center ">
                 <span className="leading-[0.8] mt-8 flex-shrink-0">We believe that </span> <Img src={IMG_NEX_BRIDGE_WHITE_LOGO.src} className="inline-block h-[30px] lg:h-[115px]" alt="" />
               </h1> */}
-                <h1 className="">
+                {/* <h1 className="">
                   can{" "}
                   <span className="we-believe-change-text font-bold">
                     {" "}
                     Change{" "}
                   </span>
                   the world.
-                </h1>
+                </h1> */}
               </hgroup>
               <div className="max-w-[883px] mx-auto my-12">
                 <p id="typedtext">
@@ -76,7 +79,7 @@ export default function SectionWeBelieve() {
                   />
                   <hr className="line flex-1 hidden md:block"></hr>
                   <CountCard
-                    amount="35"
+                    amount="5"
                     amountSuffix="+"
                     label="Handled Countries"
                   />
