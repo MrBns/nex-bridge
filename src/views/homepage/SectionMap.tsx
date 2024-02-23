@@ -1,4 +1,4 @@
-import { IMG_POLYGON_WORLD_MAP } from "@/assets/img";
+import { IMG_PLAYGON_WORLD_MAP } from "@/assets/img";
 import SvgMapHighlight from "@/components/animations/SvgMapHighlight";
 import Img from "@/components/helper/Img";
 
@@ -17,11 +17,13 @@ export default function SectionMap() {
         </div>
       </div>
       <div className="relative max-w-[1920px] mx-auto">
-        <div className="map-img relative w-fit ms-auto">
-          <Img src={IMG_POLYGON_WORLD_MAP.src} className=" ms-auto" alt="" />
+        <div className="my-container">
+          <div className="map-img relative w-fit ms-auto">
+            <Img src={IMG_PLAYGON_WORLD_MAP.src} className="ms-auto w-full" alt="" />
 
-          <div className="highlights absolute top-[20%]  left-[-13%] w-[67%] ">
-            <SvgMapHighlight />
+            <div className="highlights absolute top-[20%]  left-[-13%] w-[67%] ">
+              <SvgMapHighlight />
+            </div>
           </div>
         </div>
       </div>

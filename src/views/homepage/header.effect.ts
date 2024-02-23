@@ -2,6 +2,7 @@
 import isDomReady from "@/lib/client/isDomReady";
 import wait from "@/lib/client/wait";
 
+//Header typing animation;
 isDomReady()
   .completed()
   .then(() => {
