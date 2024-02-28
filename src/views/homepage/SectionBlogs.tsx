@@ -42,10 +42,10 @@ export type BlogType = (typeof BLOGS_DATA)[number];
 
 function SectionBlogs({}: Props) {
   return (
-    <div className="w-full pt-20 pb-40">
+    <div className="w-full pt-20 pb-40 pl:px-10 px:px-0">
       <div className="bg-blog-gradient bg-top h-[70px] md:h-[100px]"></div>
       <div data-aos className="my-container mx-5 lg:mx-auto mt-5">
-        <h1 className="text-center heading-5 lg:heading-3 font-bold">Blogs</h1>
+        <h1 className="text-center heading-5 font-bold">Blogs</h1>
         <p className="text-center mt-5 lg:mt-16 max-w-[896px] mx-auto text-[12px] leading-[15px] md:text-[16px] md:leading-[19px] lg:text-[20px] lg:leading-[30px]">
           Stay up to date with the latest trends and insights in technology with
           our informative blog. From industry news to expert tips, we&apos;ve
