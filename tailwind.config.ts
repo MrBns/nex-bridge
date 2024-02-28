@@ -43,6 +43,8 @@ const config: Config = {
 
       screens: {
         // lg: "1428px",
+        pl: "1339px",
+        px: "1700px",
       },
     },
   },

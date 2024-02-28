@@ -6,16 +6,16 @@ type Props = {};
 function SectionWantToConnect({}: Props) {
   return (
     <>
-      <section className="flex flex-col w-full overflow-x-hidden">
+      <section className="flex flex-col w-full overflow-x-hidden pl:px-10 px:px-0">
         <div
           id="want-to-connect"
           // bg-[url('/footer-wireframe.svg')]
-          className="w-full  bg-cover bg-center"
+          className="w-full bg-cover bg-center"
         >
           <div className="relative pt-10 pb-52 lg:pt-32 lg:pb-64 my-container mx-5 lg:mx-auto flex flex-col justify-center">
-            <div className="absolute w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] bg-[#19476C] top-0 right-1/4"></div>
-            <div className="absolute w-[50px] h-[50px] lg:w-[77px] lg:h-[77px] bg-[#19476C] bottom-20 left-[15%]"></div>
-            <div className="absolute w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] bg-[#D9D9D9] bottom-0 right-0"></div>
+            {/* <div className="absolute w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] bg-[#19476C] top-0 right-1/4"></div> */}
+            {/* <div className="absolute w-[50px] h-[50px] lg:w-[77px] lg:h-[77px] bg-[#19476C] bottom-20 left-[15%]"></div> */}
+            {/* <div className="absolute w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] bg-[#D9D9D9] bottom-0 right-0"></div> */}
 
             <span className="text-start heading-5 leading-[58px] lg:heading-3 font-medium">
               <p>Want to connect?</p>
@@ -45,7 +45,7 @@ function SectionWantToConnect({}: Props) {
           </div>
         </div>
       </section>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></Script>
+      {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></Script>
       <Script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></Script>
       <Script
         defer
@@ -70,7 +70,7 @@ function SectionWantToConnect({}: Props) {
           })
         `,
         }}
-      ></Script>
+      ></Script> */}
     </>
   );
 }
