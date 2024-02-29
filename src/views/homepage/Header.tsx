@@ -51,7 +51,7 @@ export default function Header() {
           <div className="text-center lg:my-16">
             <GradientBorderButton
               variant="glow"
-              className="[--border-width:1px] mb-2 lg:me-5 text-white active:!text-blue-400 font-bold px-7 py-4 2xl:px-10 2xl:py-5"
+              className="[--border-width:1px] mb-2  me-2 lg:me-5 text-white active:!text-blue-400 font-bold px-7 py-4 2xl:px-10 2xl:py-5"
             >
               Explore
               <Img

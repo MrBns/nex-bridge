@@ -31,14 +31,14 @@ function BlogItem({
   centerId?: string;
 }) {
   return centerId === id ? (
-    <div className="lg:h-[520px] bg-gradient-to-b from-[#1C75BC66] to-transparent w-full rounded-[25px] flex flex-col items-center pt-16 lg:pt-28 px-10">
+    <div className="lg:h-[450px] 2xl:h-[520px] bg-gradient-to-b from-[#1C75BC66] to-transparent w-full rounded-[25px] flex flex-col items-center pt-16 lg:pt-28 px-10">
       <p className="tracking-wide uppercase text-[15px] leading-[18px] lg:text-[20px] lg:leading-[30px] text-[#C4C4C4]">
         {category}
       </p>
-      <p className="text-[22px] lg:text-[32px] lg:leading-[40px] font-semibold text-center mt-5">
+      <h1 className="text-[22px] lg:text-[26px]/[1.2] 2xl:text-[32px]/[1.2] font-semibold text-center mt-5">
         {title}
-      </p>
-      <p className="mt-5 text-[12px] lg:text-[16px] lg:leading-[26px] text-center text-[#C4C4C4]">
+      </h1>
+      <p className="mt-5 text-[12px] lg:text-[15px]/[1.1] 2xl:text-[16px]/[26px] text-center text-[#C4C4C4]">
         {time}
       </p>
       <button className="blog-read-more-btn text-[#1C75BC] font-medium bg-black rounded-[10px] px-8 lg:px-14 py-3 mt-8">
@@ -48,7 +48,7 @@ function BlogItem({
   ) : (
     <div className="h-[300px] lg:h-[439px] border-y border-[#C4C4C4] pt-10 pb-10 lg:pb-20 flex flex-col">
       <p className="uppercase tracking-[5px] text-[20px]">{category}</p>
-      <p className="font-semibold text-[16px] leading-[26px] lg:text-[32px] lg:leading-[40px] mt-10">
+      <p className="font-semibold text-[16px] leading-[26px] lg:text-[26px]/[1.2] 2xl:text-[32px]/[1.2] mt-10">
         {title}
       </p>
       <p

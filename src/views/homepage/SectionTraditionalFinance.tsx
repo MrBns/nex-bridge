@@ -8,20 +8,24 @@ type Props = {};
 function SectionTraditionalFinance({}: Props) {
   return (
     <section id="">
-      <div className="my-container  lg:mx-auto flex flex-col lg:flex-row justify-between gap-10 mt-10 text-white">
-        <div className="w-full pt-36 sm:pt-40 lg:pt-14 lg:pb-16 lg:px-24   rounded-3xl lg:rounded-[50px] flex flex-col  bg-[url('/ready-to-take-bg.svg')] bg-cover bg-no-repeat bg-bottom">
-          <div className="">
-            <h2 className="lg:text-[32px] xl:text-[48px] font-extralight">
+      <div className="my-container mt-10 xl:mb-20 2xl:mb-40 text-white">
+        <div
+          className="w-full py-20 px-5 lg:pt-14 2xl:pt-20 lg:pb-16 lg:px-24 rounded-3xl lg:rounded-[50px] 
+        bg-[url('/ready-to-take-bg.png')] bg-cover bg-no-repeat bg-bottom"
+        >
+          <div className="text-center lg:text-left">
+            <h2 className="text-xl lg:text-[32px] xl:text-[48px] font-extralight">
               We envision a future where
             </h2>
-            <h1 className="lg:text-[54px] xl:text-[64px] leading-none 2xl:text-[82px] font-medium">
+            <h1 className="mt-3 lg:mt-5 text-3xl lg:text-[54px] xl:text-[64px] leading-none 2xl:text-[82px] font-medium">
               traditional finance integrates seamlessly with blockchain
             </h1>
           </div>
 
           <GradientBorderButton
             variant="minimal"
-            className="mt-5 lg:mt-40 [--border-width:2px] w-max bg-black text-white font-medium px-5 py-4 lg:px-8 lg:py-6 rounded-[15px] flex items-center gap-3 lg:gap-14"
+            className="mt-10 lg:mt-36 mx-auto lg:mx-0 [--border-width:2px] w-max bg-black text-white 
+            font-medium px-5 py-4 lg:px-8 lg:py-6 rounded-[15px] flex items-center gap-3 lg:gap-14"
           >
             Contact us
             <svg

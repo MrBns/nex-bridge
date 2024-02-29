@@ -6,7 +6,7 @@ import GradientBorderButton from "../shared/buttons/GradientBorderButton";
 
 type TProps = {};
 
-const NAVBAR_MENU_DATA = [
+export const NAVBAR_MENU_DATA = [
   {
     name: "Home",
     onClick: () => {},
