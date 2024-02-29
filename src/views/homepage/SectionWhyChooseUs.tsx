@@ -37,7 +37,7 @@ const WHY_CHOOSE_US_CARD_DATA = [
 export default function SectionWhyChooseUs() {
   return (
     <section id="section-why-choose-us" className="relative">
-      <div className="h-[100px] lg:h-[250px] relative max-w-[1920px] mx-auto z-10">
+      <div className="h-[100px] lg:h-[200px] 2xl:h-[250px] relative max-w-[1920px] mx-auto z-10">
         <Img
           src={IMG_WHY_CHOOSE_US_WAVE.src}
           alt="nex-bridge-wave"
