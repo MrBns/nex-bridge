@@ -32,11 +32,6 @@ export const NAVBAR_MENU_DATA = [
     onClick: () => {},
     slug: "contact",
   },
-  {
-    name: "Private Access",
-    onClick: () => {},
-    slug: "contact",
-  },
 ];
 
 export default function Navbar(props: TProps) {
@@ -113,7 +108,7 @@ export default function Navbar(props: TProps) {
                 className="px-4 py-2 [--border-width:1.5px] font-semibold text-white text-sm 2xl:text-base no-animation rounded-md uppercase"
                 variant="minimal"
               >
-                Sign In
+                Private Access
               </GradientBorderButton>
             </div>
           </div>
