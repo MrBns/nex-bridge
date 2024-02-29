@@ -91,3 +91,29 @@
       );
   }
 }
+
+.why-choose-us-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.why-choose-us-slider.slider-shadow::before,
+.why-choose-us-slider.slider-shadow::after {
+  content: "";
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-image: linear-gradient(90deg, #000, transparent);
+
+  @media screen and (max-width: 678px) {
+    visibility: hidden;
+  }
+}
+
+.why-choose-us-slider.slider-shadow::after {
+  left: auto;
+  right: 0;
+  background-image: linear-gradient(270deg, #000, transparent);
+}
