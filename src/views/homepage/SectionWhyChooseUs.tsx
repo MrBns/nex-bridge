@@ -46,7 +46,7 @@ export default function SectionWhyChooseUs() {
       </div>
       <div className="my-container lg:px-10">
         <div data-aos className="mb-20">
-          <h1 className="text-5xl lg:text-[100px] leading-tight font-bold">
+          <h1 className="text-5xl xl:text-7xl 2xl:text-[100px] leading-tight font-bold">
             Why <br />
             Choose Us ?
           </h1>

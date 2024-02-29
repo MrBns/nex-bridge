@@ -7,7 +7,7 @@
     @apply text-white;
   }
   .my-container {
-    @apply max-w-[1635px] mx-auto px-5 md:px-3;
+    @apply xl:max-w-[1200px] 2xl:max-w-[1635px] mx-auto px-5 md:px-3;
   }
 
   #homepage-header {

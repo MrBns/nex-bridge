@@ -30,20 +30,20 @@ export default function Header() {
       <div className="my-container text-white header-all-element-wrapper">
         <div className="mt-20 lg:mt-0">
           <h1 className="text-center   uppercase">
-            <span className=" leading-[1.2] text-4xl lg:text-[37px]">
+            <span className=" leading-[1.2] text-[#c2c2c2] text-4xl lg:text-[37px]">
               Gateway to a{" "}
             </span>
-            <span className=" leading-[1.2] blue-gradient-text font-michroma text-4xl md:text-[100px]">
+            <span className=" leading-[1.2]  font-michroma text-4xl md:text-[77px] 2xl:text-[100px]">
               New
             </span>
-            <span className=" leading-[1.2] block blue-gradient-text font-michroma text-4xl md:text-[100px]">
-              Financial Era
+            <span className=" leading-[1.2] block  font-michroma text-4xl md:text-[77px] 2xl:text-[100px]">
+              Financial &nbsp;Era
             </span>
           </h1>
-          <div className="text-xl lg:text-[33px] uppercase text-center my-8 flex justify-center ">
-            <h5 className="">For &nbsp;</h5>
+          <div className="text-xl lg:text-2xl 2xl:text-[33px] uppercase text-center my-8 flex justify-center ">
+            <h5 className="font-extralight text-[#d9d9d9]">FOR &nbsp;</h5>
             <h5 className="italic" id="word-change-and-typing-animation-span">
-              <span className="animation-word  blue-gradient-text lg:px-1"></span>
+              <span className="animation-word text-white lg:px-1 font-medium"></span>
               <span className="cursor">|&nbsp;</span>
             </h5>
           </div>
@@ -51,7 +51,7 @@ export default function Header() {
           <div className="text-center lg:my-16">
             <GradientBorderButton
               variant="glow"
-              className="[--border-width:1px] mb-2 lg:me-5 text-white active:!text-blue-400 font-bold px-10 py-3 lg:py-5"
+              className="[--border-width:1px] mb-2 lg:me-5 text-white active:!text-blue-400 font-bold px-7 py-4 2xl:px-10 2xl:py-5"
             >
               Explore
               <Img
@@ -62,7 +62,7 @@ export default function Header() {
             </GradientBorderButton>
             <GradientBorderButton
               variant="glow"
-              className="[--border-width:1px] text-white active:!text-blue-400 font-bold px-10 py-3 lg:py-5"
+              className="[--border-width:1px] text-white active:!text-blue-400 font-bold px-7 py-4 2xl:px-10 2xl:py-5"
             >
               Contact Us
               <Img

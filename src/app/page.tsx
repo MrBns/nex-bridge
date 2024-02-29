@@ -1,6 +1,6 @@
 import Header from "@/views/homepage/Header";
-import SectionWeBelieve from "@/views/homepage/SectionWeBelieve";
 
+import SectionReshaping from "@/views/homepage/SectionReshapping";
 import Footer from "@/components/layout-comp/Footer";
 import BrandSlider from "@/views/homepage/BrandSlider";
 import SectionWhyChooseUs from "@/views/homepage/SectionWhyChooseUs";
@@ -16,7 +16,7 @@ export default function Home() {
     <main className="bg-black">
       <Header />
       <BrandSlider />
-      <SectionWeBelieve />
+      <SectionReshaping />
       <SectionWhyChooseUs />
       <SectionMap />
       <SectionTraditionalFinance />

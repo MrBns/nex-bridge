@@ -3,15 +3,21 @@
 @use "./fonts" as *;
 @use "./animations" as *;
 @use "./global" as *;
+@use "./breakpoint" as b;
 
 #main-navbar {
   transition: 0.3s;
 
   &:not(.navbar-scrolled) {
-    padding: 2rem 0px;
+    padding: 1rem 2rem;
+    @include b.xl2() {
+      padding: 2rem 0px;
+    }
   }
   .navbar-scrolled {
     padding: 30px 0px;
+    @include b.sm() {
+    }
   }
 }
 

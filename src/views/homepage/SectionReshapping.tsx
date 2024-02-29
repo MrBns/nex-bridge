@@ -1,13 +1,8 @@
-import {
-  IMG_NEXBRIDGE_WHITE_LOGO as IMG_NEX_BRIDGE_WHITE_LOGO,
-  IMG_NEXT_BRIDGE_LOGO,
-} from "@/assets/img";
-import Img from "@/components/helper/Img";
 import Script from "next/script";
 
 function CountCard({ amount = "", label = "", amountSuffix = "" }) {
   return (
-    <div className="p-5 text-center flex-shrink-0 w-1/3 ">
+    <div className="p-5 text-center flex-shrink-0 w-1/3 lg:w-fit ">
       <h1 className="text-2xl md:text-[56px] font-bold">
         <span className="" data-count={amount} data-count-ms="100"></span>
         <span>{amountSuffix}</span>
@@ -17,7 +12,7 @@ function CountCard({ amount = "", label = "", amountSuffix = "" }) {
   );
 }
 
-export default function SectionWeBelieve() {
+export default function SectionReshaping() {
   return (
     <>
       <section id="we-believe">
@@ -26,41 +21,18 @@ export default function SectionWeBelieve() {
             <div className="text-center lg:mt-26">
               <hgroup
                 data-aos
-                className="titles leading-[0.8] lg:leading-tight text-4xl 2xl:leading-[81px] lg:text-[44px] 2xl:text-[64px]"
+                className="lg:leading-tight text-3xl  2xl:leading-[81px] lg:text-[44px] 2xl:text-[64px]"
               >
-                <h1 className="mt-8 flex justify-center flex-col lg:flex-row  mb-4 lg:mb-0 gap-2 items-center">
-                  {/* <span className="  mt-8">We believe that </span>{" "}
-                  <Img
-                    src={IMG_NEX_BRIDGE_WHITE_LOGO.src}
-                    className="inline-block h-[50px] lg:h-[80px] 2xl:h-[115px]"
-                    alt=""
-                  /> */}
+                <h1 className="mt-8 mb-4 leading-[0.98em] font-light gap-2 items-center">
                   Reshaping the financial landscape
-                  <br />
-                  for a world, where finance is
+                  <span className="lg:block"></span> for a world, where finance is
                 </h1>
-                <h1 className="blue-gradient-text font-semibold">
+                <h1 className="leading-none font-semibold">
                   Accessible, Efficient and Universal
                 </h1>
-                {/* <h1 className="flex justify-center gap-5 items-center ">
-                <span className="leading-[0.8] mt-8 flex-shrink-0">We believe that </span> <Img src={IMG_NEX_BRIDGE_WHITE_LOGO.src} className="inline-block h-[30px] lg:h-[115px]" alt="" />
-              </h1> */}
-                {/* <h1 className="">
-                  can{" "}
-                  <span className="we-believe-change-text font-bold">
-                    {" "}
-                    Change{" "}
-                  </span>
-                  the world.
-                </h1> */}
               </hgroup>
               <div className="max-w-[883px] mx-auto my-12">
                 <p id="typedtext">
-                  {/* NexBridge is a digital asset issuer, forging a link between
-                  traditional finance and digital assets. We empower investors
-                  with access to a new spectrum of tokenized investment
-                  opportunities, while enabling asset owners to penetrate global
-                  liquid capital markets. */}
                 </p>
               </div>
 
