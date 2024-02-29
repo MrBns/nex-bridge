@@ -6,7 +6,7 @@ import GradientBorderButton from "../shared/buttons/GradientBorderButton";
 
 type TProps = {};
 
-const NAVBAR_MENU_DATA = [
+export const NAVBAR_MENU_DATA = [
   {
     name: "Home",
     onClick: () => {},
@@ -50,7 +50,7 @@ export default function Navbar(props: TProps) {
               <a href="/#" className="block">
                 <Image
                   src={IMG_NEXBRIDGE_WHITE_LOGO}
-                  className="mb-5  w-[260px]"
+                  className="mb-5 w-[200px]  2xl:w-[260px]"
                   alt="nex-bridge-logo"
                 />
               </a>
@@ -80,7 +80,7 @@ export default function Navbar(props: TProps) {
                   <li key={`${index}-${data.slug}`} className="p-4">
                     <a
                       href=""
-                      className="text-4xl lg:text-base text-center block lg:inline-block"
+                      className="text-4xl uppercase md:text-sm 2xl:text-base text-center block lg:inline-block"
                     >
                       {data.name}
                     </a>
@@ -110,7 +110,7 @@ export default function Navbar(props: TProps) {
             </div>
             <div className="hidden lg:block">
               <GradientBorderButton
-                className="px-4 py-2 [--border-width:2px] font-semibold text-white no-animation rounded-md uppercase"
+                className="px-4 py-2 [--border-width:1.5px] font-semibold text-white text-sm 2xl:text-base no-animation rounded-md uppercase"
                 variant="minimal"
               >
                 Sign In

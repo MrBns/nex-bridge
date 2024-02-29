@@ -7,7 +7,7 @@
     @apply text-white;
   }
   .my-container {
-    @apply max-w-[1635px] mx-auto px-5 md:px-3;
+    @apply md:max-w-[95%] xl:max-w-[1200px] 2xl:max-w-[1635px] mx-auto px-5 md:px-3;
   }
 
   #homepage-header {
@@ -90,4 +90,30 @@
         #1c75bc 100%
       );
   }
+}
+
+.why-choose-us-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.why-choose-us-slider.slider-shadow::before,
+.why-choose-us-slider.slider-shadow::after {
+  content: "";
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-image: linear-gradient(90deg, #000, transparent);
+
+  @media screen and (max-width: 678px) {
+    visibility: hidden;
+  }
+}
+
+.why-choose-us-slider.slider-shadow::after {
+  left: auto;
+  right: 0;
+  background-image: linear-gradient(270deg, #000, transparent);
 }

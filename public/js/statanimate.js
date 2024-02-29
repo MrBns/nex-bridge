@@ -4,7 +4,7 @@ const statRoot = document.querySelector(".stat-root");
 const countsEl = document.querySelectorAll("[data-count]");
 
 let isPlayedCountAnimation = false;
-let totalStepTime = 5000;
+let totalStepTime = 3000;
 
 const observer = new IntersectionObserver(
   (entries) => {

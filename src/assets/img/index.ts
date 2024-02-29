@@ -3,8 +3,15 @@ export { default as IMG_ILLST_REGISTER_ISSUER } from "./illst-register-issuer.pn
 export { default as IMG_ILLUST_GLOBAL_PRESENCE } from "./illust-global-presence.png";
 export { default as IMG_LILLST_FINANCIAL_KNOW_HOW } from "./lillst-financial-know-how.png";
 export { default as IMG_LOGO_AMAZON } from "./logo-amazon.png";
+export { default as IMG_LOGO_BITFINEX } from "./logo-bitfinex.png";
+export { default as IMG_LOGO_BLOCKSTREAM_AMP } from "./logo-blockstream-amp.png";
+export { default as IMG_LOGO_BLOCKSTREAM_GREEN } from "./logo-blockstream-green.png";
+export { default as IMG_LOGO_BLOCKSTREAM } from "./logo-blockstream.png";
 export { default as IMG_LOGO_GOOGLE } from "./logo-google.png";
+export { default as IMG_LOGO_LIQUID_NETWORK } from "./logo-liquid-network.png";
+export { default as IMG_LOGO_MERJ } from "./logo-merj.png";
 export { default as IMG_LOGO_SAMSUNG } from "./logo-samsung.png";
+export { default as IMG_LOGO_SIDESWAP } from "./logo-sideswap.png";
 export { default as IMG_LOGO_SONY } from "./logo-sony.png";
 export { default as IMG_LOGO_WINDOWS } from "./logo-windows.png";
 export { default as IMG_MOBILE_TRADITIONAL_FINANCE } from "./mobile-traditional-finance.png";

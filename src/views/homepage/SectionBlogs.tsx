@@ -42,7 +42,7 @@ export type BlogType = (typeof BLOGS_DATA)[number];
 
 function SectionBlogs({}: Props) {
   return (
-    <div className="w-full pt-20 pb-40 pl:px-10 px:px-0">
+    <div className="w-full pt-20 xl:pb-28 2xl:pb-40">
       <div className="bg-blog-gradient bg-top h-[70px] md:h-[100px]"></div>
       <div data-aos className="my-container mx-5 lg:mx-auto mt-5">
         <h1 className="text-center heading-5 font-bold">Blogs</h1>
