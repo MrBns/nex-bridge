@@ -72,7 +72,7 @@ export default function SectionWhyChooseUs() {
           className="absolute top-[0%] lg:-top-[50%] left-0 lg:opacity-30"
         />
       </div>
-      <div className="my-container lg:px-10">
+      <div className="my-container">
         <div data-aos className="mb-20">
           <h1 className="text-5xl xl:text-7xl 2xl:text-[100px] leading-tight font-bold">
             Why <br />
@@ -93,17 +93,15 @@ export default function SectionWhyChooseUs() {
                   spaceBetween: 20,
                 },
                 1024: {
-                  slidesPerView: 3,
-                },
-                1400: {
                   slidesPerView: 4,
                 },
               }}
               allowTouchMove={true}
-              freeMode={true}
+              // freeMode={true}
               loop={true}
               autoplay={{
-                disableOnInteraction: false,
+                disableOnInteraction: true,
+                pauseOnMouseEnter:true,
                 delay: 0,
               }}
               speed={12000}
@@ -122,7 +120,7 @@ export default function SectionWhyChooseUs() {
                       className="mb-8 h-[100px] opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[20deg]"
                     />
                     <div className="">
-                      <h1 className="lg:text-3xl mb-4 font-semibold">
+                      <h1 className="lg:text-xl 2xl:text-3xl mb-4 font-semibold">
                         {d.title}
                       </h1>
                       <p className="text-xs">{d.desc}</p>
