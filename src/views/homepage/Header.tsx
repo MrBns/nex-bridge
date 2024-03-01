@@ -4,7 +4,7 @@ import GradientBorderButton from "@/components/shared/buttons/GradientBorderButt
 import "./header.effect";
 
 const animate_video =
-  "https://cdn.discordapp.com/attachments/1063452671698272328/1209043262422126622/bg_video.mp4?ex=65e57c48&is=65d30748&hm=fa5a67dbb213d6ba5903cc8dcb7da32d803c3637c26fc25665da50d670ef7e61&";
+  "https://cdn.discordapp.com/attachments/1063452671698272328/1212763102454485073/Comp_1_2.mp4?ex=65f304a7&is=65e08fa7&hm=fb8a2458118a1ca8e10ebdcbab13ae938e775fcf31596afc9d079e93b69aa094&";
 
 export default function Header() {
   return (
