@@ -9,7 +9,7 @@ export default function SectionMap() {
         <div data-aos className="my-16">
           <h1 className="text-2xl lg:text-5xl leading-snug text-center">
             NexBridge is registered as a digital asset issuer in the <br />
-            <span className="font-monument blue-gradient-text">
+            <span className="font-monument text-[#1C75BC]">
               El Salvador
             </span>{" "}
             National Commission of Digital Assets registry.
@@ -19,7 +19,11 @@ export default function SectionMap() {
       <div className="relative max-w-[1920px] mx-auto">
         <div className="my-container">
           <div className="map-img relative w-fit ms-auto">
-            <Img src={IMG_PLAYGON_WORLD_MAP.src} className="ms-auto w-full" alt="" />
+            <Img
+              src={IMG_PLAYGON_WORLD_MAP.src}
+              className="ms-auto w-full"
+              alt=""
+            />
 
             <div className="highlights absolute top-[20%]  left-[-13%] w-[67%] ">
               <SvgMapHighlight />

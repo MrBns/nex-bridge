@@ -3,6 +3,9 @@ import Img from "@/components/helper/Img";
 import GradientBorderButton from "@/components/shared/buttons/GradientBorderButton";
 import "./header.effect";
 
+const animate_video =
+  "https://cdn.discordapp.com/attachments/1063452671698272328/1209043262422126622/bg_video.mp4?ex=65e57c48&is=65d30748&hm=fa5a67dbb213d6ba5903cc8dcb7da32d803c3637c26fc25665da50d670ef7e61&";
+
 export default function Header() {
   return (
     <header
@@ -19,12 +22,7 @@ export default function Header() {
           loop
           id="header-animated-video"
         >
-          {/* <source src={"/vid/header_animation.mp4"} /> */}
-          <source
-            src={
-              "https://cdn.discordapp.com/attachments/1063452671698272328/1209043262422126622/bg_video.mp4?ex=65e57c48&is=65d30748&hm=fa5a67dbb213d6ba5903cc8dcb7da32d803c3637c26fc25665da50d670ef7e61&"
-            }
-          />
+          <source src={animate_video} />
         </video>
       </div>
       <div className="my-container text-white header-all-element-wrapper">

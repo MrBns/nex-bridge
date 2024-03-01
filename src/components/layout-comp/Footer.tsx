@@ -1,6 +1,7 @@
 import React from "react";
 import Img from "../helper/Img";
 import { NAVBAR_MENU_DATA } from "./Navbar";
+import GradientBorderButton from "../shared/buttons/GradientBorderButton";
 
 type Props = {};
 
@@ -17,18 +18,23 @@ function Footer({}: Props) {
             />
           </div>
 
+          <GradientBorderButton
+            className="h-max w-max whitespace-nowrap px-4 py-2 [--border-width:1.5px] font-semibold text-white text-sm 2xl:text-base no-animation rounded-md uppercase lg:mt-20"
+            variant="minimal"
+          >
+            Private Access
+          </GradientBorderButton>
 
           <div className="lg:min-w-max">
-              <h5 className="text-[20px] md:heading-6 mb-2">Explore</h5>
-              <ul className="opacity-75 text-[16px]/tight 2xl:text-[20px] flex flex-row flex-wrap  md:flex-col">
-                {NAVBAR_MENU_DATA.map((d, i) => (
-                  <li key={`nav-menu-${i}`} className="py-2 lg:py-1 px-3 lg:px-0">
-                    <a href="#">{d.name}</a>
-                  </li>
-                ))}
-              </ul>
+            <h5 className="text-[20px] md:heading-6 mb-2">Explore</h5>
+            <ul className="opacity-75 text-[16px]/tight 2xl:text-[20px] flex flex-row flex-wrap  md:flex-col">
+              {NAVBAR_MENU_DATA.map((d, i) => (
+                <li key={`nav-menu-${i}`} className="py-2 lg:py-1 px-3 lg:px-0">
+                  <a href="#">{d.name}</a>
+                </li>
+              ))}
+            </ul>
           </div>
-
 
           <div className="space-y-5">
             <p className="text-[20px] md:heading-6">Newsletter</p>
