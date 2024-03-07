@@ -27,6 +27,16 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+  .circle-radial-gradient {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(28, 117, 188, 0.4) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
   .about-middle-radial-gradient::before {
     content: "";
     position: absolute;
