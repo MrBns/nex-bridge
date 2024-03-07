@@ -23,9 +23,9 @@ export const NAVBAR_MENU_DATA = [
     slug: "about us",
   },
   {
-    name: "Blog",
+    name: "Issuance",
     onClick: () => {},
-    slug: "blog",
+    slug: "/issuance",
   },
   {
     name: "Contact",
