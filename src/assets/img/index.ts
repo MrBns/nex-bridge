@@ -20,3 +20,7 @@ export { default as IMG_NEXT_BRIDGE_LOGO } from "./next-bridge-logo.png";
 export { default as IMG_PLAYGON_WORLD_MAP } from "./playgon-world-map.png";
 export { default as IMG_WHITE_BLUE_FLAG } from "./white-blue-flag.png";
 export { default as IMG_WHY_CHOOSE_US_WAVE } from "./why-choose-us-wave.png";
+
+export { default as GRID_IMAGE_1 } from "./grid-image-1.png";
+export { default as GRID_IMAGE_2 } from "./grid-image-2.png";
+export { default as GRID_IMAGE_3 } from "./grid-image-3.png";
