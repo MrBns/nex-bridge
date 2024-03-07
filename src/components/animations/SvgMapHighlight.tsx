@@ -1,7 +1,4 @@
 "use client";
-
-import { IMG_WHITE_BLUE_FLAG } from "@/assets/img";
-
 type TProps = {};
 
 export default function SvgMapHighlight(props: TProps) {
@@ -69,15 +66,7 @@ export default function SvgMapHighlight(props: TProps) {
           Your browser does not support the video tag.
         </video>
       </foreignObject>
-      {/* <rect
-        className="flag"
-        x="508"
-        y="92"
-        width="320"
-        height="178"
-        rx="25"
-        fill="url(#pattern0)"
-      /> */}
+
       <path
         className="flag-below-arrow-sign"
         d="M669.891 334.476C668.852 336.276 666.253 336.276 665.214 334.476L645.338 300.05C644.299 298.25 645.598 296 647.677 296L687.428 296C689.507 296 690.806 298.25 689.767 300.05L669.891 334.476Z"
@@ -85,18 +74,6 @@ export default function SvgMapHighlight(props: TProps) {
       />
 
       <defs>
-        {/* <pattern
-          id="pattern0"
-          patternContentUnits="objectBoundingBox"
-          width="1"
-          height="1"
-        >
-          <use
-            href="#image0_210_2"
-            xlinkHref="#image0_210_2"
-            transform="matrix(0.000856648 0 0 0.00159236 -0.0139886 0)"
-          />
-        </pattern> */}
         <linearGradient
           id="paint0_linear_210_2"
           x1="670.295"

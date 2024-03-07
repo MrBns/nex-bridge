@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <main className="bg-black">
       <Header />
-      <BrandSlider />
       <SectionReshaping />
       <SectionWhyChooseUs />
       <SectionMap />

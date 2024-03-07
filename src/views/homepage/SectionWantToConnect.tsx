@@ -1,3 +1,5 @@
+import { IMG_WANT_TO_CONNECT_WAVE } from "@/assets/img";
+import Img from "@/components/helper/Img";
 import Script from "next/script";
 import React from "react";
 
@@ -6,13 +8,19 @@ type Props = {};
 function SectionWantToConnect({}: Props) {
   return (
     <>
-      <section
-        id="want-to-connect"
-        className="relative bg-[url('/footer-wireframe.svg')] bg-cover bg-center"
-      >
-        <div className="want-to-connect-radial-gradient absolute inset-0 bg-left-top"></div>
-        <div className="my-container">
-          <div className="relative pt-28 py-20 lg:py-32 2xl:pt-40 2xl:pb-52  my-container sm:mx-5 flex flex-col justify-center">
+      <section id="want-to-connect" className="relative">
+       <div className="background-glow absolute w-[1502px] h-[962px] -top-[40%] -left-[10%] "></div>
+
+        <div className="absolute top-[18%] w-full">
+          <Img
+            src={IMG_WANT_TO_CONNECT_WAVE.src}
+            className="w-full max-w-[1920px] mx-auto"
+            alt=""
+          />
+        </div>
+
+        <div className="my-container  bg-cover bg-center relative">
+          <div className="relative pt-28 py-20 lg:py-32 2xl:pt-40 2xl:pb-52  my-container mx-5 flex flex-col justify-center">
             <div className="text-5xl lg:text-7xl xl:text-[80px] 2xl:text-[100px]/none font-bold">
               <h1 className="">Want to connect?</h1>
               <h1 className="mt-5 lg:mt-0">

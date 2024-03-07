@@ -17,7 +17,7 @@
       rgba(0, 0, 0, 0) 80.42%
     );
   }
-  #we-believe {
+  /* #we-believe {
     background: radial-gradient(
       50% 50% at 50% 50%,
       rgba(28, 117, 188, 0.4) 0%,
@@ -26,35 +26,7 @@
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center center;
-  }
-  .circle-radial-gradient {
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(28, 117, 188, 0.4) 0%,
-      rgba(28, 117, 188, 0) 100%
-    );
-    background-position: center center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-  .about-middle-radial-gradient::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    right: -10%;
-    bottom: 0%;
-    z-index: -1;
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(28, 117, 188, 0.4) 0%,
-      rgba(28, 117, 188, 0) 100%
-    );
-    background-position: bottom right;
-    background-size: 80%;
-    background-repeat: no-repeat;
-  }
+  } */
   #main-navbar.navbar-scrolled {
     @apply backdrop-blur-lg bg-black/15 py-2;
   }
@@ -120,7 +92,7 @@
   }
 }
 
-.why-choose-us-slider .swiper-wrapper {
+/* .why-choose-us-slider .swiper-wrapper {
   transition-timing-function: linear !important;
 }
 
@@ -144,4 +116,4 @@
   left: auto;
   right: 0;
   background-image: linear-gradient(270deg, #000, transparent);
-}
+} */

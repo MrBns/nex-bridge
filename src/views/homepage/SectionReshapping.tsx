@@ -1,4 +1,7 @@
+import { IMG_RESHAPPING_BACKGROUND } from "@/assets/img";
+import Img from "@/components/helper/Img";
 import Script from "next/script";
+import BrandSlider from "./BrandSlider";
 
 function CountCard({ amount = "", label = "", amountSuffix = "" }) {
   return (
@@ -15,7 +18,15 @@ function CountCard({ amount = "", label = "", amountSuffix = "" }) {
 export default function SectionReshaping() {
   return (
     <>
-      <section id="we-believe">
+      <section id="we-believe" className="relative">
+        {/* background effect */}
+        <div className="absolute w-full">
+          <Img src={IMG_RESHAPPING_BACKGROUND.src} className="w-full" alt="" />
+        </div>
+
+        {/* logos slider */}
+        <BrandSlider />
+
         <div className="my-container text-white">
           <div className="max-w-[1316px] py-10 lg:py-40 mx-auto">
             <div className="text-center lg:mt-26">
@@ -25,15 +36,15 @@ export default function SectionReshaping() {
               >
                 <h1 className="mt-8 mb-4 leading-[0.98em] font-light gap-2 items-center">
                   Reshaping the financial landscape
-                  <span className="lg:block"></span> for a world, where finance is
+                  <span className="lg:block"></span> for a world, where finance
+                  is
                 </h1>
                 <h1 className="leading-none font-semibold">
                   Accessible, Efficient and Universal
                 </h1>
               </hgroup>
               <div className="max-w-[883px] mx-auto my-12">
-                <p id="typedtext">
-                </p>
+                <p id="typedtext"></p>
               </div>
 
               <div className="mt-20 stat-root">

@@ -1,10 +1,13 @@
-import { IMG_PLAYGON_WORLD_MAP } from "@/assets/img";
+import { IMG_MAP_CONER_BG, IMG_PLAYGON_WORLD_MAP } from "@/assets/img";
 import SvgMapHighlight from "@/components/animations/SvgMapHighlight";
 import Img from "@/components/helper/Img";
 
 export default function SectionMap() {
   return (
-    <section id="" className="py-24 pb-40">
+    <section id="" className="py-24 relative pb-40">
+      <div className="absolute  right-0 -top-[15%]">
+        <Img alt="" src={IMG_MAP_CONER_BG.src} className="" />
+      </div>
       <div className="my-container">
         <div data-aos className="my-16">
           <h1 className="text-2xl lg:text-5xl leading-snug text-center">
