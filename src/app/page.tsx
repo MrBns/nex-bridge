@@ -9,7 +9,7 @@ import SectionTraditionalFinance from "@/views/homepage/SectionTraditionalFinanc
 import SectionBlogs from "@/views/homepage/SectionBlogs";
 import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
 import "@/lib/client/scroll-animation.effect";
-
+import ImageInfoGrid from "@/views/homepage/ImageInfoGrid";
 
 export default function Home() {
   return (
@@ -18,6 +18,7 @@ export default function Home() {
       <SectionReshaping />
       <SectionWhyChooseUs />
       <SectionMap />
+      <ImageInfoGrid />
       <SectionTraditionalFinance />
       <SectionBlogs />
       <SectionWantToConnect />

@@ -28,3 +28,7 @@ export { default as IMG_RESHAPPING_BACKGROUND } from "./reshapping-background.pn
 export { default as IMG_WANT_TO_CONNECT_WAVE } from "./want-to-connect-wave.png";
 export { default as IMG_WHITE_BLUE_FLAG } from "./white-blue-flag.png";
 export { default as IMG_WHY_CHOOSE_US_WAVE } from "./why-choose-us-wave.png";
+
+export { default as GRID_IMAGE_1 } from "./grid-image-1.png";
+export { default as GRID_IMAGE_2 } from "./grid-image-2.png";
+export { default as GRID_IMAGE_3 } from "./grid-image-3.png";

@@ -10,22 +10,22 @@ export const NAVBAR_MENU_DATA = [
   {
     name: "Home",
     onClick: () => {},
-    slug: "home",
+    slug: "",
   },
   {
     name: "About us",
     onClick: () => {},
-    slug: "about us",
+    slug: "about",
   },
   {
     name: "Vision",
     onClick: () => {},
-    slug: "about us",
+    slug: "vision",
   },
   {
     name: "Issuance",
     onClick: () => {},
-    slug: "/issuance",
+    slug: "issuance",
   },
   {
     name: "Contact",
@@ -74,7 +74,7 @@ export default function Navbar(props: TProps) {
                 {NAVBAR_MENU_DATA.map((data, index) => (
                   <li key={`${index}-${data.slug}`} className="p-4">
                     <a
-                      href=""
+                      href={`/${data.slug}`}
                       className="text-4xl uppercase md:text-sm 2xl:text-base text-center block lg:inline-block"
                     >
                       {data.name}
