@@ -7,7 +7,7 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
-    <section className="my-container mx-5 lg:mx-auto">
+    <section className="my-container sm:mx-5 lg:mx-auto">
       <div className="my-container">
         <div className="flex gap-10 lg:gap-20 flex-col xl:flex-row">
           <div className="w-full pt-8 flex flex-col justify-between">
