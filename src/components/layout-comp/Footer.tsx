@@ -44,14 +44,18 @@ function Footer({}: Props) {
               anytime!
             </p>
 
-            <div className="w-full flex items-center gap-2 bg-darkBlue rounded-[5px] border border-white px-6 py-3 2xl:py-4">
+            <div className="w-full group flex items-center gap-2 bg-darkBlue focus-within:bg-black rounded-[5px] border border-white px-6 py-3 2xl:py-4">
               <input
                 placeholder="Enter Your Email Address ..."
                 type="email"
-                className="w-full bg-transparent placeholder:text-white placeholder:opacity-75 font-light focus:outline-none"
+                className="w-full bg-transparent placeholder:text-white placeholder:opacity-75 placeholder:font-normal font-semibold focus:outline-none"
               />
               <button className="">
-                <Img src="/arrow-right-bold.svg" alt="arrow" />
+                <Img
+                  src="/arrow-right-bold.svg"
+                  className="group-focus-within:translate-x-2 transition-all"
+                  alt="arrow"
+                />
               </button>
             </div>
           </div>

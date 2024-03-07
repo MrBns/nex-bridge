@@ -34,9 +34,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${michroma.variable} ${montserrat.variable}`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${michroma.variable} ${montserrat.variable}`}
+    >
       <head></head>
-      <body className="bg-black">
+      <body className="bg-[#0B0C15]">
         <Navbar />
         {children}
       </body>
