@@ -1,8 +1,8 @@
-import { IMG_NEXBRIDGE_WHITE_LOGO, IMG_NEXT_BRIDGE_LOGO } from "@/assets/img";
+import { IMG_NEXBRIDGE_WHITE_LOGO } from "@/assets/img";
 import Image from "next/image";
-import Script from "next/script";
 import "./navbar.effect";
 import GradientBorderButton from "../shared/buttons/GradientBorderButton";
+import Link from "next/link";
 
 type TProps = {};
 
@@ -10,27 +10,27 @@ export const NAVBAR_MENU_DATA = [
   {
     name: "Home",
     onClick: () => {},
-    slug: "",
+    slug: "/",
   },
   {
     name: "About us",
     onClick: () => {},
-    slug: "about",
+    slug: "/about",
   },
   {
     name: "Vision",
     onClick: () => {},
-    slug: "vision",
+    slug: "/vision",
   },
   {
     name: "Issuance",
     onClick: () => {},
-    slug: "issuance",
+    slug: "/issuance",
   },
   {
     name: "Contact",
     onClick: () => {},
-    slug: "contact",
+    slug: "/contact",
   },
 ];
 
@@ -73,12 +73,12 @@ export default function Navbar(props: TProps) {
               <ul className="flex flex-col lg:flex-row p-10 lg:p-0 justify-center">
                 {NAVBAR_MENU_DATA.map((data, index) => (
                   <li key={`${index}-${data.slug}`} className="p-4">
-                    <a
-                      href={`/${data.slug}`}
-                      className="text-4xl uppercase md:text-sm 2xl:text-base text-center block lg:inline-block"
+                    <Link
+                      href={data.slug}
+                      className="text-4xl navbar-menu-link uppercase md:text-sm 2xl:text-base text-center block lg:inline-block"
                     >
                       {data.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
                 <li className="lg:hidden mt-5">

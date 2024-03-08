@@ -3,6 +3,7 @@ type TProps = {
   src: string;
   alt: string;
   aos?: boolean;
+  draggable?: boolean;
 };
 
 export default function Img(props: TProps) {
@@ -11,6 +12,7 @@ export default function Img(props: TProps) {
       {props.aos ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
+          draggable="false"
           data-aos
           src={props.src}
           alt={props.alt}
@@ -18,7 +20,12 @@ export default function Img(props: TProps) {
         />
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={props.src} alt={props.alt} className={props.className} />
+        <img
+          src={props.src}
+          draggable={props.draggable}
+          alt={props.alt}
+          className={props.className}
+        />
       )}
     </>
   );

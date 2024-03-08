@@ -9,9 +9,11 @@ const animate_video =
 export default function Header() {
   return (
     <header
+    
       className="header p-2 min-h-[600px] md:min-h-[700px]  lg:min-h-screen relative isolate grid place-items-center overflow-hidden"
       id="homepage-header"
     >
+      {/* Background Video */}
       <div className="absolute h-full w-full -z-[1]  left-0 top-0">
         <video
           className="w-full h-full object-cover"
@@ -25,6 +27,10 @@ export default function Header() {
           <source src={animate_video} />
         </video>
       </div>
+
+    {/* Background video marger  */}
+    <div className="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent h-20"></div>
+
       <div className="my-container text-white header-all-element-wrapper">
         <div className="mt-20 lg:mt-0">
           <h1 className="text-center   uppercase">
@@ -71,6 +77,7 @@ export default function Header() {
             </GradientBorderButton>
           </div>
         </div>
+        
       </div>
     </header>
   );

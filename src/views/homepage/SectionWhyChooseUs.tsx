@@ -61,12 +61,12 @@ export default function SectionWhyChooseUs() {
         </div>
 
         <div className="">
-          <div className="relative flex flex-wrap why-choose-us-slider slider-shadow">
+          <div className="relative flex flex-wrap why-choose-us-slider gap-y-10 lg:gap-y-0  ">
             {WHY_CHOOSE_US_CARD_DATA.map((d, idx) => (
               <div
                 key={idx}
                 data-aos
-                className="group w-1/4 rounded-3xl p-2 lg:p-7 hover:scale-105 transition-all duration-500"
+                className="group w-2/4 lg:w-1/4 rounded-3xl p-2 lg:p-7 hover:scale-105 transition-all duration-500"
               >
                 <Img
                   src={d.img}

@@ -18,10 +18,18 @@ function CountCard({ amount = "", label = "", amountSuffix = "" }) {
 export default function SectionReshaping() {
   return (
     <>
-      <section id="we-believe" className="relative">
+      <section
+        id="we-believe"
+        className="relative isolate w-full overflow-x-hidden lg:overflow-visible"
+      >
         {/* background effect */}
-        <div className="absolute w-full">
-          <Img src={IMG_RESHAPPING_BACKGROUND.src} className="w-full" alt="" />
+        <div className="absolute w-full -z-10" draggable={false}>
+          <Img
+            src={IMG_RESHAPPING_BACKGROUND.src}
+            className="w-[200%] max-w-none  lg:w-full select-none"
+            alt=""
+            draggable={false}
+          />
         </div>
 
         {/* logos slider */}

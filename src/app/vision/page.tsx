@@ -18,8 +18,8 @@ function Vision({}: Props) {
         <p className="mt-52 text-center text-[16px]/[20px] lg:text-[24px]/[34px] opacity-70">
           NexBridge is reshaping the financial landscape, seamlessly integrating
           traditional finance with the innovation of blockchain technology. Our
-          mission is clear: to democratize finance, ensuring it&apos;s accessible,
-          efficient, and within reach for everyone.
+          mission is clear: to democratize finance, ensuring it&apos;s
+          accessible, efficient, and within reach for everyone.
         </p>
 
         <div className="mt-40 grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-20">
