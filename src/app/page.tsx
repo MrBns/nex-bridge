@@ -13,7 +13,7 @@ import ImageInfoGrid from "@/views/homepage/ImageInfoGrid";
 
 export default function Home() {
   return (
-    <main className="bg-black">
+    <main className="">
       <Header />
       <SectionReshaping />
       <SectionWhyChooseUs />
@@ -21,8 +21,6 @@ export default function Home() {
       <ImageInfoGrid />
       <SectionTraditionalFinance />
       <SectionBlogs />
-      <SectionWantToConnect />
-      <Footer />
     </main>
   );
 }

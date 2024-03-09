@@ -29,7 +29,7 @@ export default function Header() {
       </div>
 
     {/* Background video marger  */}
-    <div className="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent h-20"></div>
+    <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0B0C15] to-transparent h-28"></div>
 
       <div className="my-container text-white header-all-element-wrapper">
         <div className="mt-20 lg:mt-0">

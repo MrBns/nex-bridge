@@ -6,7 +6,7 @@ type Props = {};
 
 function Vision({}: Props) {
   return (
-    <main className="bg-black pt-20">
+    <main className="pt-20">
       <section className="mt-28 px-5 xl:px-0 w-full max-w-[1300px] mx-auto circle-radial-gradient mb-20">
         <h1 className="text-[54px]/[71px] sm:text-[64px]/[81px] text-center lg:text-left">
           Our Vision
@@ -96,9 +96,6 @@ function Vision({}: Props) {
           </div>
         </div>
       </section>
-
-      <SectionWantToConnect />
-      <Footer />
     </main>
   );
 }

@@ -6,7 +6,7 @@ type Props = {};
 
 function About({}: Props) {
   return (
-    <main className="bg-black">
+    <main className="">
       <div className="z-[1] overflow-hidden relative about-middle-radial-gradient bg-right-bottom pt-20">
         <section className="my-container mt-20 header-gradient">
           <h1 className="text-[64px]/[81px] text-center">About Us.</h1>
@@ -93,9 +93,6 @@ function About({}: Props) {
           </div>
         </section>
       </div>
-
-      <SectionWantToConnect />
-      <Footer />
     </main>
   );
 }

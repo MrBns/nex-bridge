@@ -39,7 +39,7 @@
   left: 0;
   top: 0;
   z-index: 2;
-  background-image: linear-gradient(90deg, #000, transparent);
+  background-image: linear-gradient(90deg, #0b0c15, transparent);
 
   @include b.max-xl {
     visibility: hidden;
@@ -49,7 +49,7 @@
 .slider-shadow::after {
   left: auto;
   right: 0;
-  background-image: linear-gradient(270deg, #000, transparent);
+  background-image: linear-gradient(270deg, #0c1422, transparent);
 }
 
 .slider-anim {
@@ -79,7 +79,7 @@ body.no-scroll {
     left: 0;
     top: 0;
     z-index: 2;
-    background-image: linear-gradient(90deg, #000, transparent);
+    background-image: linear-gradient(90deg, #0b0c15, transparent);
   }
 }
 
