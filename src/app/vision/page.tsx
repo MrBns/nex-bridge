@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "@/components/layout-comp/Footer";
 import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
+import Img from "@/components/helper/Img";
 
 type Props = {};
 
@@ -8,13 +9,18 @@ function Vision({}: Props) {
   return (
     <main className="pt-20">
       <section className="mt-28 px-5 xl:px-0 w-full max-w-[1300px] mx-auto circle-radial-gradient mb-20">
-        <h1 className="text-[54px]/[71px] sm:text-[64px]/[81px] text-center lg:text-left">
-          Our Vision
-        </h1>
-        <p className="mt-5 text-[24px]/[34px] opacity-70 max-w-[600px] text-center mx-auto lg:ml-0 lg:text-left">
-          We envision a future where traditional finance integrates seamlessly
-          with blockchain.
-        </p>
+        <div className="flex items-center flex-col-reverse lg:flex-row justify-between gap-10">
+          <div>
+            <h1 className="text-[54px]/[71px] sm:text-[64px]/[81px] text-center lg:text-left">
+              Our Vision
+            </h1>
+            <p className="mt-5 text-[24px]/[34px] opacity-70 max-w-[600px] text-center mx-auto lg:ml-0 lg:text-left">
+              We envision a future where traditional finance integrates
+              seamlessly with blockchain.
+            </p>
+          </div>
+          <Img src="/vision.gif" alt="vision" />
+        </div>
         <p className="mt-52 text-center text-[16px]/[20px] lg:text-[24px]/[34px] opacity-70">
           NexBridge is reshaping the financial landscape, seamlessly integrating
           traditional finance with the innovation of blockchain technology. Our
