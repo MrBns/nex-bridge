@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "@/components/layout-comp/Footer";
 import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
+import Img from "@/components/helper/Img";
 
 type Props = {};
 
@@ -18,13 +19,13 @@ function Vision({}: Props) {
               seamlessly with blockchain.
             </p>
           </div>
-          <img src="/vision.gif" alt="vision" />
+          <Img src="/vision.gif" alt="vision" />
         </div>
         <p className="mt-52 text-center text-[16px]/[20px] lg:text-[24px]/[34px] opacity-70">
           NexBridge is reshaping the financial landscape, seamlessly integrating
           traditional finance with the innovation of blockchain technology. Our
-          mission is clear: to democratize finance, ensuring it's accessible,
-          efficient, and within reach for everyone.
+          mission is clear: to democratize finance, ensuring it&apos;s
+          accessible, efficient, and within reach for everyone.
         </p>
 
         <div className="mt-40 grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-20">
