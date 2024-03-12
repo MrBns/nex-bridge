@@ -8,10 +8,10 @@ type Props = {};
 function SectionWantToConnect({}: Props) {
   return (
     <>
-      <section id="want-to-connect" className="relative">
-        <div className="background-glow overflow-hidden absolute bg-left w-full h-full"></div>
+      <section id="want-to-connect" className="relative overflow-x-hidden overflow-y-clip lg:overflow-visible">
+       <div className="background-glow absolute w-[900px] lg:w-[1502px] h-[400px] lg:h-[962px] top-[10%] lg:-top-[40%] -left-[50%] lg:-left-[10%] "></div>
 
-        <div className="absolute top-[18%] w-full">
+        <div className=" absolute top-[18%] w-full">
           <Img
             src={IMG_WANT_TO_CONNECT_WAVE.src}
             className="w-full max-w-[1920px] mx-auto"
@@ -20,15 +20,15 @@ function SectionWantToConnect({}: Props) {
         </div>
 
         <div className="my-container  bg-cover bg-center relative">
-          <div className="relative pt-28 py-20 lg:py-32 2xl:pt-40 2xl:pb-52  my-container mx-5 flex flex-col justify-center">
-            <div className="text-5xl lg:text-7xl xl:text-[80px] 2xl:text-[100px]/none font-bold">
+          <div className="relative pt-28 py-20 lg:py-32 2xl:pt-40 2xl:pb-52  mx-5 flex flex-col justify-center">
+            <div className="text-[38px]/none lg:text-7xl xl:text-[80px] 2xl:text-[100px]/none font-bold">
               <h1 className="">Want to connect?</h1>
-              <h1 className="mt-5 lg:mt-0">
-                let&apos;s <span className="font-light italic">start now.</span>
+              <h1 className="mt-2">
+                Let&apos;s <span className="font-light italic">start now.</span>
               </h1>
             </div>
 
-            <button className="w-max flex items-center gap-3 mt-10 py-3 px-4 lg:py-5 lg:px-10 rounded-[15px] border border-white hover:scale-105 active:scale-100 transition-transform bg-black">
+            <button className="w-max flex items-center gap-3 mt-5 py-3 px-4 lg:py-5 lg:px-10 rounded-[15px] border border-white hover:scale-105 active:scale-100 transition-transform bg-black">
               <p className="font-semibold">Contact us</p>
               <svg
                 width="101"

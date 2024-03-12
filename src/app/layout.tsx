@@ -5,6 +5,8 @@ import "../styles/app.css";
 import "../styles/app.scss";
 import Navbar from "@/components/layout-comp/Navbar";
 import Script from "next/script";
+import Footer from "@/components/layout-comp/Footer";
+import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,6 +44,8 @@ export default function RootLayout({
       <body className="bg-[#0B0C15]">
         <Navbar />
         {children}
+        <SectionWantToConnect />
+        <Footer />
       </body>
     </html>
   );

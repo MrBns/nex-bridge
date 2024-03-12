@@ -21,16 +21,16 @@ function Footer({}: Props) {
             <div className="flex items-center gap-10 sm:gap-20 justify-between">
               <a href="#">
                 <Img
-                  className="w-[40px] sm:w-auto"
-                  src={FACEBOOK_ICON.src}
-                  alt="facebook"
+                  className="w-[30px] sm:w-auto"
+                  src={INSTAGRAM_ICON.src}
+                  alt="instagram"
                 />
               </a>
               <a href="#">
                 <Img
-                  className="w-[30px] sm:w-auto"
-                  src={INSTAGRAM_ICON.src}
-                  alt="instagram"
+                  className="w-[40px] sm:w-auto"
+                  src={FACEBOOK_ICON.src}
+                  alt="facebook"
                 />
               </a>
               <a href="#">

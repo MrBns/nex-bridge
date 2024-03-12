@@ -7,7 +7,7 @@ type Props = {};
 
 function Vision({}: Props) {
   return (
-    <main className="bg-black pt-20">
+    <main className="pt-20">
       <section className="mt-28 px-5 xl:px-0 w-full max-w-[1300px] mx-auto circle-radial-gradient mb-20">
         <div className="flex items-center flex-col-reverse lg:flex-row justify-between gap-10">
           <div>
@@ -24,8 +24,8 @@ function Vision({}: Props) {
         <p className="mt-52 text-center text-[16px]/[20px] lg:text-[24px]/[34px] opacity-70">
           NexBridge is reshaping the financial landscape, seamlessly integrating
           traditional finance with the innovation of blockchain technology. Our
-          mission is clear: to democratize finance, ensuring it&apos;s accessible,
-          efficient, and within reach for everyone.
+          mission is clear: to democratize finance, ensuring it&apos;s
+          accessible, efficient, and within reach for everyone.
         </p>
 
         <div className="mt-40 grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-20">
@@ -102,9 +102,6 @@ function Vision({}: Props) {
           </div>
         </div>
       </section>
-
-      <SectionWantToConnect />
-      <Footer />
     </main>
   );
 }
