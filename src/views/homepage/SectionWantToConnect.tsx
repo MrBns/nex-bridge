@@ -9,7 +9,7 @@ function SectionWantToConnect({}: Props) {
   return (
     <>
       <section id="want-to-connect" className="relative">
-        <div className="background-glow overflow-hidden absolute w-[1502px] h-[962px] -top-[40%] -left-[10%] "></div>
+        <div className="background-glow overflow-hidden absolute bg-left w-full h-full"></div>
 
         <div className="absolute top-[18%] w-full">
           <Img
