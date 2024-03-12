@@ -84,11 +84,11 @@ export default function Navbar(props: TProps) {
                 <li className="lg:hidden mt-5">
                   <button
                     id="navbar-menu-close-button"
-                    className="text-4xl w-full  py-3 rounded-2xl lg:text-base text-[#0F75BC] text-center flex items-center justify-center gap-5"
+                    className="text-xl w-full  py-3 rounded-2xl lg:text-base text-[#0F75BC] text-center flex items-center justify-center gap-5"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="3rem"
+                      width="2rem"
                       viewBox="0 0 16 16"
                     >
                       <path

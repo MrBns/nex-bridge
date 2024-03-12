@@ -7,13 +7,15 @@ type Props = {};
 
 function SectionTraditionalFinance({}: Props) {
   return (
-    <section id="">
+    <section id="finance">
       <div className="my-container mt-10 xl:mb-20 2xl:mb-40 text-white">
         <div
           className="w-full py-20 px-5 lg:pt-14 2xl:pt-20 lg:pb-16 lg:px-24 rounded-3xl lg:rounded-[50px] 
-        bg-[url('/ready-to-take-bg.png')] bg-cover bg-no-repeat bg-bottom"
+        bg-[url('/ready-to-take-bg.png')] bg-cover bg-no-repeat bg-bottom relative overflow-hidden"
         >
-          <div className="text-center lg:text-left">
+          <div className="w-full h-full absolute inset-0 background-glow-top z-[1]"></div>
+          <div className="w-full h-full absolute inset-0 background-glow-bottom z-[1]"></div>
+          <div className="z-[5]">
             <h2 className="text-xl lg:text-[32px] xl:text-[48px] font-extralight">
               We envision a future where
             </h2>
@@ -24,7 +26,7 @@ function SectionTraditionalFinance({}: Props) {
 
           <GradientBorderButton
             variant="minimal"
-            className="mt-10 lg:mt-36 mx-auto lg:mx-0 [--border-width:2px] w-max bg-black text-white 
+            className="z-[5] no-animation mt-10 lg:mt-36 lg:mx-0 [--border-width:1px] w-max !bg-black text-white 
             font-medium px-5 py-4 lg:px-8 lg:py-6 rounded-[15px] flex items-center gap-3 lg:gap-14"
           >
             Contact us

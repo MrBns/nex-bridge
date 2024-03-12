@@ -2,30 +2,55 @@ import React from "react";
 import Img from "../helper/Img";
 import { NAVBAR_MENU_DATA } from "./Navbar";
 import GradientBorderButton from "../shared/buttons/GradientBorderButton";
+import { FACEBOOK_ICON, INSTAGRAM_ICON, TWITTER_ICON } from "@/assets/img";
 
 type Props = {};
 
 function Footer({}: Props) {
   return (
-    <section className="my-container sm:mx-5 lg:mx-auto">
+    <section className="my-container sm:mx-5 lg:mx-auto pb-5 border-t sm:border-t-0">
       <div className="my-container">
-        <div className="flex gap-10 lg:gap-20 flex-col xl:flex-row">
-          <div className="w-full pt-8 flex flex-col justify-between">
+        <div className="flex gap-10 lg:gap-20 flex-col xl:flex-row pb-5">
+          <div className="w-full pt-8 flex items-center sm:items-start flex-col justify-between gap-10">
             <Img
               src="/logo.svg"
               alt="logo"
-              className="max-w-[300px] md:max-w-[350px] 2xl:max-w-[491px]"
+              className="ml-4 sm:-ml-5 max-w-[300px] md:max-w-[350px] 2xl:max-w-[491px]"
             />
+
+            <div className="flex items-center gap-10 sm:gap-20 justify-between">
+              <a href="#">
+                <Img
+                  className="w-[30px] sm:w-auto"
+                  src={INSTAGRAM_ICON.src}
+                  alt="instagram"
+                />
+              </a>
+              <a href="#">
+                <Img
+                  className="w-[40px] sm:w-auto"
+                  src={FACEBOOK_ICON.src}
+                  alt="facebook"
+                />
+              </a>
+              <a href="#">
+                <Img
+                  className="w-[30px] sm:w-auto"
+                  src={TWITTER_ICON.src}
+                  alt="twitter"
+                />
+              </a>
+            </div>
           </div>
 
           <GradientBorderButton
-            className="h-max w-max whitespace-nowrap px-4 py-2 [--border-width:1.5px] font-semibold text-white text-sm 2xl:text-base no-animation rounded-md uppercase lg:mt-20"
+            className="hidden sm:block h-max w-max whitespace-nowrap px-4 py-2 [--border-width:1.5px] font-semibold text-white text-sm 2xl:text-base no-animation rounded-md uppercase lg:mt-20"
             variant="minimal"
           >
             Private Access
           </GradientBorderButton>
 
-          <div className="lg:min-w-max">
+          <div className="lg:min-w-max hidden sm:block">
             <h5 className="text-[20px] md:heading-6 mb-2">Explore</h5>
             <ul className="opacity-75 text-[16px]/tight 2xl:text-[20px] flex flex-row flex-wrap  md:flex-col">
               {NAVBAR_MENU_DATA.map((d, i) => (
@@ -36,7 +61,7 @@ function Footer({}: Props) {
             </ul>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-5 hidden sm:block">
             <p className="text-[20px] md:heading-6">Newsletter</p>
             <p className="text-[14px]/[1.2] sm:text-base/tight lg:text-base/tight 2xl:text-[20px]/[30px]  opacity-75 font-light">
               Subscribe to our newsletter to stay informed about our latest
@@ -61,7 +86,7 @@ function Footer({}: Props) {
           </div>
         </div>
 
-        <div className="mt-5 border-t border-white border-opacity-50 flex flex-col text-center lg:text-start lg:flex-row items-center justify-between">
+        <div className="hidden sm:flex mt-5 border-t border-white border-opacity-50 flex-col text-center lg:text-start lg:flex-row items-center justify-between">
           <p className="text-[14px] leading-[17px] md:heading-8 opacity-50 mt-3 font-light">
             Copyright © 2023 for WaveNet. All rights reserved.
           </p>

@@ -54,6 +54,47 @@
   }
 }
 
+.gradient-button-no-anim {
+  --_rounded: 2px;
+  position: relative;
+  background-image: linear-gradient(
+    var(--rotate),
+    #1c75bc -22.22%,
+    rgba(28, 117, 188, 0) 54.4%,
+    #1c75bc 125.13%
+  );
+  background-size: cover;
+  isolation: isolate;
+  transition: 0.2s;
+  &:not(.no-animation) {
+    animation: _button-animation 2s linear infinite;
+  }
+
+  &.glow {
+    filter: drop-shadow(0px 0px 20px #033054);
+  }
+
+  &:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+  }
+  &:active {
+    color: white;
+    transform: scale(1.05);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+    width: calc(100% - calc(var(--border-width) * 2));
+    height: calc(100% - calc(var(--border-width) * 2));
+    background: #02101a;
+    z-index: -1;
+    border-radius: inherit;
+  }
+}
+
 .blog-read-more-btn.minimal {
   position: relative;
   width: 224.56px;
