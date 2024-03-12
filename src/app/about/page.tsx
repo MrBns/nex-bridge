@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "@/components/layout-comp/Footer";
-import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
 
 type Props = {};
 

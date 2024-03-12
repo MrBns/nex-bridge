@@ -9,8 +9,7 @@ const animate_video =
 export default function Header() {
   return (
     <header
-    
-      className="header p-2 min-h-[600px] md:min-h-[700px]  lg:min-h-screen relative isolate grid place-items-center overflow-hidden"
+      className="header p-2 min-h-screen relative isolate grid place-items-center overflow-hidden"
       id="homepage-header"
     >
       {/* Background Video */}
@@ -28,23 +27,23 @@ export default function Header() {
         </video>
       </div>
 
-    {/* Background video marger  */}
-    <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0B0C15] to-transparent h-28"></div>
+      {/* Background video marger  */}
+      <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0B0C15] to-transparent h-28"></div>
 
       <div className="my-container text-white header-all-element-wrapper">
         <div className="mt-20 lg:mt-0">
-          <h1 className="text-center   uppercase">
-            <span className=" leading-[1.2] text-[#c2c2c2] text-4xl lg:text-[37px]">
+          <h1 className="lg:text-center   uppercase">
+            <span className="leading-[1.2] text-[#c2c2c2] text-base block lg:inline lg:text-[37px]">
               Gateway to a{" "}
             </span>
-            <span className=" leading-[1.2]  font-michroma text-4xl md:text-[77px] 2xl:text-[100px]">
+            <span className=" leading-[1.2]  font-michroma text-5xl md:text-[77px] 2xl:text-[100px]">
               New
             </span>
-            <span className=" leading-[1.2] block  font-michroma text-4xl md:text-[77px] 2xl:text-[100px]">
-              Financial &nbsp;Era
+            <span className=" leading-[1.2] block  font-michroma text-5xl md:text-[77px] 2xl:text-[100px]">
+              Financial<span>&nbsp;</span> Era
             </span>
           </h1>
-          <div className="text-xl lg:text-2xl 2xl:text-[33px] uppercase text-center my-8 flex justify-center ">
+          <div className="text-xl lg:text-2xl 2xl:text-[33px] uppercase text-center my-8 flex lg:justify-center ">
             <h5 className="font-extralight text-[#d9d9d9]">FOR &nbsp;</h5>
             <h5 className="italic" id="word-change-and-typing-animation-span">
               <span className="animation-word text-white lg:px-1 font-medium"></span>
@@ -52,10 +51,10 @@ export default function Header() {
             </h5>
           </div>
 
-          <div className="text-center lg:my-16">
+          <div className="text-center lg:my-16 flex flex-col lg:flex-row justify-center max-w-[60%] lg:max-w-none">
             <GradientBorderButton
               variant="glow"
-              className="[--border-width:1px] mb-2  me-2 lg:me-5 text-white active:!text-blue-400 font-bold px-7 py-4 2xl:px-10 2xl:py-5"
+              className="[--border-width:1px] mb-2 lg:mb-0  lg:me-5 text-white active:!text-blue-400 font-bold px-7 py-4 2xl:px-10 2xl:py-5"
             >
               Explore
               <Img
@@ -77,7 +76,6 @@ export default function Header() {
             </GradientBorderButton>
           </div>
         </div>
-        
       </div>
     </header>
   );

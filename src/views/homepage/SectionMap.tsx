@@ -28,7 +28,7 @@ export default function SectionMap() {
               alt=""
             />
 
-            <div className="highlights absolute top-[20%]  left-[-13%] w-[67%] ">
+            <div className="highlights absolute top-[11%]  lg:top-[20%]  -left-[18%] lg:left-[-13%] w-[80%] lg:w-[67%] ">
               <SvgMapHighlight />
             </div>
           </div>

@@ -5,12 +5,12 @@ import BrandSlider from "./BrandSlider";
 
 function CountCard({ amount = "", label = "", amountSuffix = "" }) {
   return (
-    <div className="p-5 text-center flex-shrink-0 w-1/3 lg:w-fit ">
-      <h1 className="text-2xl md:text-[56px] font-bold">
+    <div className="lg:p-5 text-center flex-1 w-1/3 lg:w-fit ">
+      <h1 className="text-lg md:text-[56px] font-bold">
         <span className="" data-count={amount} data-count-ms="100"></span>
         <span>{amountSuffix}</span>
       </h1>
-      <p className="text-sm lg:mt-3 md:text-lg">{label}</p>
+      <p className="text-[7px] lg:mt-3 md:text-lg">{label}</p>
     </div>
   );
 }
@@ -23,10 +23,10 @@ export default function SectionReshaping() {
         className="relative isolate w-full overflow-x-hidden lg:overflow-visible"
       >
         {/* background effect */}
-        <div className="absolute w-full -z-10" draggable={false}>
+        <div className="absolute top-[10%] lg:top-0 w-full -z-10" draggable={false}>
           <Img
             src={IMG_RESHAPPING_BACKGROUND.src}
-            className="w-[200%] max-w-none  lg:w-full select-none"
+            className="w-full select-none"
             alt=""
             draggable={false}
           />
@@ -40,9 +40,9 @@ export default function SectionReshaping() {
             <div className="text-center lg:mt-26">
               <hgroup
                 data-aos
-                className="lg:leading-tight text-3xl  2xl:leading-[81px] lg:text-[44px] 2xl:text-[64px]"
+                className="lg:leading-tight text-lg  2xl:leading-[81px] lg:text-[44px] 2xl:text-[64px]"
               >
-                <h1 className="mt-8 mb-4 leading-[0.98em] font-light gap-2 items-center">
+                <h1 className="mt-8 mb-4 leading-none font-light gap-2 items-center">
                   Reshaping the financial landscape
                   <span className="lg:block"></span> for a world, where finance
                   is
@@ -51,24 +51,24 @@ export default function SectionReshaping() {
                   Accessible, Efficient and Universal
                 </h1>
               </hgroup>
-              <div className="max-w-[883px] mx-auto my-12">
-                <p id="typedtext"></p>
+              <div className="max-w-[300px] lg:max-w-[883px] mx-auto my-5 lg:my-12">
+                <p id="typedtext" className="text-[10px] md:text-sm lg:text-base"></p>
               </div>
 
-              <div className="mt-20 stat-root">
+              <div className=" mt-5 lg:mt-20 stat-root">
                 <div className="flex items-center">
                   <CountCard
                     amount={"500"}
                     amountSuffix="+"
                     label="successful Project"
                   />
-                  <hr className="line flex-1 hidden md:block"></hr>
+                  <hr className="line flex-1"></hr>
                   <CountCard
                     amount={"98"}
                     amountSuffix="%"
                     label="Satisfied Client"
                   />
-                  <hr className="line flex-1 hidden md:block"></hr>
+                  <hr className="line flex-1"></hr>
                   <CountCard
                     amount="5"
                     amountSuffix="+"
