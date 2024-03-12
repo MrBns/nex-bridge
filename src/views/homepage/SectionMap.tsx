@@ -4,8 +4,8 @@ import Img from "@/components/helper/Img";
 
 export default function SectionMap() {
   return (
-    <section id="" className="py-24 relative pb-40">
-      <div className="absolute  right-0 -top-[15%]">
+    <section id="" className="py-24 relative pb-40 isolate">
+      <div className="absolute  rotate-180 lg:rotate-0 left-0 lg:left-auto lg:right-0  -top-[7%] lg:-top-[15%] -z-10">
         <Img alt="" src={IMG_MAP_CONER_BG.src} className="" />
       </div>
       <div className="my-container">
