@@ -92,3 +92,20 @@ body.no-scroll {
     );
   }
 }
+
+#finance {
+  .background-glow-top {
+    background: radial-gradient(
+      50% 50% at 20% 10%,
+      rgba(17, 144, 245, 0.25) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+  }
+  .background-glow-bottom {
+    background: radial-gradient(
+      50% 50% at 70% 80%,
+      rgba(17, 144, 245, 0.25) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+  }
+}

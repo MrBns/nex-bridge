@@ -32,3 +32,7 @@ export { default as IMG_WHY_CHOOSE_US_WAVE } from "./why-choose-us-wave.png";
 export { default as GRID_IMAGE_1 } from "./grid-image-1.png";
 export { default as GRID_IMAGE_2 } from "./grid-image-2.png";
 export { default as GRID_IMAGE_3 } from "./grid-image-3.png";
+
+export { default as FACEBOOK_ICON } from "./facebook.png";
+export { default as INSTAGRAM_ICON } from "./instagram.png";
+export { default as TWITTER_ICON } from "./twitter.png";
