@@ -15,11 +15,12 @@ function SectionTraditionalFinance({}: Props) {
         >
           <div className="w-full h-full absolute inset-0 background-glow-top z-[1]"></div>
           <div className="w-full h-full absolute inset-0 background-glow-bottom z-[1]"></div>
-          <div className="z-[5]">
-            <h2 className="text-xl lg:text-[32px] xl:text-[48px] font-extralight">
+
+          <div>
+            <h2 className="relative text-xl lg:text-[32px] xl:text-[48px] font-extralight z-[10]">
               We envision a future where
             </h2>
-            <h1 className="mt-3 lg:mt-5 text-3xl lg:text-[54px] xl:text-[64px] leading-none 2xl:text-[82px] font-medium">
+            <h1 className="relative mt-3 lg:mt-5 text-3xl lg:text-[54px] xl:text-[64px] leading-none 2xl:text-[82px] font-medium z-[10]">
               traditional finance integrates seamlessly with blockchain
             </h1>
           </div>

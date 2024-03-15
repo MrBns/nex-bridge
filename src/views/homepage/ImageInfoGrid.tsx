@@ -6,40 +6,83 @@ type Props = {};
 
 function ImageGrid({}: Props) {
   return (
-    <section className="my-container pb-20 sm:pb-32 flex flex-col gap-10 sm:gap-20 lg:gap-32">
-      <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
-        <Img src={GRID_IMAGE_1.src} alt="office" />
-        <p className="text-[11px]/[13px] sm:text-[15px]/[24px] lg:text-[19px]/[28px]">
-          With NexBridge,{" "}
-          <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
-            the financial future is inclusive, innovative, and filled with
-            limitless possibilities
-          </span>{" "}
-          for growth and economic prosperity.
-        </p>
-      </div>
-      <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
-        <p className="order-2 sm:order-1 text-[11px]/[13px] sm:text-[15px]/[24px] lg:text-[19px]/[28px]">
-          Where{" "}
-          <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
-            cuting-edge technology and financial innovation come together
-          </span>{" "}
-          to chart the path toward a barrier-free economic future.
-        </p>
-        <Img className="sm:order-2" src={GRID_IMAGE_2.src} alt="innovation" />
-      </div>
-      <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
-        <Img src={GRID_IMAGE_3.src} alt="global" />
-        <p className="text-[11px]/[13px] sm:text-[15px]/[24px] lg:text-[19px]/[28px]">
-          <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
-            Not just global markets
-          </span>{" "}
-          we transform the Salvadoran financial landscape,{" "}
-          <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
-            connecting local dreams with global capital
-          </span>{" "}
-          , in a symphony of progress and opportunity{" "}
-        </p>
+    <section id="image-grid" className="relative">
+      <div className="background-glow absolute w-full h-full z-[2]"></div>
+      <div className="my-container pb-20 sm:pb-32 flex flex-col gap-10 sm:gap-20 lg:gap-32 z-[20] relative">
+        <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
+          <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
+            <Img
+              className="absolute object-cover w-full h-full"
+              src={GRID_IMAGE_1.src}
+              alt="office"
+            />
+            <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
+              future is
+              <br />
+              <span className="font-medium">
+                inclusive,
+                <br />
+                innovative.
+              </span>
+            </p>
+          </div>
+          <p className="text-[11px]/[13px] sm:text-[15px]/[24px] lg:text-[19px]/[28px]">
+            With NexBridge,{" "}
+            <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
+              the financial future is inclusive, innovative, and filled with
+              limitless possibilities
+            </span>{" "}
+            for growth and economic prosperity.
+          </p>
+        </div>
+        <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
+          <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
+            <Img
+              className="absolute object-cover w-full h-full"
+              src={GRID_IMAGE_2.src}
+              alt="innovation"
+            />
+            <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
+              <span className="font-medium">
+                cuting-edge technology and financial innovation
+              </span>{" "}
+              comes together.
+            </p>
+          </div>
+          <p className="text-[11px]/[13px] sm:text-[15px]/[24px] lg:text-[19px]/[28px]">
+            Where{" "}
+            <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
+              cuting-edge technology and financial innovation come together
+            </span>{" "}
+            to chart the path toward a barrier-free economic future.
+          </p>
+        </div>
+        <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
+          <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
+            <Img
+              className="absolute object-cover w-full h-full"
+              src={GRID_IMAGE_3.src}
+              alt="global"
+            />
+            <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
+              connecting
+              <br />
+              <span className="font-medium">
+                local dreams with global capital.
+              </span>
+            </p>
+          </div>
+          <p className="text-[11px]/[13px] sm:text-[15px]/[24px] lg:text-[19px]/[28px]">
+            <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
+              Not just global markets
+            </span>{" "}
+            we transform the Salvadoran financial landscape,{" "}
+            <span className="text-[11px] sm:text-[16px] lg:text-[20px] font-bold">
+              connecting local dreams with global capital
+            </span>{" "}
+            , in a symphony of progress and opportunity{" "}
+          </p>
+        </div>
       </div>
     </section>
   );

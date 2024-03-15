@@ -8,10 +8,10 @@ type Props = {};
 function SectionWantToConnect({}: Props) {
   return (
     <>
-      <section id="want-to-connect" className="relative overflow-x-hidden overflow-y-clip lg:overflow-visible">
-       <div className="background-glow absolute w-[900px] lg:w-[1502px] h-[400px] lg:h-[962px] top-[10%] lg:-top-[40%] -left-[50%] lg:-left-[10%] "></div>
+      <section id="want-to-connect" className="relative  mt-10">
+        <div className="background-glow absolute w-full h-full md:h-[600px] md:-top-[20%] lg:-top-0 -left-[10%] md:-left-[20%]"></div>
 
-        <div className=" absolute top-[18%] w-full">
+        <div className="absolute top-[18%] w-full">
           <Img
             src={IMG_WANT_TO_CONNECT_WAVE.src}
             className="w-full max-w-[1920px] mx-auto"
