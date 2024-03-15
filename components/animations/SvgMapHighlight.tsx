@@ -8,7 +8,6 @@ export default function SvgMapHighlight(props: TProps) {
       // height=""
       viewBox="0 0 1341 670"
       fill="none"
-      // eslint-disable-next-line react-svg/no-unused-ids-in-svg
       id="map-svg-highlight-circle"
       xmlns="http://www.w3.org/2000/svg"
     >

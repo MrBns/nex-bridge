@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Michroma, Montserrat, Poppins } from "next/font/google";
-import localFont from "next/font/local";
-import "../styles/app.css";
-import "../styles/app.scss";
 import Navbar from "@/components/layout-comp/Navbar";
-import Script from "next/script";
 import Footer from "@/components/layout-comp/Footer";
 import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
+import "../../styles/app.scss";
+import "../../styles/tailwind.css";
 
 const poppins = Poppins({
   subsets: ["latin"],

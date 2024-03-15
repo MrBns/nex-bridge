@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:react-svg/recommended",
-    "plugin:eslint-plugin-jsdoc"
-  ],
+  "extends": ["next/core-web-vitals", "plugin:eslint-plugin-jsdoc"],
   "rules": {
     "react/no-unknown-property": "error"
   }
