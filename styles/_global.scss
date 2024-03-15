@@ -109,3 +109,13 @@ body.no-scroll {
     );
   }
 }
+
+#image-grid {
+  .background-glow {
+    background: radial-gradient(
+      20% 30% at -0% 50%,
+      rgba(17, 144, 245, 0.2) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+  }
+}
