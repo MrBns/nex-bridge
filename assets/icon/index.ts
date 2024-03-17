@@ -1,1 +1,10 @@
 export { default as ICON_RIGHT_ARROW } from "./right-arrow.svg";
+export { default as ICON_HEART_OUTLINE } from "./heart-outline.svg";
+export { default as ICON_PAGINATION_ARROW_RIGHT } from "./pagination-arrow-right.svg";
+export { default as ICON_SEARCH } from "./search-outline.svg";
+export { default as ICON_QUOTE } from "./quote-icon.svg";
+export { default as ICON_BLOG_CHECK } from "./blog-check-icon.svg";
+export { default as ICON_BLOG_FB } from "./blog-fb-icon.svg";
+export { default as ICON_BLOG_TWITTER } from "./blog-twitter-icon.svg";
+export { default as ICON_BLOG_LEFT_ARROW } from "./blog-arrow-left.svg";
+export { default as ICON_BLOG_RIGHT_ARROW } from "./blog-arrow-right.svg";

@@ -119,3 +119,21 @@ body.no-scroll {
     );
   }
 }
+
+.blog_aside_item_gradient {
+  background: rgb(20, 64, 100);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 64, 100, 1) 0%,
+    rgba(1, 38, 68, 1) 100%
+  );
+}
+
+.blog_bottom_author_card_gradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
