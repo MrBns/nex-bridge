@@ -5,23 +5,12 @@ import { z } from "zod";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import dbConnect from "@/lib/server/helper/connectDb";
+import { jwtSign } from "@/lib/utils/jwtUtils";
 
 const signInValidator = z.object({
   username: z.string().min(1, "User Name Cannot Be Empty").toLowerCase(),
   password: z.string().min(8, "Password need to be at least 8 character"),
 });
-
-async function jwtSign(payload: string | object | Buffer, secret: string, expiresIn: string) {
-  return new Promise((resolve, reject) => {
-    jwt.sign(payload, secret, { expiresIn }, function (err, token) {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(token);
-      }
-    });
-  });
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -47,7 +36,6 @@ export async function POST(req: NextRequest) {
       {
         data: found_user.toObject(),
       }, // Singing Methdo
-      "219a2f62b007699ee20a10a878026bd2c4de5d51f1847ee154c3f4bcfc5c07d8520df768058172f7d4f1387074d076a63c68",
       "3d"
     );
 
