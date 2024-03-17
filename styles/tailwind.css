@@ -10,23 +10,14 @@
     @apply md:max-w-[95%] xl:max-w-[1200px] 2xl:max-w-[1635px] mx-auto px-5 md:px-3;
   }
 
-  #homepage-header {
-    background-image: linear-gradient(
-      212.76deg,
-      rgba(28, 117, 188, 0.3) 5.52%,
-      rgba(0, 0, 0, 0) 80.42%
-    );
+  .dashboard-container {
+    @apply max-w-[1750px] mx-auto p-5;
   }
-  /* #we-believe {
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(28, 117, 188, 0.4) 0%,
-      rgba(28, 117, 188, 0) 100%
-    );
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  } */
+
+  #homepage-header {
+    background-image: linear-gradient(212.76deg, rgba(28, 117, 188, 0.3) 5.52%, rgba(0, 0, 0, 0) 80.42%);
+  }
+
   #main-navbar.navbar-scrolled {
     @apply backdrop-blur-lg bg-black/15 py-2;
   }
@@ -45,50 +36,20 @@
   }
 
   .logo-gradient {
-    background: -webkit-linear-gradient(
-      90deg,
-      rgba(146, 222, 237, 1) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    background: -webkit-linear-gradient(90deg, rgba(146, 222, 237, 1) 0%, rgba(255, 255, 255, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .blue-partial-border {
     position: relative;
-    background: radial-gradient(
-          circle at 100% 100%,
-          #000000 0,
-          #000000 14px,
-          transparent 14px
-        )
-        0% 0%/15px 15px no-repeat,
-      radial-gradient(
-          circle at 0 100%,
-          #000000 0,
-          #000000 14px,
-          transparent 14px
-        )
-        100% 0%/15px 15px no-repeat,
-      radial-gradient(
-          circle at 100% 0,
-          #000000 0,
-          #000000 14px,
-          transparent 14px
-        )
-        0% 100%/15px 15px no-repeat,
-      radial-gradient(circle at 0 0, #000000 0, #000000 14px, transparent 14px)
-        100% 100%/15px 15px no-repeat,
-      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 2px)
-        calc(100% - 30px) no-repeat,
-      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 30px)
-        calc(100% - 2px) no-repeat,
-      linear-gradient(
-        118deg,
-        #1c75bc 0%,
-        rgba(72, 171, 224, 0) 50%,
-        #1c75bc 100%
-      );
+    background: radial-gradient(circle at 100% 100%, #000000 0, #000000 14px, transparent 14px) 0% 0%/15px 15px no-repeat,
+      radial-gradient(circle at 0 100%, #000000 0, #000000 14px, transparent 14px) 100% 0%/15px 15px no-repeat,
+      radial-gradient(circle at 100% 0, #000000 0, #000000 14px, transparent 14px) 0% 100%/15px 15px no-repeat,
+      radial-gradient(circle at 0 0, #000000 0, #000000 14px, transparent 14px) 100% 100%/15px 15px no-repeat,
+      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 2px) calc(100% - 30px) no-repeat,
+      linear-gradient(#000000, #000000) 50% 50% / calc(100% - 30px) calc(100% - 2px) no-repeat,
+      linear-gradient(118deg, #1c75bc 0%, rgba(72, 171, 224, 0) 50%, #1c75bc 100%);
   }
 }
 

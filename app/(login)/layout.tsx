@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Michroma, Montserrat, Poppins } from "next/font/google";
 import "../../styles/app.scss";
 import "../../styles/tailwind.css";
-import AdminSidebar from "@/components/layout-comp/admin/sidebar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,14 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${michroma.variable} ${montserrat.variable}`}>
       <head></head>
-      <body className="bg-[#0B0C15]">
-        <div className="w-full flex">
-          <div className="shrink-0 min-w-[300px] h-screen border-r border-r-slate-800 sticky top-0 bg-black">
-            <AdminSidebar />
-          </div>
-          <div className="flex-1">{children}</div>
-        </div>
-      </body>
+      <body className="bg-[#0B0C15]">{children}</body>
     </html>
   );
 }
