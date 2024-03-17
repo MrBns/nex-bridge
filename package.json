@@ -11,8 +11,10 @@
     "gen::icon": "./src/assets/assetLoader --dir=\"src/assets/icon/\" --output=\"index.ts\" --prefix=\"ICON\""
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-react": "^6.2.0",
     "@types/bcrypt": "^5.0.2",
     "bcrypt": "^5.1.1",
+    "ckeditor5": "file:lib/vendor/ckeditor",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.1",
     "next": "14.1.0",
