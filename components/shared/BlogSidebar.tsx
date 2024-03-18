@@ -30,6 +30,7 @@ const TWITTER_POSTS: LatestTwitterPostItemType[] = [
 type Props = {};
 
 type CATEGORY = {
+  id: number;
   attributes: {
     Category: string;
     blogs: {
@@ -69,7 +70,7 @@ async function BlogSidebar({}: Props) {
         <div className="mt-10 flex flex-col gap-4">
           {categories &&
             categories.map((item) => (
-              <div className="flex items-center justify-between">
+              <div key={`category-${item.id}`} className="flex items-center justify-between">
                 <p className="text-[17px]/[22px] font-bold">{item.attributes.Category}</p>
                 <p className="text-[14px]/[21px]">{item.attributes.blogs.data.length}</p>
               </div>

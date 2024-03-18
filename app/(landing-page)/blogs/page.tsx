@@ -4,7 +4,11 @@ import BlogSidebar from "@/components/shared/BlogSidebar";
 import Img from "@/components/helper/Img";
 import axios from "axios";
 
-type Props = {};
+type Props = {
+  searchParams: Record<string, string> & {
+    page: string;
+  };
+};
 
 type BLOG = {
   id: number;
@@ -43,10 +47,12 @@ type BLOG_DATA = {
   data: BLOG[];
 };
 
-async function Blogs({}: Props) {
+async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
   let data = null;
+  let pageNumber = Number(page) === 0 ? 1 : Number(page);
+
   try {
-    const blogsResponse = await axios.get("http://localhost:1337/api/blogs?populate=*&pagination[page]=1&pagination[pageSize]=3");
+    const blogsResponse = await axios.get(`http://localhost:1337/api/blogs?populate=*&pagination[page]=${pageNumber}&pagination[pageSize]=3`);
     if (blogsResponse.status === 200) {
       data = (blogsResponse.data as BLOG_DATA).data;
     }
@@ -60,8 +66,9 @@ async function Blogs({}: Props) {
 
       <section className="w-full mt-28 flex gap-10">
         <section className="w-[60%]">
-          <div className="h-full flex flex-col gap-10">{data && data.map((blog: BLOG) => <BlogCard key={`blog-${blog.id}`} blog={blog} />)}</div>
-          {/* paginations */}
+          <div className="h-full flex flex-col gap-10">
+            {data && data.map((blog: BLOG) => <BlogCard key={`blog-${blog.attributes.slug}`} blog={blog} />)}
+          </div>
           <div className="grid grid-cols-4 w-max gap-4">
             <button className="px-3 py-2 rounded-lg bg-[#144064] border border-[#144064]">
               <span className="text-white text-[22px]/[28px] font-semibold">1</span>
@@ -95,7 +102,7 @@ function BlogCard({ blog }: BlogCardProps) {
         {blog.attributes.thumbnail && (
           <img
             className="absolute inset-0 w-full h-full bg-cover"
-            src={`http://localhost:1337${blog.attributes.thumbnail.data.attributes.formats.large.url}`}
+            src={`http://localhost:1337${blog.attributes.thumbnail.data.attributes.formats.large?.url}`}
             alt="thumbnail"
           />
         )}

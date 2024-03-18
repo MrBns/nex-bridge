@@ -11,7 +11,7 @@ const font = Space_Grotesk({
 });
 
 type Props = {
-  slug: string;
+  params: { slug: string };
 };
 
 type BLOG = {
@@ -26,6 +26,7 @@ type BLOG = {
     thumbnail: {
       data: {
         attributes: {
+          url: string;
           formats: {
             large: {
               url: string;
@@ -51,12 +52,15 @@ type BLOG_DATA = {
   data: BLOG[];
 };
 
-async function BlogView({ slug }: Props) {
+async function BlogView({ params: { slug }, ...restProps }: Props) {
   let data = null;
+  console.log(restProps);
+
   try {
-    const blogResponse = await axios.get(`http://localhost:1337/api/blogs?slug=${slug}&populate=*`);
+    const blogResponse = await axios.get(`http://localhost:1337/api/blogs?filters[slug][$eq]=${slug}&populate=*`);
     if (blogResponse.status === 200) {
       data = (blogResponse.data as BLOG_DATA).data[0];
+      console.log(data.attributes.thumbnail.data.attributes.url);
     }
   } catch (err) {
     console.log(err);
@@ -76,7 +80,7 @@ async function BlogView({ slug }: Props) {
             {data?.attributes.thumbnail && (
               <Img
                 className="w-full h-full object-cover"
-                src={`http://localhost:1337${data?.attributes.thumbnail.data.attributes.formats.large.url}`}
+                src={`http://localhost:1337${data?.attributes.thumbnail.data.attributes.url}`}
                 alt="thumbnail"
               />
             )}
@@ -96,7 +100,7 @@ async function BlogView({ slug }: Props) {
           </div>
 
           {/* content */}
-          <div className="mt-10 text-[14px]/[21px]">
+          <div className="mt-10 text-[14px]/[21px]" id="BLOG_CONTENT_HTML">
             {data?.attributes.content && <div dangerouslySetInnerHTML={{ __html: data?.attributes.content ?? "" }}></div>}
           </div>
 
