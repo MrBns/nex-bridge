@@ -76,11 +76,11 @@ export async function handleLogin(formData: FormData): Promise<LoginResult> {
 
   found_user.password = "";
 
-  cookies().set("token", token as string, {
+  cookies().set("token", "Bearer " + token, {
     maxAge: 60 * 60 * 24 * 3,
     expires: new Date(Date.now() + 60 * 60 * 24 * 3 * 1000),
     sameSite: true,
-    httpOnly: process.env.NODE_ENV !== "development",
+    httpOnly: false,
     secure: process.env.NODE_ENV !== "development",
   });
 
@@ -95,7 +95,7 @@ export async function handleLogin(formData: FormData): Promise<LoginResult> {
         email: found_user.email,
         role: found_user.role,
       },
-      token: token as string,
+      token: "Bearer " + token,
       tokenDuration: "3days",
     },
   };
