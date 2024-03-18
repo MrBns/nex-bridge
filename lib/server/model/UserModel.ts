@@ -1,6 +1,6 @@
 import mongoose, { Schema, model } from "mongoose";
 
-interface IUser extends mongoose.Document {
+export interface IUser {
   username: string;
   first_name: string;
   last_name: string;
@@ -10,7 +10,9 @@ interface IUser extends mongoose.Document {
   role: "admin" | "author";
 }
 
-const userScheme = new Schema<IUser>(
+interface IUserDocument extends mongoose.Document, IUser {}
+
+const userScheme = new Schema<IUserDocument>(
   {
     username: {
       type: String,
