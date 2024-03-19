@@ -2,6 +2,8 @@ import React from "react";
 import { ICON_SEARCH } from "@/assets/icon";
 import Img from "@/components/helper/Img";
 import axios from "axios";
+import { ADMIN_URL } from "@/lib/config/url";
+
 
 type LatestTwitterPostItemType = {
   id: number;
@@ -47,7 +49,7 @@ async function BlogSidebar({}: Props) {
   let categories = null;
 
   try {
-    const categoriesResponse = await axios.get("http://localhost:1337/api/categories?populate=*");
+    const categoriesResponse = await axios.get(`${ADMIN_URL}/api/categories?populate=*`);
     if (categoriesResponse.status === 200) {
       categories = (categoriesResponse.data as CATEGORY_DATA).data;
     }

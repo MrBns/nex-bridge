@@ -3,6 +3,9 @@ import { ICON_HEART_OUTLINE, ICON_PAGINATION_ARROW_RIGHT } from "@/assets/icon";
 import BlogSidebar from "@/components/shared/BlogSidebar";
 import Img from "@/components/helper/Img";
 import axios from "axios";
+import { ADMIN_URL } from "@/lib/config/url";
+
+
 
 type Props = {
   searchParams: Record<string, string> & {
@@ -52,7 +55,7 @@ async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
   let pageNumber = Number(page) === 0 ? 1 : Number(page);
 
   try {
-    const blogsResponse = await axios.get(`http://localhost:1337/api/blogs?populate=*&pagination[page]=${pageNumber}&pagination[pageSize]=3`);
+    const blogsResponse = await axios.get(`${ADMIN_URL}/api/blogs?populate=*&pagination[page]=${pageNumber}&pagination[pageSize]=3`);
     if (blogsResponse.status === 200) {
       data = (blogsResponse.data as BLOG_DATA).data;
     }
@@ -102,7 +105,7 @@ function BlogCard({ blog }: BlogCardProps) {
         {blog.attributes.thumbnail && (
           <img
             className="absolute inset-0 w-full h-full bg-cover"
-            src={`http://localhost:1337${blog.attributes.thumbnail.data.attributes.formats.large?.url}`}
+            src={`${ADMIN_URL}${blog.attributes.thumbnail.data.attributes.formats.large?.url}`}
             alt="thumbnail"
           />
         )}
