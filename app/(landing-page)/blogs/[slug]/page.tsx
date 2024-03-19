@@ -4,6 +4,7 @@ import BlogSidebar from "@/components/shared/BlogSidebar";
 import { ICON_BLOG_CHECK, ICON_BLOG_FB, ICON_BLOG_LEFT_ARROW, ICON_BLOG_RIGHT_ARROW, ICON_BLOG_TWITTER, ICON_QUOTE } from "@/assets/icon";
 import Img from "@/components/helper/Img";
 import axios from "axios";
+import { ADMIN_URL } from "@/lib/config/url";
 
 const font = Space_Grotesk({
   weight: ["500", "400"],
@@ -57,7 +58,7 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
   console.log(restProps);
 
   try {
-    const blogResponse = await axios.get(`http://localhost:1337/api/blogs?filters[slug][$eq]=${slug}&populate=*`);
+    const blogResponse = await axios.get(`${ADMIN_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`);
     if (blogResponse.status === 200) {
       data = (blogResponse.data as BLOG_DATA).data[0];
       console.log(data.attributes.thumbnail.data.attributes.url);
@@ -80,7 +81,7 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
             {data?.attributes.thumbnail && (
               <Img
                 className="w-full h-full object-cover"
-                src={`http://localhost:1337${data?.attributes.thumbnail.data.attributes.url}`}
+                src={`${ADMIN_URL}${data?.attributes.thumbnail.data.attributes.url}`}
                 alt="thumbnail"
               />
             )}
