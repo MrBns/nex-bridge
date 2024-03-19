@@ -1,0 +1,139 @@
+@use "./breakpoint" as b;
+
+/* Navbar */
+#main-navbar {
+  transition: 0.3s;
+
+  &:not(.navbar-scrolled) {
+    padding: 1rem;
+    @include b.xl2() {
+      padding: 2rem 0px;
+    }
+  }
+  .navbar-scrolled {
+    padding: 30px 0px;
+    @include b.sm() {
+    }
+  }
+}
+
+.we-believe-change-text {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(28, 117, 188, 0.5) 0%,
+    rgba(28, 117, 188, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.slider-shadow::before,
+.slider-shadow::after {
+  content: "";
+  width: 15%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-image: linear-gradient(90deg, #0b0c15, transparent);
+
+  @include b.max-xl {
+    visibility: hidden;
+  }
+}
+
+.slider-shadow::after {
+  left: auto;
+  right: 0;
+  background-image: linear-gradient(270deg, #0c1422, transparent);
+}
+
+.slider-anim {
+  animation: toRight 40s linear infinite;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+@keyframes toRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-shadow::before,
+  .slider-shadow::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-image: linear-gradient(90deg, #0b0c15, transparent);
+  }
+}
+
+#want-to-connect {
+  .background-glow {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(17, 144, 245, 0.25) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+  }
+}
+
+#finance {
+  .background-glow-top {
+    background: radial-gradient(
+      50% 50% at 20% 10%,
+      rgba(17, 144, 245, 0.25) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+  }
+  .background-glow-bottom {
+    background: radial-gradient(
+      50% 50% at 70% 80%,
+      rgba(17, 144, 245, 0.25) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+  }
+}
+
+#image-grid {
+  .background-glow {
+    background: radial-gradient(
+      20% 30% at -0% 50%,
+      rgba(17, 144, 245, 0.2) 0%,
+      rgba(28, 117, 188, 0) 100%
+    );
+  }
+}
+
+.blog_aside_item_gradient {
+  background: rgb(20, 64, 100);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 64, 100, 1) 0%,
+    rgba(1, 38, 68, 1) 100%
+  );
+}
+
+.blog_bottom_author_card_gradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}

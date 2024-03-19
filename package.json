@@ -8,22 +8,34 @@
     "start": "next start",
     "lint": "next lint",
     "gen::img": "./src/assets/assetLoader --dir=\"src/assets/img/\" --output=\"index.ts\" --prefix=\"IMG\"",
-    "gen::icon": "./src/assets/assetLoader --dir=\"src/assets/icon/\" --output=\"index.ts\" --prefix=\"ICON\""
+    "gen::icon": "./src/assets/assetLoader --dir=\"src/assets/icon/\" --output=\"index.ts\" --prefix=\"ICON\"",
+    "pm2": "pm2"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-react": "^6.2.0",
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "jose": "^5.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.1",
     "next": "14.1.0",
+    "next-swagger-doc": "^0.4.0",
+    "pm2": "^5.3.1",
     "react": "^18",
     "react-dom": "^18",
-    "swiper": "^11.0.6"
+    "swagger-ui-react": "^5.12.0",
+    "swiper": "^11.0.6",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
-    "eslint-plugin-react-svg": "^0.0.4",
     "postcss": "^8",
     "sass": "^1.70.0",
     "tailwindcss": "^3.3.0",

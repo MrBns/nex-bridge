@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:react-svg/recommended"],
+  "extends": ["next/core-web-vitals"],
   "rules": {
     "react/no-unknown-property": "error"
   }
