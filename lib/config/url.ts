@@ -1,1 +1,1 @@
-export const ADMIN_URL = "admin.axiwalug.myhostpoint.ch"
+export const ADMIN_URL = "https://admin.axiwalug.myhostpoint.ch"
