@@ -5,15 +5,13 @@ import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
 
-
-
 type Props = {
   searchParams: Record<string, string> & {
     page: string;
   };
 };
 
-type BLOG = {
+export type BLOG = {
   id: number;
   attributes: {
     title: string;
@@ -25,11 +23,7 @@ type BLOG = {
     thumbnail: {
       data: {
         attributes: {
-          formats: {
-            large: {
-              url: string;
-            };
-          };
+          url: string;
         };
       };
     };
@@ -40,8 +34,21 @@ type BLOG = {
         };
       }[];
     };
-    createdBy: {
-      firstname: string;
+    author: {
+      data: {
+        attributes: {
+          firstName: string;
+          lastName: string;
+          about?: string;
+          profilePic: {
+            data: {
+              attributes: {
+                url: string;
+              };
+            };
+          };
+        };
+      };
     };
   };
 };
@@ -55,7 +62,9 @@ async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
   let pageNumber = Number(page) === 0 ? 1 : Number(page);
 
   try {
-    const blogsResponse = await axios.get(`${ADMIN_URL}/api/blogs?populate=*&pagination[page]=${pageNumber}&pagination[pageSize]=3`);
+    const blogsResponse = await axios.get(
+      `${ADMIN_URL}/api/blogs?populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail&pagination[page]=${pageNumber}&pagination[pageSize]=3`
+    );
     if (blogsResponse.status === 200) {
       data = (blogsResponse.data as BLOG_DATA).data;
     }
@@ -105,7 +114,7 @@ function BlogCard({ blog }: BlogCardProps) {
         {blog.attributes.thumbnail && (
           <img
             className="absolute inset-0 w-full h-full bg-cover"
-            src={`${ADMIN_URL}${blog.attributes.thumbnail.data.attributes.formats.large?.url}`}
+            src={`${ADMIN_URL}${blog.attributes.thumbnail.data.attributes.url}`}
             alt="thumbnail"
           />
         )}
@@ -126,10 +135,20 @@ function BlogCard({ blog }: BlogCardProps) {
         <div className="mt-5 flex items-center justify-between">
           <div className="flex items-center gap-4">
             {/* will replace this with the author image later */}
-            <div className="rounded-full w-[50px] h-[50px] bg-[#D9D9D9]"></div>
+            <div className="overflow-hidden rounded-full w-[50px] h-[50px] bg-[#D9D9D9]">
+              {blog?.attributes?.author?.data?.attributes?.profilePic?.data?.attributes?.url && (
+                <Img
+                  className="w-full h-full"
+                  src={`${ADMIN_URL}${blog.attributes.author.data.attributes.profilePic.data.attributes.url}`}
+                  alt="profilePic"
+                />
+              )}
+            </div>
 
             <div className="text-[11px]/[18px]">
-              <p className="font-semibold">{blog.attributes.createdBy.firstname}</p>
+              <p className="font-semibold">
+                {blog.attributes.author.data.attributes.firstName} {blog.attributes.author.data.attributes.lastName}
+              </p>
               <p className="opacity-80">{blog.attributes.createdAt}</p>
             </div>
           </div>

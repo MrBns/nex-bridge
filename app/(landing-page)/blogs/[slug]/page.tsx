@@ -5,6 +5,7 @@ import { ICON_BLOG_CHECK, ICON_BLOG_FB, ICON_BLOG_LEFT_ARROW, ICON_BLOG_RIGHT_AR
 import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
+import { BLOG } from "../page";
 
 const font = Space_Grotesk({
   weight: ["500", "400"],
@@ -13,40 +14,6 @@ const font = Space_Grotesk({
 
 type Props = {
   params: { slug: string };
-};
-
-type BLOG = {
-  id: number;
-  attributes: {
-    title: string;
-    createdAt: string;
-    content: string;
-    short_description: string;
-    summary: string;
-    slug: string;
-    thumbnail: {
-      data: {
-        attributes: {
-          url: string;
-          formats: {
-            large: {
-              url: string;
-            };
-          };
-        };
-      };
-    };
-    categories: {
-      data: {
-        attributes: {
-          Category: string;
-        };
-      }[];
-    };
-    createdBy: {
-      firstname: string;
-    };
-  };
 };
 
 type BLOG_DATA = {
@@ -58,7 +25,9 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
   console.log(restProps);
 
   try {
-    const blogResponse = await axios.get(`${ADMIN_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`);
+    const blogResponse = await axios.get(
+      `${ADMIN_URL}/api/blogs?filters[slug][$eq]=${slug}&populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail`
+    );
     if (blogResponse.status === 200) {
       data = (blogResponse.data as BLOG_DATA).data[0];
       console.log(data.attributes.thumbnail.data.attributes.url);
@@ -79,11 +48,7 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
           {/* thumbnail */}
           <div className="w-full h-[475px] bg-[#D9D9D9] rounded-[17px] overflow-hidden">
             {data?.attributes.thumbnail && (
-              <Img
-                className="w-full h-full object-cover"
-                src={`${ADMIN_URL}${data?.attributes.thumbnail.data.attributes.url}`}
-                alt="thumbnail"
-              />
+              <Img className="w-full h-full object-cover" src={`${ADMIN_URL}${data?.attributes.thumbnail.data.attributes.url}`} alt="thumbnail" />
             )}
           </div>
 
@@ -91,9 +56,19 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
           <div className="mt-5 flex items-center justify-between">
             <div className="flex items-center gap-4">
               {/* will replace this with the author image later */}
-              <div className="rounded-full w-[50px] h-[50px] bg-[#D9D9D9]"></div>
+              <div className="rounded-full w-[50px] h-[50px] bg-[#D9D9D9]">
+                {data?.attributes?.author?.data?.attributes?.profilePic?.data?.attributes?.url && (
+                  <Img
+                    src={`${ADMIN_URL}${data?.attributes?.author?.data?.attributes?.profilePic?.data?.attributes?.url}`}
+                    alt="profilePic"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                )}
+              </div>
               <div className="text-[11px]/[18px]">
-                <p className="font-semibold">{data?.attributes.createdBy.firstname}</p>
+                <p className="font-semibold">
+                  {data?.attributes.author.data.attributes.firstName} {data?.attributes.author.data.attributes.lastName}
+                </p>
                 <p className="opacity-80">{data?.attributes.createdAt}</p>
               </div>
             </div>
@@ -127,12 +102,19 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
 
           {/* author */}
           <div className="mt-20 w-full blog_bottom_author_card_gradient rounded-[17px] p-8 flex gap-5">
-            <div className="shrink-0 w-[112px] h-[112px] rounded-full bg-[#D9D9D9] relative">
+            <div className="shrink-0 w-[112px] h-[112px] bg-[#D9D9D9] relative rounded-full">
+              {data?.attributes?.author?.data?.attributes?.profilePic?.data?.attributes?.url && (
+                <Img
+                  src={`${ADMIN_URL}${data?.attributes?.author?.data?.attributes?.profilePic?.data?.attributes?.url}`}
+                  alt="profilePic"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              )}
               <div className="absolute bottom-0 right-0 w-[34px] h-[34px] bg-[#92DEED] rounded-full flex items-center justify-center">
                 <Img src={ICON_BLOG_CHECK.src} alt="check" />
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <div className="flex items-center justify-between">
                 <span className="tracking-[8px] text-[14px]/[21px]">AUTHOR</span>
                 <div className="flex items-center gap-5">
@@ -140,11 +122,10 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
                   <Img src={ICON_BLOG_TWITTER.src} alt="twitter" />
                 </div>
               </div>
-              <p className="mt-1 text-[22px]/[28px] font-semibold">NEXBRIDGE</p>
-              <p className="mt-3 text-[11px]/[18px]">
-                Nathan Akitson is a seasoned cloud computing expert and blogger with years of experience in the field. Currently, he works as a Cloud
-                Solutions Architect at a leading tech company in Silicon Valley and contributes several articles to our technology blog.
+              <p className="mt-1 text-[22px]/[28px] font-semibold uppercase">
+                {data?.attributes.author.data.attributes.firstName} {data?.attributes.author.data.attributes.lastName}
               </p>
+              <p className="mt-3 text-[11px]/[18px]">{data?.attributes.author.data.attributes.about}</p>
             </div>
           </div>
 
