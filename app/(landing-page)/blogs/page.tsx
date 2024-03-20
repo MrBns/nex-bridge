@@ -112,7 +112,7 @@ function BlogCard({ blog }: BlogCardProps) {
       <div className="relative bg-[#D9D9D9] h-[300px] flex items-end">
         {/* need to add the thumbnail image */}
         {blog.attributes.thumbnail && (
-          <img
+          <Img
             className="absolute inset-0 w-full h-full bg-cover"
             src={`${ADMIN_URL}${blog.attributes.thumbnail.data.attributes.url}`}
             alt="thumbnail"
