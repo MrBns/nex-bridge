@@ -17,27 +17,40 @@ function About({}: Props) {
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0B0C15] to-transparent h-28"></div>
 
         <h1 className="text-[64px]/[81px] text-center">About Us.</h1>
-        <p className="text-[24px] text-center opacity-70">Welcome to NexBridge, your gateway to the future of finance.</p>
+        <p className="text-[24px] text-center opacity-70 px-10">Welcome to NexBridge, your gateway to the future of finance.</p>
       </div>
 
       <div className="z-[1] overflow-hidden relative about-middle-radial-gradient bg-right-bottom pt-20">
         <section className="my-container mt-20 header-gradient relative">
-          <div className="mt-16 grid grid-cols-1 place-items-center xl:grid-cols-2 items-center gap-20">
-            <div className="sm:w-max lg:w-[614px] lg:h-[574px] overflow-hidden bg-black rounded-[35px]">
+          <div className="mt-16 flex items-center justify-center gap-20">
+            {/* <div className="sm:w-max lg:w-[614px] lg:h-[574px] overflow-hidden bg-black rounded-[35px]">
               <video className="h-full aspect-auto" autoPlay loop playsInline muted>
                 <source src="/vid/about-vid.mp4" type="video/mp4" />
               </video>
-            </div>
+            </div> */}
             <div>
-              <h2 className="text-[24px]/[34px] font-bold">Accessing a New Capital Market with NexBridge: Where Innovation Meets Tradition.</h2>
-              <p className="mt-10 text-[16px]/[34px]">
+              <h2 className="text-[30px]/[34px] font-bold text-center">
+                Accessing a New Capital Market with NexBridge: Where Innovation Meets Tradition.
+              </h2>
+              {/* <p className="mt-10 text-[16px]/[34px] text-center">
                 At NexBridge, we are more than just a digital asset issuer. Positioned at the crossroads of traditional finance and digital
                 innovation, we deliver solutions that align seamlessly with regulatory standards. In an era where compliance and transparency are
                 paramount, our commitment to ensuring that our digital products meet stringent regulations sets us apart. Our deep understanding of
                 traditional finance, combined with our expertise in tokenization, allows us to offer a comprehensive 360° service. From concept to
                 realization, we and our esteemed market-leading partners guarantee an all-inclusive solution in the new age of digital finance,
                 empowering sectors ranging from startups to established financial institutions with the tools they need to succeed.
-              </p>
+              </p> */}
+              <hgroup data-aos className="leading-[20px] text-[15px] lg:text-[19px] text-center max-w-6xl mx-auto">
+                <h1 className="mt-8 leading-[30px] font-light">
+                  At NexBridge, we are more than just a digital asset issuer. Positioned at the crossroads of traditional finance and digital
+                  innovation, we deliver solutions that align seamlessly with regulatory standards. In an era where compliance and transparency are
+                  paramount, our commitment to ensuring that our digital products meet stringent regulations sets us apart. Our deep understanding of
+                  traditional finance, combined with our expertise in <h1 className="leading-none font-semibold inline-block">tokenization</h1>,
+                  allows us to offer a comprehensive <h1 className="leading-none font-semibold inline-block">360° service</h1>. From concept to
+                  realization, we and our esteemed market-leading partners guarantee an all-inclusive solution in the new age of digital finance,
+                  empowering sectors ranging from startups to established financial institutions with the tools they need to succeed.
+                </h1>
+              </hgroup>
             </div>
           </div>
         </section>

@@ -24,7 +24,7 @@ export const FOOTER_LINKS = [
   {
     name: "Issuance",
     onClick: () => {},
-    slug: "/issuance",
+    slug: "/issuances",
   },
   {
     name: "Contact",

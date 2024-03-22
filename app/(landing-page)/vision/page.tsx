@@ -28,10 +28,19 @@ function Vision({}: Props) {
       </div>
 
       <section className="mt-28 px-5 xl:px-0 w-full max-w-[1300px] mx-auto circle-radial-gradient mb-20">
-        <p className="mt-52 text-center text-[16px]/[20px] lg:text-[24px]/[34px] opacity-70">
+        {/* <p className="mt-52 text-center text-[16px]/[20px] lg:text-[24px]/[34px] opacity-70">
           NexBridge is reshaping the financial landscape, seamlessly integrating traditional finance with the innovation of blockchain technology. Our
           mission is clear: to democratize finance, ensuring it&apos;s accessible, efficient, and within reach for everyone.
-        </p>
+        </p> */}
+
+        <hgroup data-aos className="lg:leading-tight text-lg  2xl:leading-[42px] 2xl:text-[38px] text-center">
+          <h1 className="mt-8 leading-none font-light">
+            NexBridge is reshaping the financial landscape, seamlessly integrating traditional finance with the innovation of blockchain technology.
+            Our mission is clear:
+          </h1>
+          <h1 className="leading-none font-semibold">to democratize finance, ensuring it&apos;s accessible, efficient,</h1> and within reach for
+          everyone.
+        </hgroup>
 
         <div className="mt-40 grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-20">
           <div className="flex flex-col gap-10">
