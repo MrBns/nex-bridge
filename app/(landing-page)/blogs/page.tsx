@@ -73,15 +73,15 @@ async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
   }
 
   return (
-    <main id="blogs" className="min-h-screen my-container pt-20 pb-32">
-      <h1 className="text-[71px]/[78px] font-bold mt-24">Blog</h1>
+    <main id="blogs" className="min-h-screen my-container pt-20 pb-16 md:pb-32">
+      <h1 className="text-[54px]/[58px] md:text-[71px]/[78px] font-bold mt-10 sm:mt-20 md:mt-24">Blog</h1>
 
-      <section className="w-full mt-28 flex gap-10">
-        <section className="w-[60%]">
+      <section className="w-full mt-16 md:mt-28 flex flex-col lg:flex-row gap-10">
+        <section className="w-full lg:w-[60%]">
           <div className="h-full flex flex-col gap-10">
             {data && data.map((blog: BLOG) => <BlogCard key={`blog-${blog.attributes.slug}`} blog={blog} />)}
           </div>
-          <div className="grid grid-cols-4 w-max gap-4">
+          <div className="mt-5 lg:mt-0 grid grid-cols-4 w-max gap-4">
             <button className="px-3 py-2 rounded-lg bg-[#144064] border border-[#144064]">
               <span className="text-white text-[22px]/[28px] font-semibold">1</span>
             </button>
@@ -109,12 +109,12 @@ type BlogCardProps = {
 function BlogCard({ blog }: BlogCardProps) {
   return (
     <div className="w-full rounded-[17px] overflow-hidden">
-      <div className="relative bg-[#D9D9D9] h-[300px] flex items-end">
+      <div className="relative bg-[#D9D9D9] h-[200px] lg:h-[300px] flex items-end">
         {/* need to add the thumbnail image */}
-        {blog.attributes.thumbnail && (
+        {blog?.attributes?.thumbnail && (
           <Img
-            className="absolute inset-0 w-full h-full bg-cover"
-            src={`${ADMIN_URL}${blog.attributes.thumbnail.data.attributes.url}`}
+            className="absolute inset-0 w-full h-full object-cover"
+            src={`${ADMIN_URL}${blog?.attributes?.thumbnail?.data?.attributes?.url}`}
             alt="thumbnail"
           />
         )}
@@ -126,7 +126,7 @@ function BlogCard({ blog }: BlogCardProps) {
           ))}
         </div>
       </div>
-      <div className="bg-[#092B46] px-8 py-7">
+      <div className="bg-[#092B46] px-5 md:px-8 py-4 md:py-7">
         <a href={`/blogs/${blog.attributes.slug}`}>
           <h2 className="font-semibold text-[22px]/[28px]">{blog.attributes.title}</h2>
         </a>
@@ -147,7 +147,7 @@ function BlogCard({ blog }: BlogCardProps) {
 
             <div className="text-[11px]/[18px]">
               <p className="font-semibold">
-                {blog.attributes.author.data.attributes.firstName} {blog.attributes.author.data.attributes.lastName}
+                {blog?.attributes?.author?.data?.attributes?.firstName} {blog?.attributes?.author?.data?.attributes?.lastName}
               </p>
               <p className="opacity-80">{blog.attributes.createdAt}</p>
             </div>

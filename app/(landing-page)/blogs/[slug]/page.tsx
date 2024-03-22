@@ -30,23 +30,22 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
     );
     if (blogResponse.status === 200) {
       data = (blogResponse.data as BLOG_DATA).data[0];
-      console.log(data.attributes.thumbnail.data.attributes.url);
     }
   } catch (err) {
     console.log(err);
   }
 
   return (
-    <main id="blogs-view" className="min-h-screen my-container pt-20 pb-32">
-      <hgroup className="mt-28">
+    <main id="blogs-view" className="min-h-screen my-container pt-20 pb-16 md:pb-32">
+      <hgroup className="mt-16 lg:mt-28">
         <h2 className="text-[#1190F5] text-[24px] font-bold">Blog</h2>
         <h1 className={`text-[40px] font-bold ${font.className}`}>{data?.attributes.title}</h1>
       </hgroup>
 
-      <section className="w-full mt-32 flex gap-10">
-        <section className="w-[60%]">
+      <section className="w-full mt-14 md:mt-20 lg:mt-32 flex flex-col lg:flex-row gap-10">
+        <section className="w-full lg:w-[60%]">
           {/* thumbnail */}
-          <div className="w-full h-[475px] bg-[#D9D9D9] rounded-[17px] overflow-hidden">
+          <div className="w-full h-[250px] md:h-[300px] xl:h-[475px] bg-[#D9D9D9] rounded-[17px] overflow-hidden">
             {data?.attributes.thumbnail && (
               <Img className="w-full h-full object-cover" src={`${ADMIN_URL}${data?.attributes.thumbnail.data.attributes.url}`} alt="thumbnail" />
             )}
@@ -67,9 +66,9 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
               </div>
               <div className="text-[11px]/[18px]">
                 <p className="font-semibold">
-                  {data?.attributes.author.data.attributes.firstName} {data?.attributes.author.data.attributes.lastName}
+                  {data?.attributes?.author?.data?.attributes?.firstName} {data?.attributes?.author?.data?.attributes?.lastName}
                 </p>
-                <p className="opacity-80">{data?.attributes.createdAt}</p>
+                <p className="opacity-80">{data?.attributes?.createdAt}</p>
               </div>
             </div>
             <div className="h-[57px] w-[127px] bg-white rounded-lg"></div>
@@ -77,7 +76,7 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
 
           {/* content */}
           <div className="mt-10 text-[14px]/[21px]" id="BLOG_CONTENT_HTML">
-            {data?.attributes.content && <div dangerouslySetInnerHTML={{ __html: data?.attributes.content ?? "" }}></div>}
+            {data?.attributes?.content && <div dangerouslySetInnerHTML={{ __html: data?.attributes?.content ?? "" }}></div>}
           </div>
 
           {/* quote */}
@@ -101,8 +100,8 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
           <p className="mt-10 text-[14px]/[21px]">{data?.attributes.summary}</p>
 
           {/* author */}
-          <div className="mt-20 w-full blog_bottom_author_card_gradient rounded-[17px] p-8 flex gap-5">
-            <div className="shrink-0 w-[112px] h-[112px] bg-[#D9D9D9] relative rounded-full">
+          <div className="mt-20 w-full blog_bottom_author_card_gradient rounded-[17px] p-4 md:p-8 flex gap-5">
+            <div className="shrink-0 w-[70px] h-[70px] md:w-[112px] md:h-[112px] bg-[#D9D9D9] relative rounded-full">
               {data?.attributes?.author?.data?.attributes?.profilePic?.data?.attributes?.url && (
                 <Img
                   src={`${ADMIN_URL}${data?.attributes?.author?.data?.attributes?.profilePic?.data?.attributes?.url}`}
@@ -116,16 +115,16 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
             </div>
             <div className="flex flex-col w-full">
               <div className="flex items-center justify-between">
-                <span className="tracking-[8px] text-[14px]/[21px]">AUTHOR</span>
+                <span className="tracking-[8px] text-[13px]/[18px] md:text-[14px]/[21px]">AUTHOR</span>
                 <div className="flex items-center gap-5">
                   <Img src={ICON_BLOG_FB.src} alt="facebook" />
                   <Img src={ICON_BLOG_TWITTER.src} alt="twitter" />
                 </div>
               </div>
-              <p className="mt-1 text-[22px]/[28px] font-semibold uppercase">
-                {data?.attributes.author.data.attributes.firstName} {data?.attributes.author.data.attributes.lastName}
+              <p className="mt-1 text-[16px]/[18px] md:text-[22px]/[28px] font-semibold uppercase">
+                {data?.attributes?.author?.data?.attributes?.firstName} {data?.attributes?.author?.data?.attributes?.lastName}
               </p>
-              <p className="mt-3 text-[11px]/[18px]">{data?.attributes.author.data.attributes.about}</p>
+              <p className="mt-3 text-[11px]/[18px]">{data?.attributes?.author?.data?.attributes?.about}</p>
             </div>
           </div>
 
