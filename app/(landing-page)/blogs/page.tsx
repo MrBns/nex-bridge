@@ -4,6 +4,7 @@ import BlogSidebar from "@/components/shared/BlogSidebar";
 import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
+import Link from "next/link";
 
 type Props = {
   searchParams: Record<string, string> & {
@@ -53,6 +54,12 @@ export type BLOG = {
   };
 };
 
+type Pagination = {
+  page: number;
+  pageSize: number;
+  pageCount: number;
+};
+
 type BLOG_DATA = {
   data: BLOG[];
 };
@@ -60,40 +67,45 @@ type BLOG_DATA = {
 async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
   let data = null;
   let pageNumber = Number(page) === 0 ? 1 : Number(page);
+  let pagination: Pagination | undefined = undefined;
 
   try {
     const blogsResponse = await axios.get(
-      `${ADMIN_URL}/api/blogs?populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail&pagination[page]=${pageNumber}&pagination[pageSize]=3`
+      `${ADMIN_URL}/api/blogs?populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail&pagination[page]=${pageNumber}&pagination[pageSize]=3&pagination[withCount]=true`
     );
     if (blogsResponse.status === 200) {
       data = (blogsResponse.data as BLOG_DATA).data;
+      pagination = blogsResponse.data.meta.pagination;
     }
   } catch (err) {
     console.log(err);
   }
 
   return (
-    <main id="blogs" className="min-h-screen my-container pt-20 pb-32">
-      <h1 className="text-[71px]/[78px] font-bold mt-24">Blog</h1>
+    <main id="blogs" className="min-h-screen my-container pt-20 pb-16 md:pb-32">
+      <h1 className="text-[54px]/[58px] md:text-[71px]/[78px] font-bold mt-10 sm:mt-20 md:mt-24">Blog</h1>
 
-      <section className="w-full mt-28 flex gap-10">
-        <section className="w-[60%]">
+      <section className="w-full mt-16 md:mt-28 flex flex-col lg:flex-row gap-10">
+        <section className="w-full lg:w-[60%]">
           <div className="h-full flex flex-col gap-10">
             {data && data.map((blog: BLOG) => <BlogCard key={`blog-${blog.attributes.slug}`} blog={blog} />)}
           </div>
-          <div className="grid grid-cols-4 w-max gap-4">
-            <button className="px-3 py-2 rounded-lg bg-[#144064] border border-[#144064]">
-              <span className="text-white text-[22px]/[28px] font-semibold">1</span>
-            </button>
-            <button className="px-3 py-2 rounded-lg bg-[#000000] border border-[#144064]">
-              <span className="text-[#ABABAB] text-[22px]/[28px] font-semibold">2</span>
-            </button>
-            <button className="px-3 py-2 rounded-lg bg-[#000000] border border-[#144064]">
-              <span className="text-[#ABABAB] text-[22px]/[28px] font-semibold">3</span>
-            </button>
-            <button className="px-3 py-2 rounded-lg bg-[#000000] border border-[#144064]">
-              <Img src={ICON_PAGINATION_ARROW_RIGHT.src} alt="more" />
-            </button>
+          <div className="mt-5 lg:mt-0 grid grid-cols-4 w-max gap-4">
+            {[...new Array(pagination?.pageCount)].map((_v, idx) => (
+              <Link
+                href={`/blogs?page=${idx + 1}`}
+                key={`key-${idx}`}
+                className={`px-3 py-2 rounded-lg border text-center border-[#144064] ${pagination?.page === idx + 1 ? "bg-[#144064]" : ""}`}
+              >
+                <span className="text-white text-[22px]/[28px] font-semibold">{idx + 1}</span>
+              </Link>
+            ))}
+
+            {pagination?.page !== pagination?.pageCount && (
+              <Link href={`/blogs?page=${Number(page) + 1}`} className="px-3 py-2 rounded-lg bg-[#000000] text-center border border-[#144064]">
+                <Img src={ICON_PAGINATION_ARROW_RIGHT.src} alt="next" />
+              </Link>
+            )}
           </div>
         </section>
         <BlogSidebar />
@@ -109,12 +121,12 @@ type BlogCardProps = {
 function BlogCard({ blog }: BlogCardProps) {
   return (
     <div className="w-full rounded-[17px] overflow-hidden">
-      <div className="relative bg-[#D9D9D9] h-[300px] flex items-end">
+      <div className="relative bg-[#D9D9D9] h-[200px] lg:h-[300px] flex items-end">
         {/* need to add the thumbnail image */}
-        {blog.attributes.thumbnail && (
-          <img
-            className="absolute inset-0 w-full h-full bg-cover"
-            src={`${ADMIN_URL}${blog.attributes.thumbnail.data.attributes.url}`}
+        {blog?.attributes?.thumbnail && (
+          <Img
+            className="absolute inset-0 w-full h-full object-cover"
+            src={`${ADMIN_URL}${blog?.attributes?.thumbnail?.data?.attributes?.url}`}
             alt="thumbnail"
           />
         )}
@@ -126,7 +138,7 @@ function BlogCard({ blog }: BlogCardProps) {
           ))}
         </div>
       </div>
-      <div className="bg-[#092B46] px-8 py-7">
+      <div className="bg-[#092B46] px-5 md:px-8 py-4 md:py-7">
         <a href={`/blogs/${blog.attributes.slug}`}>
           <h2 className="font-semibold text-[22px]/[28px]">{blog.attributes.title}</h2>
         </a>
@@ -147,7 +159,7 @@ function BlogCard({ blog }: BlogCardProps) {
 
             <div className="text-[11px]/[18px]">
               <p className="font-semibold">
-                {blog.attributes.author.data.attributes.firstName} {blog.attributes.author.data.attributes.lastName}
+                {blog?.attributes?.author?.data?.attributes?.firstName} {blog?.attributes?.author?.data?.attributes?.lastName}
               </p>
               <p className="opacity-80">{blog.attributes.createdAt}</p>
             </div>

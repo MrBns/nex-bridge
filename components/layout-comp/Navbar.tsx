@@ -23,9 +23,14 @@ export const NAVBAR_MENU_DATA = [
     slug: "/vision",
   },
   {
-    name: "Issuance",
+    name: "Issuances",
     onClick: () => {},
-    slug: "/issuance",
+    slug: "/issuances",
+  },
+  {
+    name: "Blog",
+    onClick: () => {},
+    slug: "/blogs",
   },
   {
     name: "Contact",
@@ -43,21 +48,13 @@ export default function Navbar(props: TProps) {
           <div className="flex items-center">
             <div className="">
               <a href="/#" className="block">
-                <Image
-                  src={IMG_NEXBRIDGE_WHITE_LOGO}
-                  className="mb-5 w-[200px]  2xl:w-[260px]"
-                  alt="nex-bridge-logo"
-                />
+                <Image src={IMG_NEXBRIDGE_WHITE_LOGO} className="mb-5 w-[200px]  2xl:w-[260px]" alt="nex-bridge-logo" />
               </a>
             </div>
 
             <div className="ms-auto flex-shrink-0 me-2 lg:hidden">
               <button id="navbar-toggle-button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2rem"
-                  viewBox="0 0 448 512"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" viewBox="0 0 448 512">
                   <path
                     fill="currentColor"
                     d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32m0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32m448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32"
@@ -73,10 +70,7 @@ export default function Navbar(props: TProps) {
               <ul className="flex flex-col lg:flex-row p-10 lg:p-0 justify-center">
                 {NAVBAR_MENU_DATA.map((data, index) => (
                   <li key={`${index}-${data.slug}`} className="p-4">
-                    <Link
-                      href={data.slug}
-                      className="text-4xl navbar-menu-link uppercase md:text-sm 2xl:text-base text-center block lg:inline-block"
-                    >
+                    <Link href={data.slug} className="text-4xl navbar-menu-link uppercase md:text-sm 2xl:text-base text-center block lg:inline-block">
                       {data.name}
                     </Link>
                   </li>
@@ -86,11 +80,7 @@ export default function Navbar(props: TProps) {
                     id="navbar-menu-close-button"
                     className="text-xl w-full  py-3 rounded-2xl lg:text-base text-[#0F75BC] text-center flex items-center justify-center gap-5"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2rem"
-                      viewBox="0 0 16 16"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" viewBox="0 0 16 16">
                       <path
                         fill="currentColor"
                         fillRule="evenodd"
@@ -104,12 +94,14 @@ export default function Navbar(props: TProps) {
               </ul>
             </div>
             <div className="hidden lg:block">
-              <GradientBorderButton
-                className="px-4 py-2 [--border-width:1.5px] font-semibold text-white text-sm 2xl:text-base no-animation rounded-md uppercase"
-                variant="minimal"
-              >
-                Private Access
-              </GradientBorderButton>
+              <Link href="/coming-soon">
+                <GradientBorderButton
+                  className="px-4 py-2 [--border-width:1.5px] font-semibold text-white text-sm 2xl:text-base no-animation rounded-md uppercase"
+                  variant="minimal"
+                >
+                  Private Access
+                </GradientBorderButton>
+              </Link>
             </div>
           </div>
         </div>

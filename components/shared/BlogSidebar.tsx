@@ -4,7 +4,6 @@ import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
 
-
 type LatestTwitterPostItemType = {
   id: number;
   date: string;
@@ -58,8 +57,8 @@ async function BlogSidebar({}: Props) {
   }
 
   return (
-    <aside className="w-[40%]">
-      <div className="w-full rounded-[17px] blog_aside_item_gradient px-14 pt-12 pb-10">
+    <aside className="w-full lg:w-[40%]">
+      <div className="w-full rounded-[17px] blog_aside_item_gradient px-8 py-7 md:px-14 md:pt-12 pb-10">
         <h3 className="text-[22px]/[28px] font-semibold">Search</h3>
         <div className="mt-5 border-b border-b-gray-500 flex items-center justify-between gap-4 pb-4">
           <input type="text" className="bg-transparent focus:outline-none text-[14px]/[21px] w-full" placeholder="Enter your keywords ..." />
@@ -67,7 +66,7 @@ async function BlogSidebar({}: Props) {
         </div>
       </div>
 
-      <div className="mt-5 w-full rounded-[17px] blog_aside_item_gradient px-14 pt-12 pb-10">
+      <div className="mt-5 w-full rounded-[17px] blog_aside_item_gradient px-8 py-7 md:px-14 md:pt-12 pb-10">
         <h3 className="text-[22px]/[28px] font-semibold">Category</h3>
         <div className="mt-10 flex flex-col gap-4">
           {categories &&
@@ -80,7 +79,7 @@ async function BlogSidebar({}: Props) {
         </div>
       </div>
 
-      <div className="mt-5 w-full rounded-[17px] blog_aside_item_gradient px-14 pt-12 pb-10">
+      <div className="mt-5 w-full rounded-[17px] blog_aside_item_gradient px-8 py-7 md:px-14 md:pt-12 pb-10">
         <h3 className="text-[22px]/[28px] font-semibold">Latest Twitter Posts</h3>
         <div className="mt-10 flex flex-col gap-8">
           {TWITTER_POSTS.map((item) => (

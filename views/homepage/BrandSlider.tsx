@@ -33,12 +33,7 @@ function LogoList() {
     <>
       <div className="slider-anim min-w-[600px]  flex items-center justify-between shrink-0 px-0 lg:px-4 xl:px-8 w-full ">
         {LOGO_LIST.map((img, index) => (
-          <Img
-            className="h-[30px] lg:h-[42px] w-[13%] object-contain lg:shrink-0 px-2"
-            key={"index" + index}
-            src={img.src}
-            alt=""
-          />
+          <Img className="h-[30px] lg:h-[42px] w-[13%] object-contain lg:shrink-0 px-2" key={"index" + index} src={img.src} alt="" />
         ))}
       </div>
     </>

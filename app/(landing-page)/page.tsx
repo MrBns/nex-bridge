@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <main className="">
       <Header />
+      <div id="explore" className="py-2"></div>
       <SectionReshaping />
       <SectionWhyChooseUs />
       <SectionMap />
