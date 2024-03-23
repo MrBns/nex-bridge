@@ -4,6 +4,7 @@ import BlogSidebar from "@/components/shared/BlogSidebar";
 import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
+import Link from "next/link";
 
 type Props = {
   searchParams: Record<string, string> & {
@@ -53,6 +54,12 @@ export type BLOG = {
   };
 };
 
+type Pagination = {
+  page: number;
+  pageSize: number;
+  pageCount: number;
+};
+
 type BLOG_DATA = {
   data: BLOG[];
 };
@@ -60,13 +67,15 @@ type BLOG_DATA = {
 async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
   let data = null;
   let pageNumber = Number(page) === 0 ? 1 : Number(page);
+  let pagination: Pagination | undefined = undefined;
 
   try {
     const blogsResponse = await axios.get(
-      `${ADMIN_URL}/api/blogs?populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail&pagination[page]=${pageNumber}&pagination[pageSize]=3`
+      `${ADMIN_URL}/api/blogs?populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail&pagination[page]=${pageNumber}&pagination[pageSize]=3&pagination[withCount]=true`
     );
     if (blogsResponse.status === 200) {
       data = (blogsResponse.data as BLOG_DATA).data;
+      pagination = blogsResponse.data.meta.pagination;
     }
   } catch (err) {
     console.log(err);
@@ -82,18 +91,21 @@ async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
             {data && data.map((blog: BLOG) => <BlogCard key={`blog-${blog.attributes.slug}`} blog={blog} />)}
           </div>
           <div className="mt-5 lg:mt-0 grid grid-cols-4 w-max gap-4">
-            <button className="px-3 py-2 rounded-lg bg-[#144064] border border-[#144064]">
-              <span className="text-white text-[22px]/[28px] font-semibold">1</span>
-            </button>
-            <button className="px-3 py-2 rounded-lg bg-[#000000] border border-[#144064]">
-              <span className="text-[#ABABAB] text-[22px]/[28px] font-semibold">2</span>
-            </button>
-            <button className="px-3 py-2 rounded-lg bg-[#000000] border border-[#144064]">
-              <span className="text-[#ABABAB] text-[22px]/[28px] font-semibold">3</span>
-            </button>
-            <button className="px-3 py-2 rounded-lg bg-[#000000] border border-[#144064]">
-              <Img src={ICON_PAGINATION_ARROW_RIGHT.src} alt="more" />
-            </button>
+            {[...new Array(pagination?.pageCount)].map((_v, idx) => (
+              <Link
+                href={`/blogs?page=${idx + 1}`}
+                key={`key-${idx}`}
+                className={`px-3 py-2 rounded-lg border text-center border-[#144064] ${pagination?.page === idx + 1 ? "bg-[#144064]" : ""}`}
+              >
+                <span className="text-white text-[22px]/[28px] font-semibold">{idx + 1}</span>
+              </Link>
+            ))}
+
+            {pagination?.page !== pagination?.pageCount && (
+              <Link href={`/blogs?page=${Number(page) + 1}`} className="px-3 py-2 rounded-lg bg-[#000000] text-center border border-[#144064]">
+                <Img src={ICON_PAGINATION_ARROW_RIGHT.src} alt="next" />
+              </Link>
+            )}
           </div>
         </section>
         <BlogSidebar />
