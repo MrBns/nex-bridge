@@ -36,3 +36,5 @@ export { default as GRID_IMAGE_3 } from "./IMAGE_GRID_3.png";
 export { default as FACEBOOK_ICON } from "./facebook.png";
 export { default as INSTAGRAM_ICON } from "./instagram.png";
 export { default as TWITTER_ICON } from "./twitter.png";
+
+export { default as CONTACT_BUILDING_IMAGE } from "./contact-building-image.png";

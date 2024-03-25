@@ -45,10 +45,10 @@ function About({}: Props) {
                   At NexBridge, we are more than just a digital asset issuer. Positioned at the crossroads of traditional finance and digital
                   innovation, we deliver solutions that align seamlessly with regulatory standards. In an era where compliance and transparency are
                   paramount, our commitment to ensuring that our digital products meet stringent regulations sets us apart. Our deep understanding of
-                  traditional finance, combined with our expertise in <h1 className="leading-none font-semibold inline-block">tokenization</h1>,
-                  allows us to offer a comprehensive <h1 className="leading-none font-semibold inline-block">360° service</h1>. From concept to
-                  realization, we and our esteemed market-leading partners guarantee an all-inclusive solution in the new age of digital finance,
-                  empowering sectors ranging from startups to established financial institutions with the tools they need to succeed.
+                  traditional finance, combined with our expertise in <p className="leading-none font-semibold inline-block">tokenization</p>, allows
+                  us to offer a comprehensive <p className="leading-none font-semibold inline-block">360° service</p>. From concept to realization, we
+                  and our esteemed market-leading partners guarantee an all-inclusive solution in the new age of digital finance, empowering sectors
+                  ranging from startups to established financial institutions with the tools they need to succeed.
                 </h1>
               </hgroup>
             </div>
