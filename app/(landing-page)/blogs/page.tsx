@@ -76,6 +76,7 @@ async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
     if (blogsResponse.status === 200) {
       data = (blogsResponse.data as BLOG_DATA).data;
       pagination = blogsResponse.data.meta.pagination;
+      console.log(pagination);
     }
   } catch (err) {
     console.log(err);

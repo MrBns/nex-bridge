@@ -1,6 +1,8 @@
 import React from "react";
-import Img from "../../components/helper/Img";
-import { GRID_IMAGE_1, GRID_IMAGE_2, GRID_IMAGE_3 } from "../../assets/img";
+
+const INFO_VID_1 = "/vid/anim-vid-1.mp4";
+const INFO_VID_2 = "/vid/anim-vid-2.mp4";
+const INFO_VID_3 = "/vid/anim-vid-3.mp4";
 
 type Props = {};
 
@@ -24,7 +26,7 @@ function ImageGrid({}: Props) {
               muted
               loop
             >
-              <source src={"/vid/anim-vid-1.mp4"} />
+              <source src={INFO_VID_1} />
             </video>
             <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
               future is
@@ -56,7 +58,7 @@ function ImageGrid({}: Props) {
               muted
               loop
             >
-              <source src={"/vid/anim-vid-2.mp4"} />
+              <source src={INFO_VID_2} />
             </video>
 
             <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
@@ -80,7 +82,7 @@ function ImageGrid({}: Props) {
               muted
               loop
             >
-              <source src={"/vid/anim-vid-3.mp4"} />
+              <source src={INFO_VID_3} />
             </video>
 
             <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
