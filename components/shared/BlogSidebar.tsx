@@ -26,7 +26,7 @@ async function BlogSidebar({}: Props) {
   let categories = null;
   let latestnews: TBlogLatestNewsResponse = await (
     await fetch(
-      `${ADMIN_URL}/api/blogs?fields%5B0%5D=createdAt&fields%5B1%5D=title&populate%5Bthumbnail%5D%5Bfields%5D%5B2%5D=url&fields%5B4%5D=slug&fields%5B5%5D=uid&sort=createdAt%3Aasc&pagination%5Bpage%5D=1&pagination%5BpageSize%5D=3`
+      `${ADMIN_URL}/api/blogs?fields%5B0%5D=createdAt&fields%5B1%5D=title&populate%5Bthumbnail%5D%5Bfields%5D%5B2%5D=url&fields%5B4%5D=slug&fields%5B5%5D=uid&sort=createdAt%3Adesc&pagination%5Bpage%5D=1&pagination%5BpageSize%5D=3`
     )
   ).json();
   console.log(latestnews);
@@ -81,10 +81,11 @@ async function BlogSidebar({}: Props) {
 function LatestTwitterPostItem(props: TBlogLatestNewsResponse["data"][0]) {
   return (
     <Link href={`/blogs/${props.attributes.slug}`} className="flex gap-5 w-full">
-      <div className="w-[73px] h-[69px] rounded-lg bg-[#D9D9D9]"></div>
+      <Img className="w-[110px] h-[69px] rounded-lg bg-[#D9D9D9] object-cover " src={ADMIN_URL + props.attributes.thumbnail.data.attributes.url} alt="" />
+
       <div className="flex flex-col gap-1">
         <p className="text-[11px]/[18px]">{new Date(props.attributes.createdAt).toDateString()}</p>
-        <h4 className="text-[17px]/[22px] font-bold max-w-[200px]">{props.attributes.title}</h4>
+        <h4 className="text-[17px]/[22px] font-bold max-w-[200px] line-clamp-2">{props.attributes.title}</h4>
       </div>
     </Link>
   );

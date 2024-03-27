@@ -71,12 +71,11 @@ async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
 
   try {
     const blogsResponse = await axios.get(
-      `${ADMIN_URL}/api/blogs?populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail&pagination[page]=${pageNumber}&pagination[pageSize]=3&pagination[withCount]=true`
+      `${ADMIN_URL}/api/blogs?populate[0]=author.profilePic&populate[1]=categories&populate[2]=thumbnail&pagination[page]=${pageNumber}&pagination[pageSize]=3&pagination[withCount]=true&sort=createdAt:desc`
     );
     if (blogsResponse.status === 200) {
       data = (blogsResponse.data as BLOG_DATA).data;
       pagination = blogsResponse.data.meta.pagination;
-      console.log(pagination);
     }
   } catch (err) {
     console.log(err);
@@ -122,16 +121,16 @@ type BlogCardProps = {
 function BlogCard({ blog }: BlogCardProps) {
   return (
     <div className="w-full rounded-[17px] overflow-hidden">
-      <div className="relative bg-[#D9D9D9] h-[200px] lg:h-[300px] flex items-end">
+      <div className="relative bg-[#D9D9D9] aspect-video w-full flex items-end overflow-hidden">
         {/* need to add the thumbnail image */}
         {blog?.attributes?.thumbnail && (
           <Img
-            className="absolute inset-0 w-full h-full object-cover"
+            className="w-full aspect-video object-cover object-center max-w-none"
             src={`${ADMIN_URL}${blog?.attributes?.thumbnail?.data?.attributes?.url}`}
             alt="thumbnail"
           />
         )}
-        <div className="relative z-20 px-8 py-5 flex items-center gap-3">
+        <div className="absolute z-20 px-8 py-5 flex items-center gap-3">
           {blog.attributes.categories.data.map((category) => (
             <p key={category.attributes.Category} className="uppercase bg-white px-4 py-2 text-black text-[11px]/[18px] font-semibold rounded-lg">
               {category.attributes.Category}
@@ -162,13 +161,8 @@ function BlogCard({ blog }: BlogCardProps) {
               <p className="font-semibold">
                 {blog?.attributes?.author?.data?.attributes?.firstName} {blog?.attributes?.author?.data?.attributes?.lastName}
               </p>
-              <p className="opacity-80">{blog.attributes.createdAt}</p>
+              <p className="opacity-80">{new Date(blog.attributes.createdAt).toDateString()}</p>
             </div>
-          </div>
-
-          <div className="flex items-center gap-2 cursor-pointer">
-            {/* <Img src={ICON_HEART_OUTLINE.src} alt="heart" /> */}
-            {/* <p className="text-[14px]/[21px] opacity-80">{props.likes}</p> */}
           </div>
         </div>
       </div>

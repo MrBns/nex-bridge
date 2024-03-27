@@ -43,7 +43,7 @@ export default function Navbar(props: TProps) {
   return (
     <>
       {/* <Script src={new URL("./navbar.effect.ts").pathname} strategy="afterInteractive" /> */}
-      <nav id="main-navbar" className="text-white fixed  w-screen z-[100]">
+      <nav id="main-navbar" className="text-white fixed w-screen z-[100]">
         <div className="my-container">
           <div className="flex items-center">
             <div className="">

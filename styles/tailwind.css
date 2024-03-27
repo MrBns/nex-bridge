@@ -7,7 +7,7 @@
     @apply text-white;
   }
   .my-container {
-    @apply md:max-w-[95%] xl:max-w-[1200px] 2xl:max-w-[1635px] mx-auto px-5 md:px-3;
+    @apply md:max-w-[95%] xl:max-w-[1200px] 2xl:max-w-[1350px] min-[1750px]:max-w-[1500px] min-[1900px]:max-w-[1600px] mx-auto px-5 md:px-3;
   }
 
   .dashboard-container {
