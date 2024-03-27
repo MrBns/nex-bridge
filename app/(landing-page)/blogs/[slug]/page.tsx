@@ -34,7 +34,6 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
     );
     if (blogResponse.status === 200) {
       data = (blogResponse.data as BLOG_DATA).data[0];
-      console.log(header);
     }
   } catch (err) {
     console.log(err);
