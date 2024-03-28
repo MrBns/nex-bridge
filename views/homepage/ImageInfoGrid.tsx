@@ -1,12 +1,15 @@
+import { ADMIN_URL } from "@/lib/config/url";
+import { IStaticAssetResponse } from "@/lib/types/strapi-api/static-asset-all";
 import React from "react";
-
-const INFO_VID_1 = "/vid/anim-vid-1.mp4";
-const INFO_VID_2 = "/vid/anim-vid-2.mp4";
-const INFO_VID_3 = "/vid/anim-vid-3.mp4";
 
 type Props = {};
 
-function ImageGrid({}: Props) {
+async function ImageGrid({}: Props) {
+  //Loading Static Assets only header_bg_vid field;
+  const assets: IStaticAssetResponse<["home_info_vid1", "home_info_vid2", "home_info_vid3"]> = await (
+    await fetch(`${ADMIN_URL}/api/static-asset?populate[0]=home_info_vid1&populate[1]=home_info_vid2&populate[2]=home_info_vid3`)
+  ).json();
+
   return (
     <section id="image-grid" className="relative">
       <div className="background-glow absolute w-full h-full z-[2]"></div>
@@ -26,7 +29,7 @@ function ImageGrid({}: Props) {
               muted
               loop
             >
-              <source src={INFO_VID_1} />
+              <source src={ADMIN_URL + assets?.data?.attributes?.home_info_vid1?.data?.attributes?.url} />
             </video>
             <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
               future is
@@ -58,7 +61,7 @@ function ImageGrid({}: Props) {
               muted
               loop
             >
-              <source src={INFO_VID_2} />
+              <source src={ADMIN_URL + assets?.data?.attributes?.home_info_vid2?.data?.attributes?.url} />
             </video>
 
             <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
@@ -82,7 +85,7 @@ function ImageGrid({}: Props) {
               muted
               loop
             >
-              <source src={INFO_VID_3} />
+              <source src={ADMIN_URL + assets?.data?.attributes?.home_info_vid3?.data?.attributes?.url} />
             </video>
 
             <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">

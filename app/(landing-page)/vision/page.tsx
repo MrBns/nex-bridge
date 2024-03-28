@@ -1,18 +1,22 @@
+import { ADMIN_URL } from "@/lib/config/url";
+import { IStaticAssetResponse } from "@/lib/types/strapi-api/static-asset-all";
 import React from "react";
-import Footer from "@/components/layout-comp/Footer";
-import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
-import Img from "@/components/helper/Img";
 
 type Props = {};
 
-function Vision({}: Props) {
+async function Vision({}: Props) {
+  //Loading Static Assets only header_bg_vid field;
+  const assets: IStaticAssetResponse<["vision_header_bg_vid"]> = await (
+    await fetch(`${ADMIN_URL}/api/static-asset?populate[0]=vision_header_bg_vid`)
+  ).json();
+
   return (
     <main className="pt-20">
       <div className="flex flex-col items-center justify-center gap-10 overflow-hidden relative py-10 mt-10">
         {/* Background Video */}
         <div className="absolute h-full w-full -z-[1] left-0 top-0">
           <video className="w-full h-full object-cover" autoPlay controls={false} playsInline muted loop>
-            <source src={"/vid/anim-vid-2.mp4"} />
+            <source src={ADMIN_URL + assets?.data?.attributes?.vision_header_bg_vid?.data?.attributes?.url} />
           </video>
         </div>
 
@@ -23,16 +27,9 @@ function Vision({}: Props) {
         <p className="text-[24px]/[34px] opacity-70 max-w-4xl text-center mx-auto">
           We envision a future where traditional finance integrates seamlessly with blockchain.
         </p>
-
-        {/* <Img src="/vision.gif" alt="vision" /> */}
       </div>
 
       <section className="mt-28 px-5 xl:px-0 w-full max-w-[1300px] mx-auto circle-radial-gradient mb-20">
-        {/* <p className="mt-52 text-center text-[16px]/[20px] lg:text-[24px]/[34px] opacity-70">
-          NexBridge is reshaping the financial landscape, seamlessly integrating traditional finance with the innovation of blockchain technology. Our
-          mission is clear: to democratize finance, ensuring it&apos;s accessible, efficient, and within reach for everyone.
-        </p> */}
-
         <hgroup data-aos className="lg:leading-tight text-lg  2xl:leading-[42px] 2xl:text-[38px] text-center">
           <h1 className="mt-8 leading-none font-light">
             NexBridge is reshaping the financial landscape, seamlessly integrating traditional finance with the innovation of blockchain technology.

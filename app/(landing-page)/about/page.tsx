@@ -1,15 +1,22 @@
+import { ADMIN_URL } from "@/lib/config/url";
+import { IStaticAssetResponse } from "@/lib/types/strapi-api/static-asset-all";
 import React from "react";
 
 type Props = {};
 
-function About({}: Props) {
+async function About({}: Props) {
+  //Loading Static Assets only header_bg_vid field;
+  const assets: IStaticAssetResponse<["about_us_header_vid"]> = await (
+    await fetch(`${ADMIN_URL}/api/static-asset?populate[0]=about_us_header_vid`)
+  ).json();
+
   return (
     <main className="pt-28">
       <div className="relative mt-5 py-20">
         {/* Background Video */}
         <div className="absolute h-full w-full -z-[1] left-0 top-0">
           <video className="w-full h-full object-cover" autoPlay controls={false} playsInline muted loop>
-            <source src={"/vid/anim-vid-1.mp4"} />
+            <source src={ADMIN_URL + assets?.data?.attributes?.about_us_header_vid?.data?.attributes?.url} />
           </video>
         </div>
 
@@ -23,23 +30,11 @@ function About({}: Props) {
       <div className="z-[1] overflow-hidden relative about-middle-radial-gradient bg-right-bottom pt-20">
         <section className="my-container mt-20 header-gradient relative">
           <div className="mt-16 flex items-center justify-center gap-20">
-            {/* <div className="sm:w-max lg:w-[614px] lg:h-[574px] overflow-hidden bg-black rounded-[35px]">
-              <video className="h-full aspect-auto" autoPlay loop playsInline muted>
-                <source src="/vid/about-vid.mp4" type="video/mp4" />
-              </video>
-            </div> */}
             <div>
               <h2 className="text-[30px]/[34px] font-bold text-center">
                 Accessing a New Capital Market with NexBridge: Where Innovation Meets Tradition.
               </h2>
-              {/* <p className="mt-10 text-[16px]/[34px] text-center">
-                At NexBridge, we are more than just a digital asset issuer. Positioned at the crossroads of traditional finance and digital
-                innovation, we deliver solutions that align seamlessly with regulatory standards. In an era where compliance and transparency are
-                paramount, our commitment to ensuring that our digital products meet stringent regulations sets us apart. Our deep understanding of
-                traditional finance, combined with our expertise in tokenization, allows us to offer a comprehensive 360° service. From concept to
-                realization, we and our esteemed market-leading partners guarantee an all-inclusive solution in the new age of digital finance,
-                empowering sectors ranging from startups to established financial institutions with the tools they need to succeed.
-              </p> */}
+
               <hgroup data-aos className="leading-[20px] text-[15px] lg:text-[19px] text-center max-w-6xl mx-auto">
                 <h1 className="mt-8 leading-[30px] font-light">
                   At NexBridge, we are more than just a digital asset issuer. Positioned at the crossroads of traditional finance and digital

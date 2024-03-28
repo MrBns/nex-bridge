@@ -3,16 +3,23 @@ import Img from "@/components/helper/Img";
 import GradientBorderButton from "@/components/shared/buttons/GradientBorderButton";
 import "./header.effect";
 import Link from "next/link";
+import { ADMIN_URL } from "@/lib/config/url";
+import { IStaticAssetResponse } from "@/lib/types/strapi-api/static-asset-all";
 
 const animate_video = "/vid/header-animation.mp4";
 
-export default function Header() {
+export default async function Header() {
+  //Loading Static Assets only header_bg_vid field;
+  const header_animate_vid: IStaticAssetResponse<["header_bg_vid"]> = await (
+    await fetch(`${ADMIN_URL}/api/static-asset?populate[header_bg_vid][field][0]=url`)
+  ).json();
+
   return (
     <header className="header p-2 min-h-screen relative isolate grid place-items-center overflow-hidden" id="homepage-header">
       {/* Background Video */}
       <div className="absolute h-full w-full -z-[1]  left-0 top-0">
         <video className="w-full h-full object-cover" autoPlay controls={false} playsInline muted loop id="header-animated-video">
-          <source src={animate_video} />
+          <source src={ADMIN_URL + header_animate_vid?.data?.attributes?.header_bg_vid?.data?.attributes?.url} />
         </video>
       </div>
 
