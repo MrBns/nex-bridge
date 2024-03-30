@@ -5,16 +5,10 @@ import {
   IMG_ICON_GLOBAL_PRESENCE,
   IMG_ICON_INDUSTRY_LEADER,
   IMG_ICON_ISSUER,
-  IMG_ILLST_INDUSTRY_LEADER,
-  IMG_ILLST_REGISTER_ISSUER,
-  IMG_ILLUST_GLOBAL_PRESENCE,
-  IMG_LILLST_FINANCIAL_KNOW_HOW,
   IMG_MAP_CONER_BG as IMG_MAP_CORNER_BG,
   IMG_WHY_CHOOSE_US_WAVE,
 } from "@/assets/img";
 import Img from "@/components/helper/Img";
-import { Autoplay } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
 
 const WHY_CHOOSE_US_CARD_DATA = [
   {
@@ -47,13 +41,8 @@ export default function SectionWhyChooseUs() {
   return (
     <section id="section-why-choose-us" className="relative">
       <div className="h-[100px] lg:h-[200px] 2xl:h-[250px] relative max-w-[1920px] mx-auto z-10">
-        <Img
-          src={IMG_WHY_CHOOSE_US_WAVE.src}
-          alt="nex-bridge-wave"
-          className="absolute top-[0%] lg:-top-[50%] left-0 lg:opacity-30"
-        />
+        <Img src={IMG_WHY_CHOOSE_US_WAVE.src} alt="nex-bridge-wave" className="absolute top-[0%] lg:-top-[50%] left-0 lg:opacity-30" />
       </div>
-
 
       <div className="absolute lg:hidden right-0 top-[40%] -z-10">
         <Img alt="" src={IMG_MAP_CORNER_BG.src} className="w-[250px]" />
@@ -78,13 +67,11 @@ export default function SectionWhyChooseUs() {
                 <Img
                   src={d.img}
                   alt={d.title}
-                className="me-4 lg:mb-8  lg:me-0 w-[70px] h-[80px] flex-shrink-0 object-contain  lg:w-auto lg:h-[100px] lg:opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[20deg]"
+                  className="me-4 lg:mb-8  lg:me-0 w-[70px] h-[80px] flex-shrink-0 object-contain  lg:w-auto lg:h-[100px] lg:opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[20deg]"
                 />
                 <div className="">
-                  <h1 className="text-[18px]/[1] lg:text-xl 2xl:text-3xl mb-2 lg:mb-4 font-semibold">
-                    {d.title}
-                  </h1>
-                  <p className="text-[10px] max-w-[170px] lg:max-w-none lg:text-sm">{d.desc}</p>
+                  <h1 className="text-[18px]/[1] lg:text-xl 2xl:text-3xl mb-2 lg:mb-4 font-semibold">{d.title}</h1>
+                  <p className="text-[12px] max-w-[170px] lg:max-w-none lg:text-base">{d.desc}</p>
                 </div>
               </div>
             ))}

@@ -1,6 +1,6 @@
 import { Space_Grotesk } from "next/font/google";
-import Img from "../../../components/helper/Img";
-import { CONTACT_BUILDING_IMAGE, IMG_NEXBRIDGE_WHITE_LOGO, IMG_WANT_TO_CONNECT_WAVE } from "../../../assets/img";
+import Img from "@/components/helper/Img";
+import { IMG_CONTACT_BUILDING_IMAGE, IMG_NEXBRIDGE_WHITE_LOGO } from "@/assets/img";
 
 const font = Space_Grotesk({
   weight: ["400", "500"],
@@ -70,7 +70,7 @@ export default function Page() {
 
         <div className="my-container">
           <div className="relative">
-            <Img src={CONTACT_BUILDING_IMAGE.src} alt="building" className="aspect-square" />
+            <Img src={IMG_CONTACT_BUILDING_IMAGE.src} alt="building" className="aspect-square" />
             <div className="max-w-[368px] absolute bottom-5 left-5 bg-[#092B4670] rounded-[17px] px-5 pt-5 pb-4 backdrop-blur-[20px]">
               <Img src={IMG_NEXBRIDGE_WHITE_LOGO.src} alt="logo" className="w-[191px] h-[38px]" />
               <p className="font-bold text-[14px]/[21px] mt-5">Av. Las Magnolias, edificio Insigne local no. 1107. San Salvador, El Salvador.</p>

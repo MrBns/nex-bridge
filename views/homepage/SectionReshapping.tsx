@@ -55,8 +55,8 @@ export default function SectionReshaping() {
         </div>
       </section>
 
-      <Script src="/js/statanimate.js" defer strategy="lazyOnload"></Script>
-      <Script src="/js/typedtext.js" defer strategy="lazyOnload"></Script>
+      <Script src="/js/statanimate.js" defer strategy="afterInteractive"></Script>
+      <Script src="/js/typedtext.js" defer strategy="afterInteractive"></Script>
     </>
   );
 }

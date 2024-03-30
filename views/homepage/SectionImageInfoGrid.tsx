@@ -1,12 +1,12 @@
 import { ADMIN_URL } from "@/lib/config/url";
 import { IStaticAssetResponse } from "@/lib/types/strapi-api/static-asset-all";
 import React from "react";
-import { GRID_IMAGE_1, GRID_IMAGE_2, GRID_IMAGE_3 } from "../../assets/img";
 import Img from "../../components/helper/Img";
+import { IMG_IMAGE_GRID_1, IMG_IMAGE_GRID_2, IMG_IMAGE_GRID_3 } from "@/assets/img";
 
 type Props = {};
 
-async function ImageGrid({}: Props) {
+async function SectionImageInfoGrid({}: Props) {
   //Loading Static Assets only header_bg_vid field;
   const assets: IStaticAssetResponse<["home_info_vid1", "home_info_vid2", "home_info_vid3"]> = await (
     await fetch(`${ADMIN_URL}/api/static-asset?populate[0]=home_info_vid1&populate[1]=home_info_vid2&populate[2]=home_info_vid3`)
@@ -18,7 +18,7 @@ async function ImageGrid({}: Props) {
       <div className="my-container pb-20 sm:pb-32 flex flex-col gap-10 sm:gap-20 lg:gap-32 z-[20] relative">
         <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
           <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
-            <Img className="absolute object-cover w-full h-full" src={GRID_IMAGE_1.src} alt="office" />
+            <Img className="absolute object-cover w-full h-full" src={IMG_IMAGE_GRID_1.src} alt="office" />
             {/* <video
               className="absolute w-full h-full object-cover rounded-[10px] md:rounded-[20px] lg:rounded-[33px]"
               autoPlay
@@ -49,7 +49,7 @@ async function ImageGrid({}: Props) {
         </div>
         <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
           <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
-            <Img className="absolute object-cover w-full h-full" src={GRID_IMAGE_2.src} alt="innovation" />
+            <Img className="absolute object-cover w-full h-full" src={IMG_IMAGE_GRID_2.src} alt="innovation" />
 
             {/* <video
               className="absolute w-full h-full object-cover rounded-[10px] md:rounded-[20px] lg:rounded-[33px]"
@@ -73,7 +73,7 @@ async function ImageGrid({}: Props) {
         </div>
         <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
           <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
-            <Img className="absolute object-cover w-full h-full" src={GRID_IMAGE_3.src} alt="global" />
+            <Img className="absolute object-cover w-full h-full" src={IMG_IMAGE_GRID_3.src} alt="global" />
 
             {/* <video
               className="absolute w-full h-full object-cover rounded-[10px] md:rounded-[20px] lg:rounded-[33px]"
@@ -103,4 +103,4 @@ async function ImageGrid({}: Props) {
   );
 }
 
-export default ImageGrid;
+export default SectionImageInfoGrid;

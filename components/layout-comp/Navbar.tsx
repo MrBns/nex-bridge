@@ -30,7 +30,7 @@ export const NAVBAR_MENU_DATA = [
   {
     name: "Blog",
     onClick: () => {},
-    slug: "/blogs",
+    slug: "/blogs?page=1",
   },
   {
     name: "Contact",

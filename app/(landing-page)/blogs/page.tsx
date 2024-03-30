@@ -102,7 +102,10 @@ async function Blogs({ searchParams: { page = "0" }, ...restProps }: Props) {
             ))}
 
             {pagination?.page !== pagination?.pageCount && (
-              <Link href={`/blogs?page=${Number(page) + 1}`} className="px-3 py-2 rounded-lg bg-[#000000] text-center border border-[#144064]">
+              <Link
+                href={`/blogs?page=${Number(page) === 0 ? 2 : Number(page) + 1}`}
+                className="px-3 py-2 rounded-lg bg-[#000000] text-center border border-[#144064]"
+              >
                 <Img src={ICON_PAGINATION_ARROW_RIGHT.src} alt="next" />
               </Link>
             )}
