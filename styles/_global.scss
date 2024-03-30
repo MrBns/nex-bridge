@@ -114,6 +114,26 @@ body.no-scroll {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 
+.about-middle-radial-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  right: -10%;
+  bottom: 0%;
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(28, 117, 188, 0.4) 0%, rgba(28, 117, 188, 0) 100%);
+  background-position: bottom right;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+.circle-radial-gradient {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(28, 117, 188, 0.4) 0%, rgba(28, 117, 188, 0) 100%);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 ///Styling Blogs Inner html;
 #BLOG_DETAILS_VIEW_CONTENT_HTML {
   font-size: 16px;

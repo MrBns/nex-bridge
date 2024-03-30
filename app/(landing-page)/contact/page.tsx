@@ -77,7 +77,7 @@ export default function Page() {
             </div>
           </div>
 
-          <form className="ml-auto -mt-20 relative z-10 w-[60%] bg-gradient-to-br from-[#008EFF] via-[#0B0C15] to-[#1C75BC] rounded-[17px] p-7">
+          <form className="ml-auto -mt-20 relative z-10 w-[60%] bg-gradient-to-b from-[#144064] to-[#012644] rounded-[17px] p-7">
             <h2 className={`${font.className} text-[40px] font-bold`}>Send Us Message</h2>
             <p className="text-[14px]/[21px] mt-3">Have any questions regarding our services? Send us your message.</p>
 
