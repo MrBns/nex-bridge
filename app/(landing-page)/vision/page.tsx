@@ -7,7 +7,7 @@ type Props = {};
 async function Vision({}: Props) {
   //Loading Static Assets only header_bg_vid field;
   const assets: IStaticAssetResponse<["vision_header_bg_vid"]> = await (
-    await fetch(`${ADMIN_URL}/api/static-asset?populate[0]=vision_header_bg_vid`)
+    await fetch(`${ADMIN_URL}/api/static-asset?populate[0]=vision_header_bg_vid`, { cache: "no-store" })
   ).json();
 
   return (

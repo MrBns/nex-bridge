@@ -11,7 +11,7 @@ const animate_video = "/vid/header-animation.mp4";
 export default async function Header() {
   //Loading Static Assets only header_bg_vid field;
   const header_animate_vid: IStaticAssetResponse<["header_bg_vid"]> = await (
-    await fetch(`${ADMIN_URL}/api/static-asset?populate[header_bg_vid][field][0]=url`)
+    await fetch(`${ADMIN_URL}/api/static-asset?populate[header_bg_vid][field][0]=url`, { cache: "no-store" })
   ).json();
 
   return (
