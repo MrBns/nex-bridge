@@ -1,14 +1,12 @@
 import React from "react";
 import { Space_Grotesk } from "next/font/google";
 import BlogSidebar from "@/components/shared/BlogSidebar";
-import { ICON_BLOG_CHECK, ICON_BLOG_FB, ICON_BLOG_LEFT_ARROW, ICON_BLOG_RIGHT_ARROW, ICON_BLOG_TWITTER, ICON_QUOTE } from "@/assets/icon";
+import { ICON_BLOG_CHECK_ICON, ICON_BLOG_FB_ICON, ICON_BLOG_TWITTER_ICON } from "@/assets/icon";
 import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
 import { BLOG } from "../page";
 import GradientBorderButton from "@/components/shared/buttons/GradientBorderButton";
-import Head from "next/head";
-import BlogMetaData from "@/components/shared/BlogMetaData";
 import { headers } from "next/headers";
 
 const font = Space_Grotesk({
@@ -111,15 +109,15 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
                   />
                 )}
                 <div className="absolute bottom-0 right-0 w-[34px] h-[34px] bg-[#92DEED] rounded-full flex items-center justify-center">
-                  <Img src={ICON_BLOG_CHECK.src} alt="check" />
+                  <Img src={ICON_BLOG_CHECK_ICON.src} alt="check" />
                 </div>
               </div>
               <div className="flex flex-col w-full">
                 <div className="flex items-center justify-between">
                   <span className="tracking-[8px] text-[13px]/[18px] md:text-[14px]/[21px]">AUTHOR</span>
                   <div className="flex items-center gap-5">
-                    <Img src={ICON_BLOG_FB.src} alt="facebook" />
-                    <Img src={ICON_BLOG_TWITTER.src} alt="twitter" />
+                    <Img src={ICON_BLOG_FB_ICON.src} alt="facebook" />
+                    <Img src={ICON_BLOG_TWITTER_ICON.src} alt="twitter" />
                   </div>
                 </div>
                 <p className="mt-1 text-[16px]/[18px] md:text-[22px]/[28px] font-semibold uppercase">
