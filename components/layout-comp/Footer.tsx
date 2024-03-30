@@ -77,7 +77,7 @@ function Footer({}: Props) {
             </ul>
           </div>
 
-          <div className="space-y-5 hidden sm:block">
+          {/* <div className="space-y-5 hidden sm:block">
             <p className="text-[20px] md:heading-6">Newsletter</p>
             <p className="text-[14px]/[1.2] sm:text-base/tight lg:text-base/tight 2xl:text-[20px]/[30px]  opacity-75 font-light">
               Subscribe to our newsletter to stay informed about our latest products, services, and promotions. Feel free to unsubscribe anytime!
@@ -93,11 +93,11 @@ function Footer({}: Props) {
                 <Img src="/arrow-right-bold.svg" className="group-focus-within:translate-x-2 transition-all" alt="arrow" />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="hidden sm:flex mt-5 border-t border-white border-opacity-50 flex-col text-center lg:text-start lg:flex-row items-center justify-between">
-          <p className="text-[14px] leading-[17px] md:heading-8 opacity-50 mt-3 font-light">Copyright © 2023 for WaveNet. All rights reserved.</p>
+          <p className="text-[14px] leading-[17px] md:heading-8 opacity-50 mt-3 font-light">Copyright © 2023 for Nexbridge. All rights reserved.</p>
           <ul className="text-[14px] leading-[17px] md:heading-8 opacity-50 mt-3 font-light flex items-center gap-3">
             <li>
               <a href="#">Terms & Condition</a>

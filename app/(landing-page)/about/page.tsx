@@ -12,7 +12,7 @@ async function About({}: Props) {
 
   return (
     <main className="pt-28">
-      <div className="relative mt-5 py-20">
+      <div className="relative mt-5 py-20 overflow-hidden">
         {/* Background Video */}
         <div className="absolute h-full w-full -z-[1] left-0 top-0">
           <video className="w-full h-full object-cover" autoPlay controls={false} playsInline muted loop>
