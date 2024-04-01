@@ -19,19 +19,19 @@ const WHY_CHOOSE_US_CARD_DATA = [
   },
   {
     id: "data-1",
-    img: IMG_ICON_FINANCIAL.src,
+    img: IMG_ICON_INDUSTRY_LEADER.src,
     title: "Industry Leader",
     desc: "Forefront of digital assets in regulated markets.",
   },
   {
     id: "data-1",
-    img: IMG_ICON_GLOBAL_PRESENCE.src,
+    img: IMG_ICON_FINANCIAL.src,
     title: "Financial Know-how",
     desc: "Bring extensive experience from traditional finance",
   },
   {
     id: "data-1",
-    img: IMG_ICON_INDUSTRY_LEADER.src,
+    img: IMG_ICON_GLOBAL_PRESENCE.src,
     title: "Global presence",
     desc: "Worldwide Network and partnerships with sector leaders.",
   },
@@ -67,7 +67,7 @@ export default function SectionWhyChooseUs() {
                 <Img
                   src={d.img}
                   alt={d.title}
-                  className="me-4 lg:mb-8  lg:me-0 w-[70px] h-[80px] flex-shrink-0 object-contain  lg:w-auto lg:h-[100px] lg:opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[20deg]"
+                  className="me-4 lg:mb-8  lg:me-0 w-[70px] h-[80px] flex-shrink-0 object-contain  lg:w-auto lg:h-[100px] transition-all duration-500 group-hover:scale-110 group-hover:rotate-[20deg]"
                 />
                 <div className="">
                   <h1 className="text-[18px]/[1] lg:text-xl 2xl:text-3xl mb-2 lg:mb-4 font-semibold">{d.title}</h1>
