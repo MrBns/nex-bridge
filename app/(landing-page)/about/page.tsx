@@ -11,8 +11,11 @@ async function About({}: Props) {
   ).json();
 
   return (
-    <main className="pt-28">
-      <div className="relative mt-5 py-20 overflow-hidden">
+    <main className="">
+      <div className="relative  py-20 overflow-hidden h-[450px]">
+        {/* Background video marger  */}
+        <div className="absolute top-0 w-full bg-gradient-to-b from-[#0B0C15] to-transparent h-28"></div>
+
         {/* Background Video */}
         <div className="absolute h-full w-full -z-[1] left-0 top-0">
           <video className="w-full h-full object-cover" autoPlay controls={false} playsInline muted loop>
@@ -23,8 +26,10 @@ async function About({}: Props) {
         {/* Background video marger  */}
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0B0C15] to-transparent h-28"></div>
 
-        <h1 className="text-[64px]/[81px] text-center">About Us.</h1>
-        <p className="text-[24px] text-center opacity-70 px-10">Welcome to NexBridge, your gateway to the future of finance.</p>
+        <div className="py-20">
+          <h1 className="text-[58px]/[1.2] text-center font-michroma uppercase font-bold mb-2">About Us.</h1>
+          <p className="text-xl lg:text-2xl text-center opacity-70 px-10">Welcome to NexBridge, your gateway to the future of finance.</p>
+        </div>
       </div>
 
       <div className="z-[1] overflow-hidden relative about-middle-radial-gradient bg-right-bottom pt-20">

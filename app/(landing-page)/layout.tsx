@@ -5,6 +5,7 @@ import Footer from "@/components/layout-comp/Footer";
 import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
 import "../../styles/app.scss";
 import "../../styles/tailwind.css";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],

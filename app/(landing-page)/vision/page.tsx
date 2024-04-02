@@ -11,8 +11,11 @@ async function Vision({}: Props) {
   ).json();
 
   return (
-    <main className="pt-20">
-      <div className="flex flex-col items-center justify-center gap-10 overflow-hidden relative py-10 mt-10">
+    <main className="">
+      <div className="flex flex-col items-center justify-center gap-10 overflow-hidden relative py-20 h-[450px]">
+        {/* Background video marger  */}
+        <div className="absolute top-0 w-full bg-gradient-to-b from-[#0B0C15] to-transparent h-28"></div>
+        
         {/* Background Video */}
         <div className="absolute h-full w-full -z-[1] left-0 top-0">
           <video className="w-full h-full object-cover" autoPlay controls={false} playsInline muted loop>
@@ -22,11 +25,12 @@ async function Vision({}: Props) {
 
         {/* Background video marger  */}
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0B0C15] to-transparent h-28"></div>
-
-        <h1 className="text-[54px]/[71px] sm:text-[64px]/[71px] text-center">Our Vision</h1>
-        <p className="text-[24px]/[34px] opacity-70 max-w-4xl text-center mx-auto">
-          We envision a future where traditional finance integrates seamlessly with blockchain.
-        </p>
+        <div className="mt-12">
+          <h1 className="text-[54px]/[71px] sm:text-[64px]/[71px] text-center font-michroma uppercase font-bold mb-2">Our Vision</h1>
+          <p className="text-xl lg:text-2xl opacity-70 max-w-4xl text-center mx-auto">
+            We envision a future where traditional finance integrates seamlessly with blockchain.
+          </p>
+        </div>
       </div>
 
       <section className="mt-28 px-5 xl:px-0 w-full max-w-[1300px] mx-auto circle-radial-gradient mb-20">
