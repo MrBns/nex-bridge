@@ -7,6 +7,7 @@ export { default as IMG_VISION_POINT_3 } from "./VISION_POINT_3.png";
 export { default as IMG_VISION_POINT_4 } from "./VISION_POINT_4.png";
 export { default as IMG_VISION_POINT_5 } from "./VISION_POINT_5.png";
 export { default as IMG_VISION_POINT_6 } from "./VISION_POINT_6.png";
+export { default as IMG_WHY_CHOOSE_US_CARD_WIREFRAME } from "./WHY_CHOOSE_US_CARD_WIREFRAME.png";
 export { default as IMG_CONTACT_BUILDING_IMAGE } from "./contact-building-image.png";
 export { default as IMG_ICON_FINANCIAL } from "./icon-financial.png";
 export { default as IMG_ICON_GLOBAL_PRESENCE } from "./icon-global-presence.png";
