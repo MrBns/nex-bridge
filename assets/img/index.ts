@@ -1,6 +1,12 @@
 export { default as IMG_IMAGE_GRID_1 } from "./IMAGE_GRID_1.png";
 export { default as IMG_IMAGE_GRID_2 } from "./IMAGE_GRID_2.png";
 export { default as IMG_IMAGE_GRID_3 } from "./IMAGE_GRID_3.png";
+export { default as IMG_VISION_POINT_1 } from "./VISION_POINT_1.png";
+export { default as IMG_VISION_POINT_2 } from "./VISION_POINT_2.png";
+export { default as IMG_VISION_POINT_3 } from "./VISION_POINT_3.png";
+export { default as IMG_VISION_POINT_4 } from "./VISION_POINT_4.png";
+export { default as IMG_VISION_POINT_5 } from "./VISION_POINT_5.png";
+export { default as IMG_VISION_POINT_6 } from "./VISION_POINT_6.png";
 export { default as IMG_CONTACT_BUILDING_IMAGE } from "./contact-building-image.png";
 export { default as IMG_ICON_FINANCIAL } from "./icon-financial.png";
 export { default as IMG_ICON_GLOBAL_PRESENCE } from "./icon-global-presence.png";
