@@ -1,6 +1,6 @@
 import { Space_Grotesk } from "next/font/google";
-import Img from "../../../components/helper/Img";
-import { CONTACT_BUILDING_IMAGE, IMG_NEXBRIDGE_WHITE_LOGO, IMG_WANT_TO_CONNECT_WAVE } from "../../../assets/img";
+import Img from "@/components/helper/Img";
+import { IMG_CONTACT_BUILDING_IMAGE, IMG_NEXBRIDGE_WHITE_LOGO } from "@/assets/img";
 
 const font = Space_Grotesk({
   weight: ["400", "500"],
@@ -10,14 +10,14 @@ const font = Space_Grotesk({
 export default function Page() {
   return (
     <main className="min-h-screen pt-20">
-      <header id="" className="my-container mt-32">
+      <header id="" className="my-container mt-20">
         <h1 className={`${font.className} text-[71px]/[71px] font-bold`}>Contact</h1>
       </header>
-      <section className="my-container flex items-end justify-between gap-10">
-        <p className={`${font.className} text-[40px] font-bold shrink-0`}>Let&apos;s get in touch!</p>
+      <section className="my-container flex flex-col-reverse lg:flex-row lg:items-end justify-between gap-10">
+        <p className={`${font.className} text-[35px] sm:text-[40px] font-bold shrink-0`}>Let&apos;s get in touch!</p>
 
-        <div className="w-full flex items-center justify-end gap-5 mt-20">
-          <div className="rounded-[17px] bg-gradient-to-b from-[#144064] to-[#012644] py-5 px-8 w-full max-w-[260px]">
+        <div className="w-full flex flex-col sm:flex-row sm:items-center lg:justify-end gap-5 mt-10">
+          <div className="rounded-[17px] bg-gradient-to-b from-[#144064] to-[#012644] py-5 px-8 w-full sm:max-w-[260px]">
             <div className="w-[46px] h-[46px] rounded-full border-t border-t-[#FFFFFF20] border-l border-l-[#FFFFFF20] border-r border-r-[#FFFFFF20] flex items-center justify-center">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_817_277)">
@@ -39,10 +39,10 @@ export default function Page() {
               +503 227 342 55
             </a>
           </div>
-          <div className="rounded-[17px] bg-gradient-to-b from-[#144064] to-[#012644] py-5 px-8 w-full max-w-[357px]">
+          <div className="rounded-[17px] bg-gradient-to-b from-[#144064] to-[#012644] py-5 px-8 w-full sm:max-w-[357px]">
             <div className="w-[46px] h-[46px] rounded-full border-t border-t-[#FFFFFF20] border-l border-l-[#FFFFFF20] border-r border-r-[#FFFFFF20] flex items-center justify-center">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_817_285)">
+                <g clipPath="url(#clip0_817_285)">
                   <path
                     d="M16.0754 3.2425H1.84994C1.01182 3.2425 0.333008 3.92553 0.333008 4.75943V13.861C0.333008 14.6999 1.01681 15.3779 1.84994 15.3779H16.0754C16.9065 15.3779 17.5923 14.7027 17.5923 13.861V4.75943C17.5923 3.92701 16.9162 3.2425 16.0754 3.2425ZM15.8629 4.25379C15.553 4.56206 10.2194 9.86754 10.0353 10.0507C9.74875 10.3372 9.36783 10.495 8.96264 10.495C8.55746 10.495 8.17654 10.3372 7.88906 10.0498C7.76521 9.92656 2.49052 4.67968 2.06237 4.25379H15.8629ZM1.34429 13.6552V4.9659L5.71433 9.31291L1.34429 13.6552ZM2.06301 14.3666L6.43133 10.0261L7.17493 10.7658C7.65246 11.2433 8.28734 11.5063 8.96264 11.5063C9.63795 11.5063 10.2728 11.2433 10.7494 10.7667L11.494 10.0261L15.8623 14.3666H2.06301ZM16.581 13.6552L12.211 9.31291L16.581 4.9659V13.6552Z"
                     fill="white"
@@ -70,18 +70,20 @@ export default function Page() {
 
         <div className="my-container">
           <div className="relative">
-            <Img src={CONTACT_BUILDING_IMAGE.src} alt="building" className="aspect-square" />
-            <div className="max-w-[368px] absolute bottom-5 left-5 bg-[#092B4670] rounded-[17px] px-5 pt-5 pb-4 backdrop-blur-[20px]">
-              <Img src={IMG_NEXBRIDGE_WHITE_LOGO.src} alt="logo" className="w-[191px] h-[38px]" />
-              <p className="font-bold text-[14px]/[21px] mt-5">Av. Las Magnolias, edificio Insigne local no. 1107. San Salvador, El Salvador.</p>
+            <Img src={IMG_CONTACT_BUILDING_IMAGE.src} alt="building" className="lg:aspect-square" />
+            <div className="max-w-[250px] sm:max-w-[368px] absolute bottom-2 left-2 sm:bottom-5 sm:left-5 bg-[#092B4670] rounded-[17px] px-5 pt-5 pb-4 backdrop-blur-[20px]">
+              <Img src={IMG_NEXBRIDGE_WHITE_LOGO.src} alt="logo" className="w-[100px] sm:w-[191px] sm:h-[38px]" />
+              <p className="font-bold text-[12px]/[18px] sm:text-[14px]/[21px] mt-5">
+                Av. Las Magnolias, edificio Insigne local no. 1107. San Salvador, El Salvador.
+              </p>
             </div>
           </div>
 
-          <form className="ml-auto -mt-20 relative z-10 w-[60%] bg-gradient-to-br from-[#008EFF] via-[#0B0C15] to-[#1C75BC] rounded-[17px] p-7">
+          <form className="ml-auto mt-10 lg:-mt-20 relative z-10 lg:w-[60%] bg-gradient-to-b from-[#144064] to-[#012644] rounded-[17px] p-7">
             <h2 className={`${font.className} text-[40px] font-bold`}>Send Us Message</h2>
             <p className="text-[14px]/[21px] mt-3">Have any questions regarding our services? Send us your message.</p>
 
-            <div className="mt-10 flex items-center justify-between gap-5">
+            <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-5">
               <div className="flex flex-col gap-2 w-full">
                 <label htmlFor="name" className="text-[17px]/[23px] font-bold">
                   Name
@@ -117,7 +119,7 @@ export default function Page() {
               />
             </div>
 
-            <div className="mt-5 flex items-center justify-between">
+            <div className="mt-5 flex flex-col md:flex-row md:items-center justify-between">
               <label className="flex items-center gap-2" htmlFor="agree">
                 <input type="checkbox" name="agree" className="appearance-none bg-white w-[14px] h-[14px] rounded-[3px] checked:bg-[#1C75BC]" />
                 <p className="max-w-[382px] text-[11px]/[18px]">
@@ -125,7 +127,9 @@ export default function Page() {
                 </p>
               </label>
 
-              <button className="text-[17px]/[23px] font-bold py-3 px-7 bg-white text-[#092B46] rounded-[10px]">SUBMIT</button>
+              <button className="w-full md:w-max mt-3 md:mt-0 text-[17px]/[23px] font-bold py-3 px-7 bg-white text-[#092B46] rounded-[10px]">
+                SUBMIT
+              </button>
             </div>
           </form>
         </div>

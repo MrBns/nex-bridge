@@ -1,10 +1,10 @@
 import React from "react";
-import { ICON_SEARCH } from "@/assets/icon";
 import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
 import { TBlogLatestNewsResponse } from "@/lib/types/strapi-api/blog-latest-news-response";
 import Link from "next/link";
+import { IMG_VISION_POINT_1, IMG_VISION_POINT_2, IMG_VISION_POINT_3, IMG_VISION_POINT_4, IMG_VISION_POINT_5, IMG_VISION_POINT_6 } from "@/assets/img";
 
 type Props = {};
 
@@ -26,10 +26,9 @@ async function BlogSidebar({}: Props) {
   let categories = null;
   let latestnews: TBlogLatestNewsResponse = await (
     await fetch(
-      `${ADMIN_URL}/api/blogs?fields%5B0%5D=createdAt&fields%5B1%5D=title&populate%5Bthumbnail%5D%5Bfields%5D%5B2%5D=url&fields%5B4%5D=slug&fields%5B5%5D=uid&sort=createdAt%3Aasc&pagination%5Bpage%5D=1&pagination%5BpageSize%5D=3`
+      `${ADMIN_URL}/api/blogs?fields%5B0%5D=createdAt&fields%5B1%5D=title&populate%5Bthumbnail%5D%5Bfields%5D%5B2%5D=url&fields%5B4%5D=slug&fields%5B5%5D=uid&sort=createdAt%3Adesc&pagination%5Bpage%5D=1&pagination%5BpageSize%5D=3`
     )
   ).json();
-  console.log(latestnews);
 
   try {
     const categoriesResponse = await axios.get(`${ADMIN_URL}/api/categories?populate=*`);
@@ -63,7 +62,8 @@ async function BlogSidebar({}: Props) {
         </div>
       </div> */}
 
-      <div className="mt-5 w-full rounded-[17px] blog_aside_item_gradient px-8 py-7 md:px-14 md:pt-12 pb-10">
+      <div className="card-points-gradient border border-[#ffffff20] relative overflow-hidden w-full rounded-[17px] blog_aside_item_gradient px-8 py-7 md:px-14 md:pt-12 pb-10">
+        <Img src={IMG_VISION_POINT_1.src} alt="" className="absolute bottom-0 right-0" />
         <h3 className="text-[22px]/[28px] font-semibold">Our Latest News</h3>
         <div className="mt-10 flex flex-col gap-8">
           {/* {TWITTER_POSTS.map((item) => (
@@ -81,10 +81,15 @@ async function BlogSidebar({}: Props) {
 function LatestTwitterPostItem(props: TBlogLatestNewsResponse["data"][0]) {
   return (
     <Link href={`/blogs/${props.attributes.slug}`} className="flex gap-5 w-full">
-      <div className="w-[73px] h-[69px] rounded-lg bg-[#D9D9D9]"></div>
+      <Img
+        className="w-[110px] h-[69px] rounded-lg bg-[#D9D9D9] object-cover "
+        src={ADMIN_URL + props.attributes.thumbnail.data.attributes.url}
+        alt=""
+      />
+
       <div className="flex flex-col gap-1">
         <p className="text-[11px]/[18px]">{new Date(props.attributes.createdAt).toDateString()}</p>
-        <h4 className="text-[17px]/[22px] font-bold max-w-[200px]">{props.attributes.title}</h4>
+        <h4 className="text-[17px]/[22px] font-bold max-w-[200px] line-clamp-2">{props.attributes.title}</h4>
       </div>
     </Link>
   );

@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "PORT=3300 next start",
     "lint": "next lint",
-    "gen::img": "./src/assets/assetLoader --dir=\"src/assets/img/\" --output=\"index.ts\" --prefix=\"IMG\"",
-    "gen::icon": "./src/assets/assetLoader --dir=\"src/assets/icon/\" --output=\"index.ts\" --prefix=\"ICON\"",
+    "gen::img": "./assets/assetLoader --dir=\"assets/img/\" --output=\"index.ts\" --prefix=\"IMG\"",
+    "gen::icon": "./assets/assetLoader --dir=\"assets/icon/\" --output=\"index.ts\" --prefix=\"ICON\"",
     "pm2": "pm2"
   },
   "dependencies": {

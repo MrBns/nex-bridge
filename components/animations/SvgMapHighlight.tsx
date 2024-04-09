@@ -43,24 +43,9 @@ export default function SvgMapHighlight(props: TProps) {
         className="scale-animate"
       />
 
-      <rect
-        className="flag"
-        x="504"
-        y="88"
-        width="327"
-        height="186"
-        rx="28"
-        fill="#1C75BC"
-      />
-      <foreignObject
-        className="flag"
-        x="508"
-        y="92"
-        width="320"
-        height="178"
-        rx="25"
-      >
-        <video width={"100%"} autoPlay muted loop className="rounded-3xl">
+      <rect className="flag" x="504" y="88" width="327" height="186" rx="28" fill="#1C75BC" />
+      <foreignObject className="flag" x="508" y="92" width="320" height="178" rx="25">
+        <video width={"100%"} autoPlay muted loop playsInline className="rounded-3xl">
           <source src="/vid/el-slavador-flag.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -73,36 +58,15 @@ export default function SvgMapHighlight(props: TProps) {
       />
 
       <defs>
-        <linearGradient
-          id="paint0_linear_210_2"
-          x1="670.295"
-          y1="297.813"
-          x2="765.408"
-          y2="353.843"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="paint0_linear_210_2" x1="670.295" y1="297.813" x2="765.408" y2="353.843" gradientUnits="userSpaceOnUse">
           <stop stopColor="#1C75BC" />
           <stop offset="1" stopColor="#1C75BC" stopOpacity="0" />
         </linearGradient>
-        <linearGradient
-          id="paint1_linear_210_2"
-          x1="670.295"
-          y1="204.659"
-          x2="1003"
-          y2="399.392"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="paint1_linear_210_2" x1="670.295" y1="204.659" x2="1003" y2="399.392" gradientUnits="userSpaceOnUse">
           <stop stopColor="#1C75BC" />
           <stop offset="1" stopColor="#1C75BC" stopOpacity="0" />
         </linearGradient>
-        <linearGradient
-          id="paint2_linear_210_2"
-          x1="1220.44"
-          y1="561.288"
-          x2="-319.5"
-          y2="194.463"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="paint2_linear_210_2" x1="1220.44" y1="561.288" x2="-319.5" y2="194.463" gradientUnits="userSpaceOnUse">
           <stop stopColor="#1C75BC" />
           <stop offset="1" stopColor="#1C75BC" stopOpacity="0" />
         </linearGradient>

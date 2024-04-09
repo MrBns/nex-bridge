@@ -62,7 +62,7 @@ async function SectionBlogs({}: Props) {
         <SectionBlogsSlider data={data.data.attributes.blogs.data} />
       </div>
 
-      <Link href="/blogs">
+      <Link href="/blogs?page=1">
         <button className="mt-20 mx-auto w-max flex items-center gap-3 py-3 px-3 lg:py-5 lg:px-10 rounded-[15px] border border-white hover:scale-105 active:scale-100 transition-transform">
           <p className="uppercase font-semibold">Read more articles</p>
           <svg width="101" height="16" viewBox="0 0 101 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[50px] lg:w-auto">

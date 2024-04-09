@@ -1,15 +1,13 @@
 import Header from "@/views/homepage/Header";
 
 import SectionReshaping from "@/views/homepage/SectionReshapping";
-import Footer from "@/components/layout-comp/Footer";
-import BrandSlider from "@/views/homepage/BrandSlider";
 import SectionWhyChooseUs from "@/views/homepage/SectionWhyChooseUs";
 import SectionMap from "@/views/homepage/SectionMap";
 import SectionTraditionalFinance from "@/views/homepage/SectionTraditionalFinance";
 import SectionBlogs from "@/views/homepage/SectionBlogs";
-import SectionWantToConnect from "@/views/homepage/SectionWantToConnect";
 import "@/lib/client/scroll-animation.effect";
-import ImageInfoGrid from "@/views/homepage/ImageInfoGrid";
+import SectionImageInfoGrid from "@/views/homepage/SectionImageInfoGrid";
+
 
 export default function Home() {
   return (
@@ -19,7 +17,7 @@ export default function Home() {
       <SectionReshaping />
       <SectionWhyChooseUs />
       <SectionMap />
-      <ImageInfoGrid />
+      <SectionImageInfoGrid />
       <SectionTraditionalFinance />
       <SectionBlogs />
     </main>

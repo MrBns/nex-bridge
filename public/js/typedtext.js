@@ -23,10 +23,7 @@ try {
       sContents += aText[iRow++] + "<br />";
     }
 
-    destination.innerHTML =
-      sContents +
-      aText[iIndex].substring(0, iTextPos) +
-      (iIndex + 1 != aText.length ? " |" : "");
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + (iIndex + 1 != aText.length ? " |" : "");
     if (iTextPos++ == iArrLength) {
       iTextPos = 0;
       iIndex++;
@@ -57,4 +54,6 @@ try {
   );
 
   typedTextObserver.observe(document.getElementById("typedtext"));
-} catch (e) {}
+} catch (e) {
+  console.log(e);
+}
