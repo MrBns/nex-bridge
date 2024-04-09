@@ -5,6 +5,7 @@ import Img from "@/components/helper/Img";
 import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
 import Link from "next/link";
+import { IMG_VISION_POINT_1, IMG_VISION_POINT_2, IMG_VISION_POINT_3, IMG_VISION_POINT_4, IMG_VISION_POINT_5, IMG_VISION_POINT_6 } from "@/assets/img";
 
 type Props = {
   searchParams: Record<string, string> & {
@@ -141,7 +142,8 @@ function BlogCard({ blog }: BlogCardProps) {
           ))}
         </div>
       </div>
-      <div className="bg-[#092B46] px-5 md:px-8 py-4 md:py-7">
+      <div className="card-points-gradient border border-b-[#ffffff30] border-l-[#ffffff30] border-r-[#ffffff30] border-t-transparent rounded-bl-[17px] rounded-br-[17px] relative px-5 md:px-8 py-4 md:py-7">
+        <Img src={IMG_VISION_POINT_3.src} alt="" className="absolute bottom-0 right-0" />
         <a href={`/blogs/${blog.attributes.slug}`}>
           <h2 className="font-semibold text-[22px]/[28px]">{blog.attributes.title}</h2>
         </a>

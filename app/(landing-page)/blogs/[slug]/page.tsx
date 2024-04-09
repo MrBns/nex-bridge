@@ -51,15 +51,19 @@ async function BlogView({ params: { slug }, ...restProps }: Props) {
       <main id="blogs-view" className="min-h-screen my-container pt-20 pb-16 md:pb-32">
         <hgroup className="mt-16 lg:mt-28">
           <h2 className="text-[#1190F5] text-[24px] font-bold">Blog</h2>
-          <h1 className={`text-[40px] font-bold ${font.className}`}>{data?.attributes.title}</h1>
+          <h1 className={`mt-2 text-[40px]/[50px] font-bold ${font.className}`}>{data?.attributes.title}</h1>
         </hgroup>
 
-        <section className="w-full mt-14 md:mt-20 lg:mt-32 flex flex-col lg:flex-row gap-10">
+        <section className="w-full mt-5 sm:mt-14 md:mt-20 lg:mt-32 flex flex-col lg:flex-row gap-10">
           <section className="w-full lg:w-[60%]">
             {/* thumbnail */}
             <div className="w-full h-[250px] md:h-[300px] xl:h-[475px] bg-[#D9D9D9] rounded-[17px] overflow-hidden">
               {data?.attributes.thumbnail && (
-                <Img className="w-full h-auto" src={`${ADMIN_URL}${data?.attributes.thumbnail.data.attributes.url}`} alt="thumbnail" />
+                <Img
+                  className="w-full h-full object-cover sm:object-fill"
+                  src={`${ADMIN_URL}${data?.attributes.thumbnail.data.attributes.url}`}
+                  alt="thumbnail"
+                />
               )}
             </div>
 

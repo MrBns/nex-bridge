@@ -16,8 +16,8 @@ async function SectionImageInfoGrid({}: Props) {
     <section id="image-grid" className="relative">
       <div className="background-glow absolute w-full h-full z-[2]"></div>
       <div className="my-container pb-20 sm:pb-32 flex flex-col gap-10 sm:gap-20 lg:gap-32 z-[20] relative">
-        <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
-          <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
+        <div className="w-full grid sm:grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
+          <div className="flex items-center relative border border-[#ffffff30] h-[200px] lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
             <Img className="absolute object-cover w-full h-full" src={IMG_IMAGE_GRID_1.src} alt="office" />
             {/* <video
               className="absolute w-full h-full object-cover rounded-[10px] md:rounded-[20px] lg:rounded-[33px]"
@@ -29,7 +29,7 @@ async function SectionImageInfoGrid({}: Props) {
             >
               <source src={ADMIN_URL + assets?.data?.attributes?.home_info_vid1?.data?.attributes?.url} />
             </video> */}
-            <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
+            <p className="text-[30px]/[35px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
               future is
               <br />
               <span className="font-medium">
@@ -47,8 +47,8 @@ async function SectionImageInfoGrid({}: Props) {
             for growth and economic prosperity.
           </p>
         </div>
-        <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
-          <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
+        <div className="w-full grid sm:grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
+          <div className="flex items-center relative border border-[#ffffff30] h-[200px] lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
             <Img className="absolute object-cover w-full h-full" src={IMG_IMAGE_GRID_2.src} alt="innovation" />
 
             {/* <video
@@ -62,7 +62,7 @@ async function SectionImageInfoGrid({}: Props) {
               <source src={ADMIN_URL + assets?.data?.attributes?.home_info_vid2?.data?.attributes?.url} />
             </video> */}
 
-            <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
+            <p className="text-[30px]/[35px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
               <span className="font-medium">cuting-edge technology and financial innovation</span> comes together.
             </p>
           </div>
@@ -71,8 +71,8 @@ async function SectionImageInfoGrid({}: Props) {
             the path toward a barrier-free economic future.
           </p>
         </div>
-        <div className="w-full grid grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
-          <div className="flex items-center relative lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
+        <div className="w-full grid sm:grid-cols-2 items-center gap-3 sm:gap-10 lg:gap-20">
+          <div className="flex items-center relative border border-[#ffffff30] h-[200px] lg:h-[325px] overflow-hidden rounded-[10px] md:rounded-[20px] lg:rounded-[33px]">
             <Img className="absolute object-cover w-full h-full" src={IMG_IMAGE_GRID_3.src} alt="global" />
 
             {/* <video
@@ -86,7 +86,7 @@ async function SectionImageInfoGrid({}: Props) {
               <source src={ADMIN_URL + assets?.data?.attributes?.home_info_vid3?.data?.attributes?.url} />
             </video> */}
 
-            <p className="text-[15px]/[15px] sm:text-[20px]/[20px] md:text-[30px]/[30px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
+            <p className="text-[30px]/[35px] lg:text-[50px]/[50px] font-thin z-[20] py-5 md:py-10 lg:py-0 px-5 lg:px-10">
               connecting
               <br />
               <span className="font-medium">local dreams with global capital.</span>

@@ -35,7 +35,7 @@ async function Vision({}: Props) {
         </div>
       </div>
 
-      <section className="pt-28 px-5 xl:px-0 w-full max-w-[1300px] mx-auto circle-radial-gradient mb-20">
+      <section className="pt-28 px-5 xl:px-0 w-full my-container circle-radial-gradient mb-20">
         <hgroup data-aos className="lg:leading-tight text-lg  2xl:leading-[42px] 2xl:text-[38px] text-center">
           <h1 className="mt-8 leading-none font-light">
             NexBridge is reshaping the financial landscape, seamlessly integrating traditional finance with the innovation of blockchain technology.
@@ -46,9 +46,9 @@ async function Vision({}: Props) {
         </hgroup>
 
         <div className="mt-40 grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-20">
-          <div className="flex flex-col gap-10 vision-card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+          <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-10 py-8 lg:px-14 lg:py-10 relative overflow-hidden">
             <Img src={IMG_VISION_POINT_1.src} alt="" className="absolute bottom-0 right-0" />
-            <p className="text-[36px]/[49px] font-medium">
+            <p className="text-[28px]/[36px] lg:text-[36px]/[49px] font-medium">
               Bridging Today
               <br />
               with Tomorrow:
@@ -59,9 +59,9 @@ async function Vision({}: Props) {
               for all participants.
             </p>
           </div>
-          <div className="flex flex-col gap-10 vision-card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+          <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-10 py-8 lg:px-14 lg:py-10 relative overflow-hidden">
             <Img src={IMG_VISION_POINT_2.src} alt="" className="absolute bottom-0 left-0" />
-            <p className="text-[36px]/[49px] font-medium">
+            <p className="text-[28px]/[36px] lg:text-[36px]/[49px] font-medium">
               The Nexus of
               <br />
               Possibilities:
@@ -72,9 +72,9 @@ async function Vision({}: Props) {
               the financial revolution.
             </p>
           </div>
-          <div className="flex flex-col gap-10 vision-card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+          <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-10 py-8 lg:px-14 lg:py-10 relative overflow-hidden">
             <Img src={IMG_VISION_POINT_3.src} alt="" className="absolute bottom-0 right-0" />
-            <p className="text-[36px]/[49px] font-medium">
+            <p className="text-[28px]/[36px] lg:text-[36px]/[49px] font-medium">
               Innovation Meets
               <br />
               Tradition:
@@ -84,26 +84,26 @@ async function Vision({}: Props) {
               blockchain. Explore our ecosystem and discover how we’re making the future of finance robust, innovative, and ready for everyone, today.
             </p>
           </div>
-          <div className="flex flex-col gap-10 vision-card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+          <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-10 py-8 lg:px-14 lg:py-10 relative overflow-hidden">
             <Img src={IMG_VISION_POINT_4.src} alt="" className="absolute bottom-0 left-0" />
-            <p className="text-[36px]/[49px] font-medium">Efficiency Through Tokenization:</p>
+            <p className="text-[28px]/[36px] lg:text-[36px]/[49px] font-medium">Efficiency Through Tokenization:</p>
             <p className="text-[18px]/[27px] text-[#ffffff70]">
               At the core of our vision is the efficiency brought by tokenization. This process transforms the way assets are managed, traded, and
               invested in, streamlining operations and removing intermediaries. Tokenization not only enhances transparency and security but also
               significantly reduces costs and barriers to entry, making investment opportunities more accessible to a wider audience.
             </p>
           </div>
-          <div className="flex flex-col gap-10 vision-card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+          <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-10 py-8 lg:px-14 lg:py-10 relative overflow-hidden">
             <Img src={IMG_VISION_POINT_5.src} alt="" className="absolute bottom-0 right-0" />
-            <p className="text-[36px]/[49px] font-medium">Making Finance Accessible:</p>
+            <p className="text-[28px]/[36px] lg:text-[36px]/[49px] font-medium">Making Finance Accessible:</p>
             <p className="text-[18px]/[27px] text-[#ffffff70]">
               Our deep expertise in traditional finance and passion for blockchain innovation uniquely position us to make finance more adaptable,
               accessible, and aligned with the needs of the 21st century.
             </p>
           </div>
-          <div className="flex flex-col gap-10 vision-card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+          <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-10 py-8 lg:px-14 lg:py-10 relative overflow-hidden">
             <Img src={IMG_VISION_POINT_6.src} alt="" className="absolute top-0 left-0" />
-            <p className="text-[36px]/[49px] font-medium">For Investors:</p>
+            <p className="text-[28px]/[36px] lg:text-[36px]/[49px] font-medium">For Investors:</p>
             <p className="text-[18px]/[27px] text-[#ffffff70]">
               NexBridge leverages tokenization to offer advantages like transparency, efficient transfers, and lower entry barriers. Investors enjoy
               unparalleled liquidity, facilitated by a dynamic mechanism that adapts to market demands and a guaranteed secondary market for greater

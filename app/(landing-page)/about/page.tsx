@@ -1,6 +1,8 @@
 import { ADMIN_URL } from "@/lib/config/url";
 import { IStaticAssetResponse } from "@/lib/types/strapi-api/static-asset-all";
 import React from "react";
+import Img from "@/components/helper/Img";
+import { IMG_VISION_POINT_1, IMG_VISION_POINT_2, IMG_VISION_POINT_3, IMG_VISION_POINT_4, IMG_VISION_POINT_5, IMG_VISION_POINT_6 } from "@/assets/img";
 
 type Props = {};
 
@@ -32,9 +34,9 @@ async function About({}: Props) {
         </div>
       </div>
 
-      <div className="z-[1] overflow-hidden relative about-middle-radial-gradient bg-right-bottom pt-20">
-        <section className="my-container mt-20 header-gradient relative">
-          <div className="mt-16 flex items-center justify-center gap-20">
+      <div className="z-[1] overflow-hidden relative about-middle-radial-gradient bg-right-bottom lg:pt-20">
+        <section className="my-container mt-5 sm:mt-10 md:mt-20 header-gradient relative">
+          <div className="flex items-center justify-center gap-20">
             <div>
               <h2 className="text-[30px]/[34px] font-bold text-center">
                 Accessing a New Capital Market with NexBridge: Where Innovation Meets Tradition.
@@ -58,28 +60,32 @@ async function About({}: Props) {
         <section className="my-container mb-20">
           <h1 className="text-[48px]/[64px] lg:text-[64px]/[81px] text-center mt-40">Key Points</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-40 mt-20 sm:mt-32">
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+              <Img src={IMG_VISION_POINT_1.src} alt="" className="absolute bottom-0 right-0" />
               <p className="text-[24px]/[34px] font-bold">Registered Issuer</p>
               <p className="text-[18px]/[34px]">
                 NexBridge is a digital asset issuer, forging a link between traditional finance and digital assets. We empower investors with access
                 to a new spectrum of tokenized investment opportunities, while enabling asset owners to penetrate global liquid capital markets.
               </p>
             </div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+              <Img src={IMG_VISION_POINT_2.src} alt="" className="absolute bottom-0 left-0" />
               <p className="text-[24px]/[34px] font-bold">Industry Leader</p>
               <p className="text-[18px]/[34px]">
                 Innovation & Excellence: Aimed to be at the forefront of digital assets in regulated markets, NexBridge is recognized for pioneering
                 industry standards and fostering financial innovation.
               </p>
             </div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+              <Img src={IMG_VISION_POINT_3.src} alt="" className="absolute bottom-0 right-0" />
               <p className="text-[24px]/[34px] font-bold">Financial Know-How</p>
               <p className="text-[18px]/[34px]">
                 Expertise & Experience: Founding members bring extensive experience from traditional finance, offering unparalleled expertise in
                 navigating the financial landscape.
               </p>
             </div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 card-points-gradient border border-[#ffffff20] rounded-[31px] px-14 py-10 relative overflow-hidden">
+              <Img src={IMG_VISION_POINT_4.src} alt="" className="absolute bottom-0 left-0" />
               <p className="text-[24px]/[34px] font-bold">Flexibility DASP Selection</p>
               <p className="text-[18px]/[34px]">
                 Tailored Solutions: NexBridge guides clients in selecting the ideal Digital Asset Service Providers, ensuring a perfect fit for

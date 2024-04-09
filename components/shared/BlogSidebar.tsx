@@ -4,6 +4,7 @@ import axios from "axios";
 import { ADMIN_URL } from "@/lib/config/url";
 import { TBlogLatestNewsResponse } from "@/lib/types/strapi-api/blog-latest-news-response";
 import Link from "next/link";
+import { IMG_VISION_POINT_1, IMG_VISION_POINT_2, IMG_VISION_POINT_3, IMG_VISION_POINT_4, IMG_VISION_POINT_5, IMG_VISION_POINT_6 } from "@/assets/img";
 
 type Props = {};
 
@@ -61,7 +62,8 @@ async function BlogSidebar({}: Props) {
         </div>
       </div> */}
 
-      <div className="mt-5 w-full rounded-[17px] blog_aside_item_gradient px-8 py-7 md:px-14 md:pt-12 pb-10">
+      <div className="card-points-gradient border border-[#ffffff20] relative overflow-hidden w-full rounded-[17px] blog_aside_item_gradient px-8 py-7 md:px-14 md:pt-12 pb-10">
+        <Img src={IMG_VISION_POINT_1.src} alt="" className="absolute bottom-0 right-0" />
         <h3 className="text-[22px]/[28px] font-semibold">Our Latest News</h3>
         <div className="mt-10 flex flex-col gap-8">
           {/* {TWITTER_POSTS.map((item) => (
