@@ -39,7 +39,7 @@ async function SectionImageInfoGrid({}: Props) {
               </span>
             </p>
           </div>
-          <p className="text-[15px]/[24px] lg:text-[37px]/[48px]">
+          <p className="px-5 sm:px-0 text-[15px]/[24px] lg:text-[37px]/[48px]">
             With NexBridge,{" "}
             <span className="text-[16px] lg:text-[37px] font-bold">
               the financial future is inclusive, innovative, and filled with limitless possibilities
@@ -66,7 +66,7 @@ async function SectionImageInfoGrid({}: Props) {
               <span className="font-medium">cuting-edge technology and financial innovation</span> comes together.
             </p>
           </div>
-          <p className="text-[15px]/[24px] lg:text-[37px]/[48px]">
+          <p className="px-5 sm:px-0 text-[15px]/[24px] lg:text-[37px]/[48px]">
             Where <span className="text-[16px] lg:text-[37px] font-bold">cuting-edge technology and financial innovation come together</span> to chart
             the path toward a barrier-free economic future.
           </p>
@@ -92,7 +92,7 @@ async function SectionImageInfoGrid({}: Props) {
               <span className="font-medium">local dreams with global capital.</span>
             </p>
           </div>
-          <p className="text-[15px]/[24px] lg:text-[37px]/[48px]">
+          <p className="px-5 sm:px-0 text-[15px]/[24px] lg:text-[37px]/[48px]">
             <span className="text-[16px] lg:text-[37px] font-bold">Not just global markets</span> we transform the Salvadoran financial landscape,{" "}
             <span className="text-[16px] lg:text-[37px] font-bold">connecting local dreams with global capital</span> , in a symphony of progress and
             opportunity{" "}

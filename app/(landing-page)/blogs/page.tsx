@@ -125,7 +125,7 @@ type BlogCardProps = {
 function BlogCard({ blog }: BlogCardProps) {
   return (
     <div className="w-full rounded-[17px] overflow-hidden">
-      <div className="relative bg-[#D9D9D9] aspect-video w-full flex items-end overflow-hidden">
+      <div className="relative aspect-video w-full flex items-end overflow-hidden">
         {/* need to add the thumbnail image */}
         {blog?.attributes?.thumbnail && (
           <Img
