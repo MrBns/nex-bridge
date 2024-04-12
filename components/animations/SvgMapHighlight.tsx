@@ -1,4 +1,8 @@
 "use client";
+
+import { IMG_EL_SALVADOR_STATIC_FLAG } from "@/assets/img";
+import Img from "../helper/Img";
+
 type TProps = {};
 
 export default function SvgMapHighlight(props: TProps) {
@@ -45,9 +49,8 @@ export default function SvgMapHighlight(props: TProps) {
 
       <rect className="flag" x="504" y="88" width="327" height="186" rx="28" fill="#1C75BC" />
       <foreignObject className="flag" x="508" y="92" width="320" height="178" rx="25">
-        <video width={"100%"} autoPlay muted loop playsInline className="rounded-3xl">
+        <video width={"100%"} autoPlay muted loop playsInline className="rounded-3xl" poster={IMG_EL_SALVADOR_STATIC_FLAG.src}>
           <source src="/vid/el-slavador-flag.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </foreignObject>
 
