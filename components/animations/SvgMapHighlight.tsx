@@ -53,21 +53,26 @@ export default function SvgMapHighlight(props: TProps) {
         className="scale-animate"
       />
 
-      <rect className="flag" x="504" y="88" width="327" height="186" rx="28" fill="#1C75BC" />
-
       {/* <pattern id="pattern0_78_5872" patternContentUnits="objectBoundingBox" className="flag" x="508" y="92" width="320" height="178" rx="25">
         <use xlinkHref="#image0_78_5872" transform="matrix(0.000856648 0 0 0.00159236 -0.0139886 0)" />
       </pattern> */}
-
-      <foreignObject className="flag" x="508" y="92" width="320" height="178" rx="25">
-        {isMobile ? (
-          <Img src={IMG_EL_SALVADOR_STATIC_FLAG.src} alt="el salvador flag" />
-        ) : (
-          <video width={"100%"} autoPlay muted loop playsInline className="rounded-3xl" poster={IMG_EL_SALVADOR_STATIC_FLAG.src}>
-            <source src="/vid/el-slavador-flag.mp4" type="video/mp4" />
-          </video>
-        )}
-      </foreignObject>
+      {isMobile ? (
+        <>
+          <g className="flag">
+            <rect className="" x="504" y="88" width="327" height="186" rx="28" fill="#1C75BC" />
+            <image id="image0_78_5872" width="320" height="178" x="508" y="92" className="rounded-2xl" xlinkHref={IMG_EL_SALVADOR_STATIC_FLAG.src} />
+          </g>
+        </>
+      ) : (
+        <>
+          <rect className="flag" x="504" y="88" width="327" height="186" rx="28" fill="#1C75BC" />
+          <foreignObject className="flag" x="508" y="92" width="320" height="178" rx="25">
+            <video width={"100%"} autoPlay muted loop playsInline className="rounded-3xl" poster={IMG_EL_SALVADOR_STATIC_FLAG.src}>
+              <source src="/vid/el-slavador-flag.mp4" type="video/mp4" />
+            </video>
+          </foreignObject>
+        </>
+      )}
 
       <path
         className="flag-below-arrow-sign"
